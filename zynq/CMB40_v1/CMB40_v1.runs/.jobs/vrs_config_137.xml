@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="zsys_system_ila_0_0_synth_1" LaunchDir="C:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.runs/zsys_system_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_util_ds_buf_0_0_synth_1" LaunchDir="C:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.runs/zsys_util_ds_buf_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="zsys_system_ila_0_0_synth_1"/>
+		<Parent Id="zsys_util_ds_buf_0_0_synth_1"/>
+	</Run>
+</Runs>
+

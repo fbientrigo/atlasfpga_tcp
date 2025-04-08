@@ -1,0 +1,474 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu May 19 23:44:11 2022
+# Process ID: 12924
+# Current directory: C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_dac_i2c_0_0_synth_1
+# Command line: vivado.exe -log zsys_dac_i2c_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zsys_dac_i2c_0_0.tcl
+# Log file: C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_dac_i2c_0_0_synth_1/zsys_dac_i2c_0_0.vds
+# Journal file: C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_dac_i2c_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source zsys_dac_i2c_0_0.tcl -notrace
+Command: synth_design -top zsys_dac_i2c_0_0 -part xc7z015clg485-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3224 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 388.914 ; gain = 99.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'zsys_dac_i2c_0_0' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_dac_i2c_0_0/synth/zsys_dac_i2c_0_0.vhd:89]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter CLK_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'dac_i2c_v1_0' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0.vhd:5' bound to instance 'U0' of component 'dac_i2c_v1_0' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_dac_i2c_0_0/synth/zsys_dac_i2c_0_0.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'dac_i2c_v1_0' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0.vhd:56]
+	Parameter CLK_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter CLK_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'dac_i2c_v1_0_S00_AXI' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:5' bound to instance 'dac_i2c_v1_0_S00_AXI_inst' of component 'dac_i2c_v1_0_S00_AXI' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'dac_i2c_v1_0_S00_AXI' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:92]
+	Parameter CLK_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:261]
+INFO: [Synth 8-226] default block is never used [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:409]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'i2c_control' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_control.vhd:8' bound to instance 'inst_i2c_control' of component 'i2c_control' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:443]
+INFO: [Synth 8-638] synthesizing module 'i2c_control' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_control.vhd:31]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'i2c_dac' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:6' bound to instance 'dac_inst' of component 'i2c_dac' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_control.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'i2c_dac' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:34]
+	Parameter clk_freq bound to: 100000000 - type: integer 
+	Parameter baud_rate bound to: 100000 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element update_1_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element update_2_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element update_pulse_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:87]
+WARNING: [Synth 8-6014] Unused sequential element clk_delay2_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:117]
+WARNING: [Synth 8-6014] Unused sequential element ack_fail_counter_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:123]
+WARNING: [Synth 8-6014] Unused sequential element sda_ena_r_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:153]
+WARNING: [Synth 8-6014] Unused sequential element SDA_W_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:199]
+WARNING: [Synth 8-6014] Unused sequential element repeat_comm_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:231]
+WARNING: [Synth 8-3848] Net read_byte_o in module/entity i2c_dac does not have driver. [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'i2c_dac' (1#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:34]
+WARNING: [Synth 8-3848] Net read_byte_o in module/entity i2c_control does not have driver. [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_control.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'i2c_control' (2#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_control.vhd:31]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'dac_i2c_v1_0_S00_AXI' (3#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'dac_i2c_v1_0' (4#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'zsys_dac_i2c_0_0' (5#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_dac_i2c_0_0/synth/zsys_dac_i2c_0_0.vhd:89]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[7]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[6]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[5]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[4]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[3]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[2]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[1]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port read_byte_o[0]
+WARNING: [Synth 8-3331] design i2c_dac has unconnected port ena_read
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[11]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[10]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[9]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[8]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[7]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[6]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[5]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[4]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[3]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[2]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[1]
+WARNING: [Synth 8-3331] design i2c_control has unconnected port read_byte_o[0]
+WARNING: [Synth 8-3331] design dac_i2c_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design dac_i2c_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design dac_i2c_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design dac_i2c_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design dac_i2c_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design dac_i2c_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design dac_i2c_v1_0 has unconnected port scl_i
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 444.117 ; gain = 154.793
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 444.117 ; gain = 154.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 444.117 ; gain = 154.793
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z015clg485-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 795.027 ; gain = 2.875
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 795.027 ; gain = 505.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 795.027 ; gain = 505.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 795.027 ; gain = 505.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'i2c_states_reg' in module 'i2c_dac'
+INFO: [Synth 8-5544] ROM "freq_counter" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i2c_busy" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i2c_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i2c_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i2c_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i2c_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i2c_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'i2c_states_reg' in module 'i2c_control'
+INFO: [Synth 8-5544] ROM "ca_byte" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stop_com" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "start_com" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i2c_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ms_idle |                              000 |                             0000
+            ms_send_data |                              001 |                             0100
+                  ms_ack |                              010 |                             0111
+                 ms_fail |                              011 |                             0101
+                ms_start |                              100 |                             0001
+               ms_end_ok |                              101 |                             0110
+                 ms_stop |                              110 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'i2c_states_reg' using encoding 'sequential' in module 'i2c_dac'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                i2c_idle |                              000 |                              000
+               i2c_start |                              001 |                              001
+             i2c_sending |                              010 |                              011
+                i2c_stop |                              011 |                              100
+                  iSTATE |                              100 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'i2c_states_reg' using encoding 'sequential' in module 'i2c_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 795.027 ; gain = 505.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 29    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     11 Bit        Muxes := 7     
+	   7 Input     11 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 9     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 20    
+	   7 Input      1 Bit        Muxes := 22    
+	   5 Input      1 Bit        Muxes := 15    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module i2c_dac 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	               11 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 7     
+	   7 Input     11 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 22    
+Module i2c_control 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 15    
+	   6 Input      1 Bit        Muxes := 1     
+Module dac_i2c_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/dac_inst/end_command_o_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/src/i2c_dac.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element U0/dac_i2c_v1_0_S00_AXI_inst/ena_read_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/e524/hdl/dac_i2c_v1_0_S00_AXI.vhd:304]
+INFO: [Synth 8-3917] design zsys_dac_i2c_0_0 has port scl_t driven by constant 0
+WARNING: [Synth 8-3331] design zsys_dac_i2c_0_0 has unconnected port scl_i
+WARNING: [Synth 8-3331] design zsys_dac_i2c_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design zsys_dac_i2c_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design zsys_dac_i2c_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design zsys_dac_i2c_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design zsys_dac_i2c_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design zsys_dac_i2c_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[3]' (FDE) to 'U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[2]' (FDE) to 'U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[1]' (FDE) to 'U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/dac_i2c_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/dac_i2c_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/dac_i2c_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/dac_i2c_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/dac_i2c_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/dac_i2c_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/dac_i2c_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module zsys_dac_i2c_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module zsys_dac_i2c_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/inst_i2c_control/data_lsb_reg[0]) is unused and will be removed from module zsys_dac_i2c_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module zsys_dac_i2c_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module zsys_dac_i2c_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module zsys_dac_i2c_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module zsys_dac_i2c_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/dac_i2c_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module zsys_dac_i2c_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 795.027 ; gain = 505.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 795.414 ; gain = 506.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 795.859 ; gain = 506.535
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     2|
+|2     |LUT2  |    15|
+|3     |LUT3  |    15|
+|4     |LUT4  |    42|
+|5     |LUT5  |    40|
+|6     |LUT6  |    98|
+|7     |MUXF7 |     1|
+|8     |FDCE  |    10|
+|9     |FDRE  |   273|
+|10    |FDSE  |     2|
++------+------+------+
+
+Report Instance Areas: 
++------+------------------------------+---------------------+------+
+|      |Instance                      |Module               |Cells |
++------+------------------------------+---------------------+------+
+|1     |top                           |                     |   498|
+|2     |  U0                          |dac_i2c_v1_0         |   498|
+|3     |    dac_i2c_v1_0_S00_AXI_inst |dac_i2c_v1_0_S00_AXI |   498|
+|4     |      inst_i2c_control        |i2c_control          |   243|
+|5     |        dac_inst              |i2c_dac              |   187|
++------+------------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 819.641 ; gain = 179.406
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 819.641 ; gain = 530.316
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+60 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 820.414 ; gain = 539.723
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_dac_i2c_0_0_synth_1/zsys_dac_i2c_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_dac_i2c_0_0/zsys_dac_i2c_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_dac_i2c_0_0_synth_1/zsys_dac_i2c_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file zsys_dac_i2c_0_0_utilization_synth.rpt -pb zsys_dac_i2c_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 820.414 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 19 23:44:49 2022...

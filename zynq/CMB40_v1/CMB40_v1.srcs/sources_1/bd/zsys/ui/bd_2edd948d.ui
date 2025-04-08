@@ -1,0 +1,110 @@
+{
+   ExpandedHierarchyInLayout: "",
+   PinnedBlocks: "/ADC/mapper_0|/ADC/fifo_generator_0|/ADC/xlconstant_1|/ADC/xlconstant_2|/ADC/xlconstant_3|/ADC/ROController_0|",
+   PinnedPorts: "ADC_MISO|ADC_MOSI|ADC_SCLK|i_rst|i_DRS4_DWRITEn|i_stop_cell_ready|i_stop_cell|o_wr_fifo_en|i_next_fifo_full|o_busy|o_ascii|o_outfifo_wr_en|rd_data_count|i_Lclk|i_ADclk|i_veto|MUXOUT_P|MUXOUT_N|o_data_clk|o_Lclk|o_ro_proc_st_debug_states1|o_send_data_control_debug_states1|o_read_proc_st_debug_states1|rd_clk|s00_axi_aresetn|S00_AXI|S00_AXI1|",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port s00_axi_aresetn -pg 1 -y 530 -defaultsOSRD
+preplace port o_wr_fifo_en -pg 1 -y 670 -defaultsOSRD
+preplace port o_data_clk -pg 1 -y 250 -defaultsOSRD
+preplace port ADC_MISO -pg 1 -y 20 -defaultsOSRD
+preplace port rd_clk -pg 1 -y 550 -defaultsOSRD
+preplace port o_Lclk -pg 1 -y 80 -defaultsOSRD
+preplace port o_busy -pg 1 -y 690 -defaultsOSRD
+preplace port i_rst -pg 1 -y 590 -defaultsOSRD
+preplace port i_next_fifo_full -pg 1 -y 850 -defaultsOSRD
+preplace port ADC_SCLK -pg 1 -y 180 -defaultsOSRD
+preplace port ADC_MOSI -pg 1 -y 160 -defaultsOSRD
+preplace port i_veto -pg 1 -y 570 -defaultsOSRD
+preplace port i_Lclk -pg 1 -y 460 -defaultsOSRD
+preplace port i_DRS4_DWRITEn -pg 1 -y 620 -defaultsOSRD
+preplace port S00_AXI1 -pg 1 -y 80 -defaultsOSRD
+preplace port i_ADclk -pg 1 -y 50 -defaultsOSRD
+preplace port i_stop_cell_ready -pg 1 -y 800 -defaultsOSRD
+preplace port o_outfifo_wr_en -pg 1 -y 710 -defaultsOSRD
+preplace portBus rd_data_count -pg 1 -y 560 -defaultsOSRD
+preplace portBus MUXOUT_N -pg 1 -y 280 -defaultsOSRD
+preplace portBus MUXOUT_P -pg 1 -y 240 -defaultsOSRD
+preplace portBus o_ascii -pg 1 -y 730 -defaultsOSRD
+preplace portBus i_stop_cell -pg 1 -y 820 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 3 -y 790 -defaultsOSRD
+preplace inst ROController_0 -pg 1 -lvl 4 -y 590 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 3 -y 590 -defaultsOSRD
+preplace inst mapper_0 -pg 1 -lvl 3 -y 380 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 3 -y 690 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 5 -y 560 -defaultsOSRD
+preplace inst AXI_ADC_1 -pg 1 -lvl 2 -y -240 -defaultsOSRD
+preplace inst ADC_readout_buff_0 -pg 1 -lvl 1 -y 370 -defaultsOSRD
+preplace netloc ROController_0_i_rd_fifo 1 4 1 2410
+preplace netloc o_read_proc_st_debug_states 1 4 1 NJ
+preplace netloc i_stop_cell_1 1 0 4 -100J 900 NJ 900 NJ 900 1800J
+preplace netloc i_DRS4_DWRITEn_1 1 0 4 NJ 620 NJ 620 1310J 850 1720J
+preplace netloc ADC_readout_buff_0_o_ADC_ch2_n 1 1 1 360
+preplace netloc ADC_readout_buff_0_o_ADC_ch2_p 1 1 1 350
+preplace netloc MUXOUT_P_1 1 0 1 -100J
+preplace netloc S00_AXI1_1 1 0 2 NJ 80 280
+preplace netloc AXI_ADC_1_o_debug 1 2 1 1320
+preplace netloc i_ADclk_1 1 0 1 -90
+preplace netloc xlconstant_3_dout 1 3 1 1730
+preplace netloc fifo_generator_0_empty 1 4 1 2370
+preplace netloc ADC_readout_buff_0_o_Lclk 1 1 5 300 30 NJ 30 NJ 30 NJ 30 2830J
+preplace netloc AXI_ADC_1_o_SCLK 1 2 4 1330 20 NJ 20 NJ 20 2820J
+preplace netloc i_Lclk_1 1 0 1 -130
+preplace netloc ROController_0_o_wr_fifo 1 4 1 2410
+preplace netloc ROController_0_o_outfifo_wr_en 1 4 2 2360J 710 NJ
+preplace netloc ROController_0_o_wr_fifo_en 1 4 2 2420 420 2820J
+preplace netloc ADC_readout_buff_0_o_ADC_ch1_n 1 1 1 340
+preplace netloc ADC_MISO_1 1 0 2 -80J 90 290
+preplace netloc ROController_0_o_rd_fifo_en 1 4 1 2390
+preplace netloc ADC_readout_buff_0_o_ADC_ch6_n 1 1 1 460
+preplace netloc ADC_readout_buff_0_o_ADC_ch1_p 1 1 1 330
+preplace netloc xlconstant_1_dout 1 3 1 1750J
+preplace netloc ADC_readout_buff_0_o_ADC_ch6_p 1 1 1 450
+preplace netloc o_send_data_control_debug_states 1 4 1 NJ
+preplace netloc AXI_ADC_1_o_data_out_ch0 1 2 1 1310
+preplace netloc s00_axi_aresetn_1 1 0 2 -140 100 400J
+preplace netloc AXI_ADC_1_o_data_out_ch1 1 2 1 1300
+preplace netloc s00_axi_ctrl_aclk_1 1 0 5 -110 140 490 170 N 170 1810 340 2400J
+preplace netloc AXI_ADC_1_o_data_out_ch2 1 2 1 1290
+preplace netloc ROController_0_o_wr_fifo_clk 1 4 1 2380
+preplace netloc i_veto_1 1 0 4 -100J 630 NJ 630 1280J 890 1760J
+preplace netloc AXI_ADC_1_o_data_out_ch3 1 2 1 1280
+preplace netloc ROController_0_o_ascii 1 4 2 2350J 730 NJ
+preplace netloc AXI_ADC_1_o_data_out_ch4 1 2 1 1270
+preplace netloc xlconstant_2_dout 1 3 1 1710J
+preplace netloc mapper_0_o_out_0 1 2 2 1340 510 1710
+preplace netloc AXI_ADC_1_o_data_out_ch5 1 2 1 1260
+preplace netloc mapper_0_o_out_1 1 3 1 1790
+preplace netloc ADC_readout_buff_0_o_ADC_ch0_n 1 1 1 320
+preplace netloc AXI_ADC_1_o_data_out_ch6 1 2 1 1250
+preplace netloc AXI_ADC_1_o_MOSI 1 2 4 1340 10 NJ 10 NJ 10 2840J
+preplace netloc i_rst_1 1 0 5 -130J 600 NJ 600 1330 860 1740 850 2390J
+preplace netloc mapper_0_o_out_2 1 3 1 1780
+preplace netloc ADC_readout_buff_0_o_ADC_ch3_n 1 1 1 390
+preplace netloc AXI_ADC_1_o_data_out_ch7 1 2 1 1240
+preplace netloc mapper_0_o_out_3 1 3 1 1770
+preplace netloc ADC_readout_buff_0_o_ADC_ch0_p 1 1 1 310
+preplace netloc ROController_0_o_busy 1 4 2 2370J 700 2840J
+preplace netloc ADC_readout_buff_0_o_ADC_ch3_p 1 1 1 370
+preplace netloc MUXOUT_N_1 1 0 1 -120J
+preplace netloc mapper_0_o_out_4 1 3 1 1760
+preplace netloc mapper_0_o_out_5 1 3 1 1750
+preplace netloc fifo_generator_0_full 1 4 1 2410
+preplace netloc mapper_0_o_out_6 1 3 1 1740
+preplace netloc i_stop_cell_ready_1 1 0 4 NJ 800 NJ 800 1250J 880 1780J
+preplace netloc fifo_generator_0_rd_data_count 1 3 3 1810 840 NJ 840 2830
+preplace netloc mapper_0_o_out_7 1 3 1 1730
+preplace netloc i_next_fifo_full_1 1 0 4 -130J 870 NJ 870 NJ 870 1790J
+preplace netloc ADC_readout_buff_0_o_ADC_ch7_n 1 1 1 480
+preplace netloc AXI_ADC_0_o_data_clk 1 1 5 380 200 N 200 1800 250 N 250 N
+preplace netloc ADC_readout_buff_0_o_ADC_ch7_p 1 1 1 470
+preplace netloc ADC_readout_buff_0_o_ADC_ch5_n 1 1 1 440
+preplace netloc ADC_readout_buff_0_o_ADC_ch4_n 1 1 1 420
+preplace netloc o_ro_proc_st_debug_states 1 4 1 NJ
+preplace netloc ADC_readout_buff_0_o_ADC_ch4_p 1 1 1 410
+preplace netloc ADC_readout_buff_0_o_ADC_ch5_p 1 1 1 430
+levelinfo -pg 1 -160 120 1080 1550 2100 2620 2860 -top -1080 -bot 1090
+",
+}
+0

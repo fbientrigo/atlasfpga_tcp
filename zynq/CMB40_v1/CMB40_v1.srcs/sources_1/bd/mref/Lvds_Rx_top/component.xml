@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>module_ref</spirit:library>
+  <spirit:name>Lvds_Rx_top</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>Lvds_Rx_top</spirit:modelName>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>45ac84a1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>Lvds_Rx_top</spirit:modelName>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>45ac84a1</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>SysRst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Lclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AdClk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DataInChP</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DataInChN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AnalyseOut</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ChOut_0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ChOut_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>ExternalClockIn</spirit:name>
+        <spirit:displayName>Externalclockin</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ExternalClockIn">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>BramAsRegister</spirit:name>
+        <spirit:displayName>Bramasregister</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BramAsRegister">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>FfAsRegister</spirit:name>
+        <spirit:displayName>Ffasregister</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FfAsRegister">0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>PhaseControl</spirit:name>
+        <spirit:displayName>Phasecontrol</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PhaseControl">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector(6 downto 0)">
+        <spirit:name>LclkOffsetK</spirit:name>
+        <spirit:displayName>Lclkoffsetk</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LclkOffsetK" spirit:bitStringLength="7">&quot;0111111&quot;</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/Lvds_Rx_top_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_4b655535</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>xilinx.com:module_ref:Lvds_Rx_top:1.0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>ExternalClockIn</spirit:name>
+      <spirit:displayName>Externalclockin</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ExternalClockIn">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BramAsRegister</spirit:name>
+      <spirit:displayName>Bramasregister</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BramAsRegister">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>FfAsRegister</spirit:name>
+      <spirit:displayName>Ffasregister</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FfAsRegister">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>PhaseControl</spirit:name>
+      <spirit:displayName>Phasecontrol</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PhaseControl">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>LclkOffsetK</spirit:name>
+      <spirit:displayName>Lclkoffsetk</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.LclkOffsetK" spirit:bitStringLength="7">&quot;0111111&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Lvds_Rx_top_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>Lvds_Rx_top_v1_0</xilinx:displayName>
+      <xilinx:autoFamilySupportLevel>level_1</xilinx:autoFamilySupportLevel>
+      <xilinx:definitionSource>module_ref</xilinx:definitionSource>
+      <xilinx:designToolContexts>
+        <xilinx:designToolContext>IPI</xilinx:designToolContext>
+      </xilinx:designToolContexts>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-12-19T22:10:09Z</xilinx:coreCreationDateTime>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

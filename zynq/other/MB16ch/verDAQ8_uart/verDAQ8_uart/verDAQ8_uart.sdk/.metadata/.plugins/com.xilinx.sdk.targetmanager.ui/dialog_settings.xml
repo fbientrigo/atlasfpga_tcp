@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Local" key="zsys_wrapper_hw_platform_0-target"/>
+	<item value="Local" key="zsys_wrapper_hw_platform_2-target"/>
+	<item value="false" key="zsys_wrapper_hw_platform_2-partial_bit"/>
+	<item value="Local" key="zsys_wrapper_hw_platform_1-target"/>
+	<item value="false" key="zsys_wrapper_hw_platform_3-partial_bit"/>
+	<item value="false" key="zsys_wrapper_hw_platform_4-partial_bit"/>
+	<item value="" key="zsys_wrapper_hw_platform_1-bmmFile"/>
+	<item value="false" key="zsys_wrapper_hw_platform_5-partial_bit"/>
+	<item value="" key="zsys_wrapper_hw_platform_0-bmmFile"/>
+	<item value="zsys_wrapper.bit" key="zsys_wrapper_hw_platform_5-bitFile"/>
+	<item value="" key="zsys_wrapper_hw_platform_5-bmmFile"/>
+	<item value="zsys_wrapper.bit" key="zsys_wrapper_hw_platform_4-bitFile"/>
+	<item value="zsys_wrapper.bit" key="zsys_wrapper_hw_platform_2-bitFile"/>
+	<item value="" key="zsys_wrapper_hw_platform_2-bmmFile"/>
+	<item value="zsys_wrapper.bit" key="zsys_wrapper_hw_platform_3-bitFile"/>
+	<item value="Local" key="zsys_wrapper_hw_platform_5-target"/>
+	<item value="zsys_wrapper.bit" key="zsys_wrapper_hw_platform_0-bitFile"/>
+	<item value="Local" key="zsys_wrapper_hw_platform_4-target"/>
+	<item value="Auto Detect" key="zsys_wrapper_hw_platform_0-device"/>
+	<item value="Auto Detect" key="zsys_wrapper_hw_platform_2-device"/>
+	<item value="Auto Detect" key="zsys_wrapper_hw_platform_3-device"/>
+	<item value="Auto Detect" key="zsys_wrapper_hw_platform_1-device"/>
+	<item value="zsys_wrapper.bit" key="zsys_wrapper_hw_platform_1-bitFile"/>
+	<item value="Local" key="zsys_wrapper_hw_platform_3-target"/>
+	<item value="zsys_wrapper_hw_platform_1" key="programfpga.hwplatform"/>
+	<item value="" key="zsys_wrapper_hw_platform_3-bmmFile"/>
+	<item value="false" key="zsys_wrapper_hw_platform_1-partial_bit"/>
+	<item value="" key="zsys_wrapper_hw_platform_4-bmmFile"/>
+	<item value="Auto Detect" key="zsys_wrapper_hw_platform_4-device"/>
+	<item value="Auto Detect" key="zsys_wrapper_hw_platform_5-device"/>
+	<item value="false" key="zsys_wrapper_hw_platform_0-partial_bit"/>
+</section>

@@ -1,0 +1,8 @@
+00:32:52 **** Incremental Build of configuration Debug for project 1mezz_uart_hw3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+00:32:52 Build Finished (took 329ms)
+

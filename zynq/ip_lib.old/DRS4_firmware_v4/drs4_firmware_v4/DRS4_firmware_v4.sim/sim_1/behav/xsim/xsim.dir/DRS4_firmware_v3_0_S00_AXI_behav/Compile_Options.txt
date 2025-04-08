@@ -1,0 +1,1 @@
+-wto "7f8a6422319a4166aae6bd9308952d81" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "DRS4_firmware_v3_0_S00_AXI_behav" "xil_defaultlib.DRS4_firmware_v3_0_S00_AXI" -log "elaborate.log" 

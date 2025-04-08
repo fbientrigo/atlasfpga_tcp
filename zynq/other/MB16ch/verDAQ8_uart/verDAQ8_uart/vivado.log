@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Tue Oct 15 16:24:53 2024
+# Process ID: 16608
+# Current directory: C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16124 C:\Users\osotosan\Downloads\verDAQ8_uart_default\verDAQ8_uart\verDAQ8_uart.xpr
+# Log file: C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart/vivado.log
+# Journal file: C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart/verDAQ8_uart.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/victo/Desktop/Vivados/verDAQ8_uart' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/Users/osotosan/Downloads/verDAQ8_uart_default/TE0715-test_board/test_board/board_files', nor could it be found using path 'C:/Users/victo/Desktop/Vivados/TE0715-test_board/test_board/board_files'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/osotosan/Downloads/verDAQ8_uart_default/ip_lib', nor could it be found using path 'C:/Users/victo/Desktop/Vivados/ip_lib'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/osotosan/Downloads/verDAQ8_uart_default/ip_lib'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'zsys.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+zsys_AXI_ADC_v1_0_0_0
+zsys_DRS4_firmware_1_0
+zsys_dac_i2c_0_0
+oopen_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 922.121 ; gain = 170.145uupdate_compile_order -fileset sources_1fexit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 15 16:53:49 2024...
+uart/verDAQ8_uart.runs/impl_1/zsys_wrapper.sysdef C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper.hdf
+
+launch_sdk -workspace C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart/verDAQ8_uart.sdk -hwspec C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart/verDAQ8_uart.sdk -hwspec C:/Users/osotosan/Downloads/verDAQ8_uart_default/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 15 16:53:56 2024...

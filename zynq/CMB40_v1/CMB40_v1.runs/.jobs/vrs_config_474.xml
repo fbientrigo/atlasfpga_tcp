@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="zsys_auto_cc_0_synth_1" LaunchDir="/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

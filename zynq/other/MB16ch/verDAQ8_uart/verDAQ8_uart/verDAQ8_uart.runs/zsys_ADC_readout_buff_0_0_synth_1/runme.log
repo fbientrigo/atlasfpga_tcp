@@ -1,0 +1,314 @@
+
+*** Running vivado
+    with args -log zsys_ADC_readout_buff_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source zsys_ADC_readout_buff_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source zsys_ADC_readout_buff_0_0.tcl -notrace
+Command: synth_design -top zsys_ADC_readout_buff_0_0 -part xc7z015clg485-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10164 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 389.164 ; gain = 103.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'zsys_ADC_readout_buff_0_0' [c:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/bd/zsys/ip/zsys_ADC_readout_buff_0_0/synth/zsys_ADC_readout_buff_0_0.vhd:101]
+INFO: [Synth 8-3491] module 'ADC_readout_buff' declared at 'C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:38' bound to instance 'U0' of component 'ADC_readout_buff' [c:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/bd/zsys/ip/zsys_ADC_readout_buff_0_0/synth/zsys_ADC_readout_buff_0_0.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'ADC_readout_buff' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:89]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADclk_IBUFDS_inst' to cell 'IBUFGDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:114]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'Lclk_IBUFDS_inst' to cell 'IBUFGDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:126]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch0_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:150]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch1_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:161]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch2_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:173]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch3_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:184]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch4_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:196]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch5_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:207]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch6_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:219]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: LVDS_25 - type: string 
+INFO: [Synth 8-113] binding component instance 'ADC_ch7_IBUFDS_inst' to cell 'IBUFDS_DIFF_OUT' [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:230]
+INFO: [Synth 8-256] done synthesizing module 'ADC_readout_buff' (1#1) [C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/imports/ADC_sources/ADC_readout_buff.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'zsys_ADC_readout_buff_0_0' (2#1) [c:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.srcs/sources_1/bd/zsys/ip/zsys_ADC_readout_buff_0_0/synth/zsys_ADC_readout_buff_0_0.vhd:101]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.051 ; gain = 158.941
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.051 ; gain = 158.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 445.051 ; gain = 158.941
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Device 21-403] Loading part xc7z015clg485-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 8 instances
+  IBUFGDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 2 instances
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 755.121 ; gain = 1.449
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.121 ; gain = 469.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.121 ; gain = 469.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.121 ; gain = 469.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 755.121 ; gain = 469.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 755.121 ; gain = 469.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 767.852 ; gain = 481.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 767.852 ; gain = 481.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 767.852 ; gain = 481.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |IBUFDS_DIFF_OUT  |     8|
+|2     |IBUFGDS_DIFF_OUT |     2|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+---------+-----------------+------+
+|      |Instance |Module           |Cells |
++------+---------+-----------------+------+
+|1     |top      |                 |    10|
+|2     |  U0     |ADC_readout_buff |    10|
++------+---------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 769.031 ; gain = 172.852
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 769.031 ; gain = 482.922
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 8 instances
+  IBUFGDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 795.703 ; gain = 521.570
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.runs/zsys_ADC_readout_buff_0_0_synth_1/zsys_ADC_readout_buff_0_0.dcp' has been generated.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/victo/Desktop/Vivados/daq_mb_te0716_v7/daq_mb_te0716_v7.runs/zsys_ADC_readout_buff_0_0_synth_1/zsys_ADC_readout_buff_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file zsys_ADC_readout_buff_0_0_utilization_synth.rpt -pb zsys_ADC_readout_buff_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 795.703 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  8 23:59:16 2022...

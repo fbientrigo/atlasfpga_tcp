@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="zsys_reset_init_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_reset_init_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_trigger_logic_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_trigger_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_DRS_A_test_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_DRS_A_test_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_system_ila_2_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_Elink_output_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_Elink_output_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_system_ila_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_axi_dma_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_axi_smc_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_xlslice_3to3_2_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_xlslice_3to3_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_processing_system7_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_fifo8b_2_axis_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_fifo8b_2_axis_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_fit_timer_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_fit_timer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_xbar_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_axi_gpio_1_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_DRS4_firmware_1_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_DRS4_firmware_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_CPLD_ctrl_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_CPLD_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_dac_i2c_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_dac_i2c_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_proc_sys_reset_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_fifo_generator_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_fifo_generator_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_axi_gpio_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_rst_ps7_0_100M_1_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_rst_ps7_0_100M_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="zsys_rst_ps7_0_100M_0_synth_1"/>
+	</Run>
+	<Run Id="zsys_system_ila_1_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_clk_mon_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_clk_mon_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_util_ds_buf_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_util_ds_buf_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_util_ds_buf_0_2_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_util_ds_buf_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="zsys_util_ds_buf_0_0_synth_1"/>
+	</Run>
+	<Run Id="zsys_AXI_ADC_0_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_AXI_ADC_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_auto_cc_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_auto_pc_0_synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="zsys_reset_init_0_0_synth_1"/>
+		<Parent Id="zsys_trigger_logic_0_0_synth_1"/>
+		<Parent Id="zsys_DRS_A_test_0_0_synth_1"/>
+		<Parent Id="zsys_system_ila_2_0_synth_1"/>
+		<Parent Id="zsys_Elink_output_0_0_synth_1"/>
+		<Parent Id="zsys_system_ila_0_0_synth_1"/>
+		<Parent Id="zsys_axi_dma_0_0_synth_1"/>
+		<Parent Id="zsys_axi_smc_0_synth_1"/>
+		<Parent Id="zsys_xlslice_3to3_2_synth_1"/>
+		<Parent Id="zsys_processing_system7_0_0_synth_1"/>
+		<Parent Id="zsys_fifo8b_2_axis_0_0_synth_1"/>
+		<Parent Id="zsys_fit_timer_0_0_synth_1"/>
+		<Parent Id="zsys_xbar_0_synth_1"/>
+		<Parent Id="zsys_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="zsys_axi_gpio_1_0_synth_1"/>
+		<Parent Id="zsys_DRS4_firmware_1_0_synth_1"/>
+		<Parent Id="zsys_CPLD_ctrl_0_0_synth_1"/>
+		<Parent Id="zsys_dac_i2c_0_0_synth_1"/>
+		<Parent Id="zsys_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="zsys_fifo_generator_0_0_synth_1"/>
+		<Parent Id="zsys_axi_gpio_0_0_synth_1"/>
+		<Parent Id="zsys_rst_ps7_0_100M_1_synth_1"/>
+		<Parent Id="zsys_system_ila_1_0_synth_1"/>
+		<Parent Id="zsys_clk_mon_0_0_synth_1"/>
+		<Parent Id="zsys_util_ds_buf_0_0_synth_1"/>
+		<Parent Id="zsys_util_ds_buf_0_2_synth_1"/>
+		<Parent Id="zsys_AXI_ADC_0_0_synth_1"/>
+		<Parent Id="zsys_auto_cc_0_synth_1"/>
+		<Parent Id="zsys_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="zsys_reset_init_0_0_synth_1"/>
+		<Parent Id="zsys_trigger_logic_0_0_synth_1"/>
+		<Parent Id="zsys_DRS_A_test_0_0_synth_1"/>
+		<Parent Id="zsys_system_ila_2_0_synth_1"/>
+		<Parent Id="zsys_Elink_output_0_0_synth_1"/>
+		<Parent Id="zsys_system_ila_0_0_synth_1"/>
+		<Parent Id="zsys_axi_dma_0_0_synth_1"/>
+		<Parent Id="zsys_axi_smc_0_synth_1"/>
+		<Parent Id="zsys_xlslice_3to3_2_synth_1"/>
+		<Parent Id="zsys_processing_system7_0_0_synth_1"/>
+		<Parent Id="zsys_fifo8b_2_axis_0_0_synth_1"/>
+		<Parent Id="zsys_fit_timer_0_0_synth_1"/>
+		<Parent Id="zsys_xbar_0_synth_1"/>
+		<Parent Id="zsys_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="zsys_axi_gpio_1_0_synth_1"/>
+		<Parent Id="zsys_DRS4_firmware_1_0_synth_1"/>
+		<Parent Id="zsys_CPLD_ctrl_0_0_synth_1"/>
+		<Parent Id="zsys_dac_i2c_0_0_synth_1"/>
+		<Parent Id="zsys_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="zsys_fifo_generator_0_0_synth_1"/>
+		<Parent Id="zsys_axi_gpio_0_0_synth_1"/>
+		<Parent Id="zsys_rst_ps7_0_100M_1_synth_1"/>
+		<Parent Id="zsys_system_ila_1_0_synth_1"/>
+		<Parent Id="zsys_clk_mon_0_0_synth_1"/>
+		<Parent Id="zsys_util_ds_buf_0_0_synth_1"/>
+		<Parent Id="zsys_util_ds_buf_0_2_synth_1"/>
+		<Parent Id="zsys_AXI_ADC_0_0_synth_1"/>
+		<Parent Id="zsys_auto_cc_0_synth_1"/>
+		<Parent Id="zsys_auto_pc_0_synth_1"/>
+	</Run>
+</Runs>
+

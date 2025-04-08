@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Jun 30 14:25:39 2023
+# Process ID: 2792
+# Current directory: c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1
+# Command line: vivado.exe -log AXI_ADC_v1_0.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source AXI_ADC_v1_0.tcl -notrace
+# Log file: c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1/AXI_ADC_v1_0.vdi
+# Journal file: c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source AXI_ADC_v1_0.tcl -notrace

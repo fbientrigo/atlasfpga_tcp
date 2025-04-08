@@ -1,0 +1,116 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port s00_axi_ctrl_aclk -pg 1 -y 540 -defaultsOSRD
+preplace port i_ADC_ch6_p_0 -pg 1 -y 400 -defaultsOSRD
+preplace port i_ADC_ch3_n_0 -pg 1 -y 300 -defaultsOSRD
+preplace port i_ADC_ch5_n_0 -pg 1 -y 380 -defaultsOSRD
+preplace port i_ADC_ch0_n_0 -pg 1 -y 180 -defaultsOSRD
+preplace port o_lclk_debug -pg 1 -y 20 -defaultsOSRD
+preplace port ADC_MISO -pg 1 -y 20 -defaultsOSRD
+preplace port o_data_clk -pg 1 -y 260 -defaultsOSRD
+preplace port o_ADclk_p -pg 1 -y 0 -defaultsOSRD
+preplace port i_ADC_ch2_n_0 -pg 1 -y 260 -defaultsOSRD
+preplace port i_ADclk_n_0 -pg 1 -y 100 -defaultsOSRD
+preplace port i_ADC_ch7_n_0 -pg 1 -y 460 -defaultsOSRD
+preplace port i_ADC_ch7_p_0 -pg 1 -y 440 -defaultsOSRD
+preplace port i_ADC_ch4_p_0 -pg 1 -y 320 -defaultsOSRD
+preplace port i_ADC_ch0_p_0 -pg 1 -y 160 -defaultsOSRD
+preplace port ADC_SCLK -pg 1 -y 220 -defaultsOSRD
+preplace port ADC_MOSI -pg 1 -y 200 -defaultsOSRD
+preplace port i_ADC_ch6_n_0 -pg 1 -y 420 -defaultsOSRD
+preplace port o_ADC_ch0_p -pg 1 -y 40 -defaultsOSRD
+preplace port i_ADC_ch2_p_0 -pg 1 -y 240 -defaultsOSRD
+preplace port i_Lclk_n_0 -pg 1 -y 140 -defaultsOSRD
+preplace port i_ADC_ch3_p_0 -pg 1 -y 280 -defaultsOSRD
+preplace port i_ADC_ch1_n_0 -pg 1 -y 220 -defaultsOSRD
+preplace port o_Lclk_p -pg 1 -y 460 -defaultsOSRD
+preplace port i_ADC_ch4_n_0 -pg 1 -y 340 -defaultsOSRD
+preplace port i_ADclk_p_0 -pg 1 -y 80 -defaultsOSRD
+preplace port s00_axi_ctrl_aresetn -pg 1 -y 560 -defaultsOSRD
+preplace port i_ADC_ch5_p_0 -pg 1 -y 360 -defaultsOSRD
+preplace port i_ADC_ch1_p_0 -pg 1 -y 200 -defaultsOSRD
+preplace port s00_axi_ctrl -pg 1 -y 520 -defaultsOSRD
+preplace port B1_ADC_nCS -pg 1 -y 240 -defaultsOSRD
+preplace port i_Lclk_p_0 -pg 1 -y 120 -defaultsOSRD
+preplace portBus o_out_1 -pg 1 -y 320 -defaultsOSRD
+preplace portBus o_out_2 -pg 1 -y 340 -defaultsOSRD
+preplace portBus o_out_3 -pg 1 -y 360 -defaultsOSRD
+preplace portBus o_out_4 -pg 1 -y 380 -defaultsOSRD
+preplace portBus o_out_5 -pg 1 -y 400 -defaultsOSRD
+preplace portBus o_out_6 -pg 1 -y 420 -defaultsOSRD
+preplace portBus o_out_7 -pg 1 -y 440 -defaultsOSRD
+preplace portBus o_out_0 -pg 1 -y 291 -defaultsOSRD
+preplace inst mapper_0 -pg 1 -lvl 3 -y 380 -defaultsOSRD
+preplace inst AXI_ADC_v1_0_0 -pg 1 -lvl 2 -y 330 -defaultsOSRD
+preplace inst ADC_readout_buff_0 -pg 1 -lvl 1 -y 270 -defaultsOSRD
+preplace netloc Conn1 1 0 2 0J 20 480J
+preplace netloc mapper_0_o_out_4 1 3 1 1150J
+preplace netloc i_ADC_ch3_p_0_1 1 0 1 NJ
+preplace netloc i_ADC_ch1_p_0_1 1 0 1 NJ
+preplace netloc i_Lclk_n_0_1 1 0 1 NJ
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch2 1 2 1 850
+preplace netloc ADC_readout_buff_0_o_ADC_ch5_p 1 1 1 340
+preplace netloc ADC_readout_buff_0_o_ADC_ch1_p 1 1 1 420
+preplace netloc ADC_readout_buff_0_o_Lclk_p 1 1 3 470 40 N 40 1140
+preplace netloc AXI_ADC_v1_0_0_o_SCLK 1 2 2 NJ 220 NJ
+preplace netloc mapper_0_o_out_5 1 3 1 1150J
+preplace netloc i_ADC_ch1_n_0_1 1 0 1 NJ
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch3 1 2 1 850
+preplace netloc ADC_readout_buff_0_o_ADC_ch6_n 1 1 1 310
+preplace netloc ADC_readout_buff_0_o_ADC_ch2_n 1 1 1 390
+preplace netloc i_ADclk_p_0_1 1 0 1 N
+preplace netloc mapper_0_o_out_6 1 3 1 1150J
+preplace netloc i_ADC_ch4_n_0_1 1 0 1 NJ
+preplace netloc i_ADC_ch2_p_0_1 1 0 1 NJ
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch4 1 2 1 830
+preplace netloc mapper_0_o_out_7 1 3 1 1150J
+preplace netloc i_ADC_ch7_n_0_1 1 0 1 NJ
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch5 1 2 1 830
+preplace netloc ADC_readout_buff_0_o_ADC_ch6_p 1 1 1 320
+preplace netloc ADC_readout_buff_0_o_ADC_ch2_p 1 1 1 400
+preplace netloc AXI_ADC_v1_0_0_o_data_clk 1 2 2 840J 250 1130J
+preplace netloc i_ADC_ch7_p_0_1 1 0 1 NJ
+preplace netloc i_ADC_ch4_p_0_1 1 0 1 NJ
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch6 1 2 1 830
+preplace netloc ADC_readout_buff_0_o_ADC_ch7_n 1 1 1 290
+preplace netloc s00_axi_ctrl_aclk_1 1 0 2 NJ 540 NJ
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch7 1 2 1 830
+preplace netloc i_Lclk_p_0_1 1 0 1 N
+preplace netloc ADC_readout_buff_0_o_ADC_ch7_p 1 1 1 300
+preplace netloc AXI_ADC_v1_0_0_o_MOSI 1 2 2 NJ 200 NJ
+preplace netloc ADC_MISO_1 1 0 2 -10J 10 490J
+preplace netloc i_ADC_ch6_n_0_1 1 0 1 NJ
+preplace netloc i_ADC_ch5_n_0_1 1 0 1 NJ
+preplace netloc i_ADC_ch3_n_0_1 1 0 1 NJ
+preplace netloc i_ADC_ch0_n_0_1 1 0 1 NJ
+preplace netloc ADC_readout_buff_0_o_ADclk_n 1 1 1 460
+preplace netloc AXI_ADC_v1_0_0_o_lclk_debug 1 3 1 N
+preplace netloc ADC_readout_buff_0_o_ADC_ch4_n 1 1 1 350
+preplace netloc ADC_readout_buff_0_o_ADC_ch0_n 1 1 1 430
+preplace netloc AXI_ADC_v1_0_0_o_nCS 1 2 2 NJ 240 NJ
+preplace netloc mapper_0_o_out_0 1 3 1 1130J
+preplace netloc i_ADC_ch6_p_0_1 1 0 1 NJ
+preplace netloc ADC_readout_buff_0_o_ADC_ch3_n 1 1 1 370
+preplace netloc ADC_readout_buff_0_o_ADclk_p 1 1 3 500 0 N 0 N
+preplace netloc s00_axi_ctrl_aresetn_1 1 0 2 NJ 560 NJ
+preplace netloc mapper_0_o_out_1 1 3 1 1130J
+preplace netloc i_ADC_ch5_p_0_1 1 0 1 NJ
+preplace netloc i_ADC_ch0_p_0_1 1 0 1 NJ
+preplace netloc ADC_readout_buff_0_o_ADC_ch4_p 1 1 1 360
+preplace netloc ADC_readout_buff_0_o_ADC_ch0_p 1 1 3 450 30 NJ 30 1150J
+preplace netloc mapper_0_o_out_2 1 3 1 1130J
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch0 1 2 1 850
+preplace netloc ADC_readout_buff_0_o_ADC_ch5_n 1 1 1 330
+preplace netloc ADC_readout_buff_0_o_ADC_ch3_p 1 1 1 380
+preplace netloc ADC_readout_buff_0_o_ADC_ch1_n 1 1 1 410
+preplace netloc ADC_readout_buff_0_o_Lclk_n 1 1 1 440
+preplace netloc mapper_0_o_out_3 1 3 1 1150J
+preplace netloc i_ADC_ch2_n_0_1 1 0 1 NJ
+preplace netloc i_ADclk_n_0_1 1 0 1 NJ
+preplace netloc AXI_ADC_v1_0_0_o_data_out_ch1 1 2 1 850
+levelinfo -pg 1 -30 150 670 1000 1240 -top -20 -bot 630
+",
+}
+0

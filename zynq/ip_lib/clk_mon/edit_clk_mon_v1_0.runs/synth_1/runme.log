@@ -1,0 +1,360 @@
+
+*** Running vivado
+    with args -log clk_mon_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_mon_v1_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source clk_mon_v1_0.tcl -notrace
+Command: synth_design -top clk_mon_v1_0 -part xc7z015clg485-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15800 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 346.863 ; gain = 99.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'clk_mon_v1_0' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0.vhd:50]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'clk_mon_v1_0_S00_AXI' declared at 'C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:5' bound to instance 'clk_mon_v1_0_S00_AXI_inst' of component 'clk_mon_v1_0_S00_AXI' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'clk_mon_v1_0_S00_AXI' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:85]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:237]
+INFO: [Synth 8-226] default block is never used [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:371]
+	Parameter freq_clk_fix bound to: 100000000 - type: integer 
+	Parameter size_counter bound to: 15 - type: integer 
+	Parameter max_count bound to: 8191 - type: integer 
+INFO: [Synth 8-3491] module 'clk_monitor' declared at 'C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:36' bound to instance 'monitor_DTAP0' of component 'clk_monitor' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:406]
+INFO: [Synth 8-638] synthesizing module 'clk_monitor' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:50]
+	Parameter freq_clk_fix bound to: 100000000 - type: integer 
+	Parameter size_counter bound to: 15 - type: integer 
+	Parameter max_count bound to: 8191 - type: integer 
+WARNING: [Synth 8-614] signal 'i_nrst' is read in the process but is not in the sensitivity list [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'clk_monitor' (1#1) [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:50]
+	Parameter freq_clk_fix bound to: 100000000 - type: integer 
+	Parameter size_counter bound to: 15 - type: integer 
+	Parameter max_count bound to: 8191 - type: integer 
+INFO: [Synth 8-3491] module 'clk_monitor' declared at 'C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:36' bound to instance 'monitor_DTAP1' of component 'clk_monitor' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:414]
+	Parameter freq_clk_fix bound to: 100000000 - type: integer 
+	Parameter size_counter bound to: 15 - type: integer 
+	Parameter max_count bound to: 8191 - type: integer 
+INFO: [Synth 8-3491] module 'clk_monitor' declared at 'C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:36' bound to instance 'monitor_DTAP2' of component 'clk_monitor' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:422]
+	Parameter freq_clk_fix bound to: 100000000 - type: integer 
+	Parameter size_counter bound to: 15 - type: integer 
+	Parameter max_count bound to: 8191 - type: integer 
+INFO: [Synth 8-3491] module 'clk_monitor' declared at 'C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:36' bound to instance 'monitor_DTAP3' of component 'clk_monitor' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:430]
+	Parameter freq_clk_fix bound to: 100000000 - type: integer 
+	Parameter size_counter bound to: 15 - type: integer 
+	Parameter max_count bound to: 8191 - type: integer 
+INFO: [Synth 8-3491] module 'clk_monitor' declared at 'C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/src/clk_monitor.vhd:36' bound to instance 'monitor_DTAP4' of component 'clk_monitor' [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:438]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:235]
+INFO: [Synth 8-256] done synthesizing module 'clk_mon_v1_0_S00_AXI' (2#1) [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'clk_mon_v1_0' (3#1) [C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/clk_mon_1.0/hdl/clk_mon_v1_0.vhd:50]
+WARNING: [Synth 8-3331] design clk_mon_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design clk_mon_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design clk_mon_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design clk_mon_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design clk_mon_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design clk_mon_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 402.035 ; gain = 155.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 402.035 ; gain = 155.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 402.035 ; gain = 155.004
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 402.035 ; gain = 155.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     16 Bit       Adders := 5     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               16 Bit    Registers := 30    
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clk_monitor 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 6     
+	                1 Bit    Registers := 1     
+Module clk_mon_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design clk_mon_v1_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design clk_mon_v1_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design clk_mon_v1_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design clk_mon_v1_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design clk_mon_v1_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design clk_mon_v1_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_f_div_reg[14]' (FDCE) to 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_f_div_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_f_div_reg[14]' (FDCE) to 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_f_div_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_f_div_reg[14]' (FDCE) to 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_f_div_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_f_div_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_f_div_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_f_div_reg[15] )
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_f_div_reg[14]' (FDCE) to 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_f_div_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_f_div_reg[14]' (FDCE) to 'clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_f_div_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_f_div_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_f_div_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\clk_mon_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'clk_mon_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk_mon_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'clk_mon_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk_mon_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_f_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_f_reg[0]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_f_div_reg[15]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_f_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_f_reg[0]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_f_div_reg[15]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_f_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_f_reg[0]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_f_div_reg[15]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_f_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_f_reg[0]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_f_div_reg[15]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_f_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_f_reg[0]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_f_div_reg[15]) is unused and will be removed from module clk_mon_v1_0.
+WARNING: [Synth 8-3332] Sequential element (clk_mon_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module clk_mon_v1_0.
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_fix_reg[14]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_fix_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP0/cnt_fix_reg[15]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_fix_reg[14]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_fix_reg[14]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_fix_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP2/cnt_fix_reg[15]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_fix_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_fix_reg[14]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_fix_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP4/cnt_fix_reg[15]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_fix_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_fix_reg[14]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_fix_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP1/cnt_fix_reg[15]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_fix_reg[15]'
+INFO: [Synth 8-3886] merging instance 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_fix_reg[14]' (FDC) to 'clk_mon_v1_0_S00_AXI_insti_9/clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_fix_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (clk_mon_v1_0_S00_AXI_insti_9/\clk_mon_v1_0_S00_AXI_inst/monitor_DTAP3/cnt_fix_reg[15] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     6|
+|2     |CARRY4 |    60|
+|3     |LUT1   |     6|
+|4     |LUT2   |     4|
+|5     |LUT3   |    78|
+|6     |LUT4   |    43|
+|7     |LUT5   |   121|
+|8     |LUT6   |   198|
+|9     |FDCE   |   610|
+|10    |FDRE   |   172|
+|11    |FDSE   |     2|
+|12    |IBUF   |    52|
+|13    |OBUF   |    41|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------+---------------------+------+
+|      |Instance                    |Module               |Cells |
++------+----------------------------+---------------------+------+
+|1     |top                         |                     |  1393|
+|2     |  clk_mon_v1_0_S00_AXI_inst |clk_mon_v1_0_S00_AXI |  1294|
+|3     |    monitor_DTAP0           |clk_monitor          |   213|
+|4     |    monitor_DTAP1           |clk_monitor_0        |   214|
+|5     |    monitor_DTAP2           |clk_monitor_1        |   213|
+|6     |    monitor_DTAP3           |clk_monitor_2        |   213|
+|7     |    monitor_DTAP4           |clk_monitor_3        |   213|
++------+----------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 576.680 ; gain = 329.648
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 112 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 678.715 ; gain = 444.977
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/victo/Desktop/Vivados/ip_lib/clk_mon/edit_clk_mon_v1_0.runs/synth_1/clk_mon_v1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file clk_mon_v1_0_utilization_synth.rpt -pb clk_mon_v1_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 678.715 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 21 10:45:24 2023...

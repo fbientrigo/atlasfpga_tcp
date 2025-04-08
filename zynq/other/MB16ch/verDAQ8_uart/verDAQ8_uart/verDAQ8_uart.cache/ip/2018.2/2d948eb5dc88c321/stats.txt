@@ -1,0 +1,4 @@
+NumberHits:1
+Timestamp: Thu May 19 01:43:48 UTC 2022
+VLNV: xilinx.com:ip:fit_timer:2.0
+SynthRuntime: 27

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="zsys_dac_i2c_0_0_synth_1" LaunchDir="/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_dac_i2c_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_CPLD_ctrl_0_0_synth_1" LaunchDir="/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_CPLD_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zsys_clk_mon_0_0_synth_1" LaunchDir="/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_clk_mon_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

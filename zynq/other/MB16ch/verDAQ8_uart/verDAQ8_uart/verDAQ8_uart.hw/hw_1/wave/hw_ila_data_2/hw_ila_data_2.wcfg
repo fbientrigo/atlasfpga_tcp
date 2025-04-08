@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1513840fs"></ZoomStartTime>
+      <ZoomEndTime time="1600941fs"></ZoomEndTime>
+      <Cursor1Time time="1526000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe0_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe0_1</obj_property>
+      <obj_property name="ObjectShortName">probe0_1</obj_property>
+      <obj_property name="label">ROController_0_o_wr_fifo_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe1_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe1_1</obj_property>
+      <obj_property name="ObjectShortName">probe1_1</obj_property>
+      <obj_property name="label">ROController_0_o_busy</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe2_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe2_1</obj_property>
+      <obj_property name="ObjectShortName">probe2_1</obj_property>
+      <obj_property name="label">ROController_0_o_outfifo_wr_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe3_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
+      <obj_property name="label">ROController_0_o_ascii</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe4_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe4_1</obj_property>
+      <obj_property name="ObjectShortName">probe4_1</obj_property>
+      <obj_property name="label">probe_out5</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe5_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe5_1</obj_property>
+      <obj_property name="ObjectShortName">probe5_1</obj_property>
+      <obj_property name="label">ROController_0_o_rd_fifo_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe6_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe6_1</obj_property>
+      <obj_property name="ObjectShortName">probe6_1</obj_property>
+      <obj_property name="label">ROController_0_o_wr_fifo_clk</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe7_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe7_1</obj_property>
+      <obj_property name="ObjectShortName">probe7_1</obj_property>
+      <obj_property name="label">fifo8b_2_axis_0_o_fifo_full</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe8_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe8_1</obj_property>
+      <obj_property name="ObjectShortName">probe8_1</obj_property>
+      <obj_property name="label">fifo_generator_0_empty</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe9_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe9_1</obj_property>
+      <obj_property name="ObjectShortName">probe9_1</obj_property>
+      <obj_property name="label">fifo_generator_0_full</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe10_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe10_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe10_1[3:0]</obj_property>
+      <obj_property name="label">&lt;const0&gt;_3</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe11_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe11_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">probe11_1[11:0]</obj_property>
+      <obj_property name="label">fifo_generator_0_rd_data_count</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="zsys_i/system_ila_1/U0/probe12_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">zsys_i/system_ila_1/U0/probe12_1</obj_property>
+      <obj_property name="ObjectShortName">probe12_1</obj_property>
+      <obj_property name="label">xlslice_2_Dout_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

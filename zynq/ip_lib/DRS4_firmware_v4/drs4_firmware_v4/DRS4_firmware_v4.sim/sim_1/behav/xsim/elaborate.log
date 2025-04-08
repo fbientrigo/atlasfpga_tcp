@@ -1,0 +1,20 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 7f8a6422319a4166aae6bd9308952d81 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot drs4_tb_behav xil_defaultlib.drs4_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="10")(0,1)\]
+Compiling architecture behavioral of entity xil_defaultlib.drs4_firmware [drs4_firmware_default]
+Compiling architecture behavioral of entity xil_defaultlib.drs4_tb
+Built simulation snapshot drs4_tb_behav

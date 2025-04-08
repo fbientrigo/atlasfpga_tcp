@@ -1,0 +1,4 @@
+NumberHits:1
+Timestamp: Fri May 20 02:05:37 UTC 2022
+VLNV: xilinx.com:ip:xlslice:1.0
+SynthRuntime: 31

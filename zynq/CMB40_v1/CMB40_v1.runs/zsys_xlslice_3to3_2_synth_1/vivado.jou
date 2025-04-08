@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Mon Nov  4 01:03:49 2024
+# Process ID: 18536
+# Current directory: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_xlslice_3to3_2_synth_1
+# Command line: vivado.exe -log zsys_xlslice_3to3_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zsys_xlslice_3to3_2.tcl
+# Log file: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_xlslice_3to3_2_synth_1/zsys_xlslice_3to3_2.vds
+# Journal file: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_xlslice_3to3_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source zsys_xlslice_3to3_2.tcl -notrace

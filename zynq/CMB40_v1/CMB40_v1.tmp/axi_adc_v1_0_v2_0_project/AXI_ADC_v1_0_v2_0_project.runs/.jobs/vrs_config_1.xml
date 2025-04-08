@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_1" LaunchDir="c:/users/victo/desktop/vivados/cmb40_v1/cmb40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

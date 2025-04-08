@@ -1,0 +1,2566 @@
+
+*** Running vivado
+    with args -log DRS4_firmware_v3_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DRS4_firmware_v3_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source DRS4_firmware_v3_0.tcl -notrace
+Command: synth_design -top DRS4_firmware_v3_0 -part xc7z015clg485-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17428 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 347.180 ; gain = 99.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DRS4_firmware_v3_0' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0.vhd:65]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+WARNING: [Synth 8-5640] Port 'clk_trigger' is missing in component declaration [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0.vhd:68]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'DRS4_firmware_v3_0_S00_AXI' declared at 'c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:8' bound to instance 'DRS4_firmware_v2_0_S00_AXI_inst' of component 'DRS4_firmware_v3_0_S00_AXI' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'DRS4_firmware_v3_0_S00_AXI' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:107]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:311]
+INFO: [Synth 8-226] default block is never used [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:457]
+INFO: [Synth 8-3491] module 'drs4_firmware' declared at 'c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:33' bound to instance 'DRS4_firmware_comp' of component 'drs4_firmware' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:508]
+INFO: [Synth 8-638] synthesizing module 'drs4_firmware' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:65]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:119]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'LUT1_inst' to cell 'LUT1' [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:169]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+WARNING: [Synth 8-6014] Unused sequential element count_delay_reg was removed.  [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:354]
+WARNING: [Synth 8-6014] Unused sequential element count_transition_reg was removed.  [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element counter_block_mem_init_reg was removed.  [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:358]
+INFO: [Synth 8-5837] Detected dual asynchronous set and preset for register dwrite_o_reg in module drs4_firmware. This is not a recommended register style for Xilinx devices  [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:139]
+INFO: [Synth 8-256] done synthesizing module 'drs4_firmware' (1#1) [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/drs4_firmware_v5.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'DRS4_firmware_v3_0_S00_AXI' (2#1) [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:107]
+INFO: [Synth 8-256] done synthesizing module 'DRS4_firmware_v3_0' (3#1) [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0.vhd:65]
+WARNING: [Synth 8-3331] design drs4_firmware has unconnected port cell_counts[11]
+WARNING: [Synth 8-3331] design drs4_firmware has unconnected port i_PLLLCK
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port clk_trigger
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 414.328 ; gain = 167.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 414.328 ; gain = 167.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 414.328 ; gain = 167.121
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Synth 8-802] inferred FSM for state register 'drs4_states_reg' in module 'drs4_firmware'
+INFO: [Synth 8-5545] ROM "rsrload_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "srin_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "drs4_states" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter_init" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5587] ROM size for "o_dwrite_for_trigger" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "trigger_reset" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "o_nReset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "dwrite_set" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "denable_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5545] ROM "drs4_states" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "drs4_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "drs4_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "drs4_states" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "drs4_states" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-3936] Found unconnected internal register 'cell_counts_axi_reg' and it is trimmed from '13' to '12' bits. [c:/Users/victo/Desktop/Vivados/ip_lib/DRS4_firmware/src/DRS4_firmware_v2_0_S00_AXI.vhd:363]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                00000000001000000 |                            00000
+                rsr_init |                00000010000000000 |                            00001
+                    init |                00000000010000000 |                            00010
+              start_conf |                00000000000010000 |                            00011
+             finish_init |                00000000000100000 |                            00100
+                init_adq |                00000001000000000 |                            00101
+            wait_trigger |                01000000000000000 |                            00110
+           delay_trigger |                10000000000000000 |                            01000
+          rsr_load_state |                00010000000000000 |                            00111
+                  adq_p2 |                00100000000000000 |                            01001
+       adq_sampler_trans |                00001000000000000 |                            01010
+      start_full_readout |                00000100000000000 |                            01011
+                 fr_srin |                00000000000001000 |                            01100
+         fr_wait_trigger |                00000000000000100 |                            01101
+        fr_trigger_delay |                00000000000000001 |                            01110
+          fr_adquisition |                00000000000000010 |                            01111
+          fr_transition2 |                00000000100000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'drs4_states_reg' using encoding 'one-hot' in module 'drs4_firmware'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 463.000 ; gain = 215.793
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 6     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 33    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	  17 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 5     
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 8     
+	   2 Input     11 Bit        Muxes := 3     
+	  17 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	  17 Input     10 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	   3 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 22    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module drs4_firmware 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	  17 Input     32 Bit        Muxes := 1     
+	  17 Input     17 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 8     
+	   2 Input     11 Bit        Muxes := 3     
+	  17 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	  17 Input     10 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	  17 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   3 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 22    
+Module DRS4_firmware_v3_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "drs4_states" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "drs4_states" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "counter_init" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "drs4_states" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "O100" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "rsrload_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design drs4_firmware has unconnected port cell_counts[11]
+WARNING: [Synth 8-3331] design drs4_firmware has unconnected port i_PLLLCK
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port clk_trigger
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design DRS4_firmware_v3_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DRS4_firmware_v2_0_S00_AXI_inst/DRS4_firmware_comp/SROUT_count_reg[4] )
+INFO: [Synth 8-3886] merging instance 'DRS4_firmware_v2_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'DRS4_firmware_v2_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DRS4_firmware_v2_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'DRS4_firmware_v2_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'DRS4_firmware_v2_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DRS4_firmware_v2_0_S00_AXI_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/DRS4_firmware_comp/SROUT_count_reg[4]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/DRS4_firmware_comp/o_nReset_reg) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/cell_counts_axi_reg[11]) is unused and will be removed from module DRS4_firmware_v3_0.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DRS4_firmware_v2_0_S00_AXI_inst/DRS4_firmware_comp/dwrite_o_reg_C )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\DRS4_firmware_v2_0_S00_AXI_inst/DRS4_firmware_comp/A3_0_o_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/DRS4_firmware_comp/A3_0_o_reg[3]) is unused and will be removed from module DRS4_firmware_v3_0.
+WARNING: [Synth 8-3332] Sequential element (DRS4_firmware_v2_0_S00_AXI_inst/DRS4_firmware_comp/dwrite_o_reg_C) is unused and will be removed from module DRS4_firmware_v3_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |    46|
+|3     |LUT1   |  2050|
+|4     |LUT2   |   149|
+|5     |LUT3   |    90|
+|6     |LUT4   |    39|
+|7     |LUT5   |    58|
+|8     |LUT6   |   179|
+|9     |MUXF7  |    34|
+|10    |MUXF8  |    17|
+|11    |FDCE   |    54|
+|12    |FDPE   |     8|
+|13    |FDRE   |   234|
+|14    |FDSE   |    34|
+|15    |LDC    |     1|
+|16    |IBUF   |    50|
+|17    |OBUF   |    66|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------+---------------------------+------+
+|      |Instance                          |Module                     |Cells |
++------+----------------------------------+---------------------------+------+
+|1     |top                               |                           |  3112|
+|2     |  DRS4_firmware_v2_0_S00_AXI_inst |DRS4_firmware_v3_0_S00_AXI |  2993|
+|3     |    DRS4_firmware_comp            |drs4_firmware              |  2727|
++------+----------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 598.281 ; gain = 351.074
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 148 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'DRS4_firmware_v3_0' is not ideal for floorplanning, since the cellview 'drs4_firmware' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDC => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+151 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 680.531 ; gain = 446.312
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/drs4_firmware_v4_project/DRS4_firmware_v4_project.runs/synth_1/DRS4_firmware_v3_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file DRS4_firmware_v3_0_utilization_synth.rpt -pb DRS4_firmware_v3_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 680.531 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 26 14:55:17 2023...

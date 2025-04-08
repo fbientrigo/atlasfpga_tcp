@@ -1,0 +1,563 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Jun 30 14:25:39 2023
+# Process ID: 2792
+# Current directory: c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1
+# Command line: vivado.exe -log AXI_ADC_v1_0.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source AXI_ADC_v1_0.tcl -notrace
+# Log file: c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1/AXI_ADC_v1_0.vdi
+# Journal file: c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source AXI_ADC_v1_0.tcl -notrace
+Command: link_design -top AXI_ADC_v1_0 -part xc7z015clg485-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/victo/Desktop/Vivados/ip_lib/axi_adc_2.0/src/AXI_ADC_constrains.xdc]
+Finished Parsing XDC File [c:/Users/victo/Desktop/Vivados/ip_lib/axi_adc_2.0/src/AXI_ADC_constrains.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 578.781 ; gain = 339.379
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.612 . Memory (MB): peak = 592.523 ; gain = 13.742
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 106212bb7
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1146.914 ; gain = 554.391
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 51977d58
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 51977d58
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: bcdfc869
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 1 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: bcdfc869
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 190fa949c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1358df75b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1146.914 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: bd30b097
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.112 . Memory (MB): peak = 1146.914 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: bd30b097
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1146.914 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: bd30b097
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1146.914 ; gain = 568.133
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1/AXI_ADC_v1_0_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file AXI_ADC_v1_0_drc_opted.rpt -pb AXI_ADC_v1_0_drc_opted.pb -rpx AXI_ADC_v1_0_drc_opted.rpx
+Command: report_drc -file AXI_ADC_v1_0_drc_opted.rpt -pb AXI_ADC_v1_0_drc_opted.pb -rpx AXI_ADC_v1_0_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/victo/Desktop/Vivados/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file c:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.tmp/axi_adc_v1_0_v2_0_project/AXI_ADC_v1_0_v2_0_project.runs/impl_1/AXI_ADC_v1_0_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1146.914 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 931e4565
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1146.914 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1152.453 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (185) is greater than number of available sites (150).
+The following are banks with available pins: 
+ IO Group: 3 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 150 sites available on device, but needs 185 sites.
+	Term: s00_axi_ctrl_rdata[0]
+	Term: s00_axi_ctrl_rdata[1]
+	Term: s00_axi_ctrl_rdata[2]
+	Term: s00_axi_ctrl_rdata[3]
+	Term: s00_axi_ctrl_rdata[4]
+	Term: s00_axi_ctrl_rdata[5]
+	Term: s00_axi_ctrl_rdata[6]
+	Term: s00_axi_ctrl_rdata[7]
+	Term: s00_axi_ctrl_rdata[8]
+	Term: s00_axi_ctrl_rdata[9]
+	Term: s00_axi_ctrl_rdata[10]
+	Term: s00_axi_ctrl_rdata[11]
+	Term: s00_axi_ctrl_rdata[12]
+	Term: s00_axi_ctrl_rdata[13]
+	Term: s00_axi_ctrl_rdata[14]
+	Term: s00_axi_ctrl_rdata[15]
+	Term: s00_axi_ctrl_rdata[16]
+	Term: s00_axi_ctrl_rdata[17]
+	Term: s00_axi_ctrl_rdata[18]
+	Term: s00_axi_ctrl_rdata[19]
+	Term: s00_axi_ctrl_rdata[20]
+	Term: s00_axi_ctrl_rdata[21]
+	Term: s00_axi_ctrl_rdata[22]
+	Term: s00_axi_ctrl_rdata[23]
+	Term: s00_axi_ctrl_rdata[24]
+	Term: s00_axi_ctrl_rdata[25]
+	Term: s00_axi_ctrl_rdata[26]
+	Term: s00_axi_ctrl_rdata[27]
+	Term: s00_axi_ctrl_rdata[28]
+	Term: s00_axi_ctrl_rdata[29]
+	Term: s00_axi_ctrl_rdata[30]
+	Term: s00_axi_ctrl_rdata[31]
+	Term: o_data_out_ch0[0]
+	Term: o_data_out_ch0[1]
+	Term: o_data_out_ch0[2]
+	Term: o_data_out_ch0[3]
+	Term: o_data_out_ch0[4]
+	Term: o_data_out_ch0[5]
+	Term: o_data_out_ch0[6]
+	Term: o_data_out_ch0[7]
+	Term: o_data_out_ch0[8]
+	Term: o_data_out_ch0[9]
+	Term: o_data_out_ch0[10]
+	Term: o_data_out_ch0[11]
+	Term: o_data_out_ch0[12]
+	Term: o_data_out_ch0[13]
+	Term: o_data_out_ch0[14]
+	Term: o_data_out_ch0[15]
+	Term: o_data_out_ch1[0]
+	Term: o_data_out_ch1[1]
+	Term: o_data_out_ch1[2]
+	Term: o_data_out_ch1[3]
+	Term: o_data_out_ch1[4]
+	Term: o_data_out_ch1[5]
+	Term: o_data_out_ch1[6]
+	Term: o_data_out_ch1[7]
+	Term: o_data_out_ch1[8]
+	Term: o_data_out_ch1[9]
+	Term: o_data_out_ch1[10]
+	Term: o_data_out_ch1[11]
+	Term: o_data_out_ch1[12]
+	Term: o_data_out_ch1[13]
+	Term: o_data_out_ch1[14]
+	Term: o_data_out_ch1[15]
+	Term: o_data_out_ch2[0]
+	Term: o_data_out_ch2[1]
+	Term: o_data_out_ch2[2]
+	Term: o_data_out_ch2[3]
+	Term: o_data_out_ch2[4]
+	Term: o_data_out_ch2[5]
+	Term: o_data_out_ch2[6]
+	Term: o_data_out_ch2[7]
+	Term: o_data_out_ch2[8]
+	Term: o_data_out_ch2[9]
+	Term: o_data_out_ch2[10]
+	Term: o_data_out_ch2[11]
+	Term: o_data_out_ch2[12]
+	Term: o_data_out_ch2[13]
+	Term: o_data_out_ch2[14]
+	Term: o_data_out_ch2[15]
+	Term: o_data_out_ch3[0]
+	Term: o_data_out_ch3[1]
+	Term: o_data_out_ch3[2]
+	Term: o_data_out_ch3[3]
+	Term: o_data_out_ch3[4]
+	Term: o_data_out_ch3[5]
+	Term: o_data_out_ch3[6]
+	Term: o_data_out_ch3[7]
+	Term: o_data_out_ch3[8]
+	Term: o_data_out_ch3[9]
+	Term: o_data_out_ch3[10]
+	Term: o_data_out_ch3[11]
+	Term: o_data_out_ch3[12]
+	Term: o_data_out_ch3[13]
+	Term: o_data_out_ch3[14]
+	Term: o_data_out_ch3[15]
+	Term: o_data_out_ch4[0]
+	Term: o_data_out_ch4[1]
+	Term: o_data_out_ch4[2]
+	Term: o_data_out_ch4[3]
+	Term: o_data_out_ch4[4]
+	Term: o_data_out_ch4[5]
+	Term: o_data_out_ch4[6]
+	Term: o_data_out_ch4[7]
+	Term: o_data_out_ch4[8]
+	Term: o_data_out_ch4[9]
+	Term: o_data_out_ch4[10]
+	Term: o_data_out_ch4[11]
+	Term: o_data_out_ch4[12]
+	Term: o_data_out_ch4[13]
+	Term: o_data_out_ch4[14]
+	Term: o_data_out_ch4[15]
+	Term: o_data_out_ch5[0]
+	Term: o_data_out_ch5[1]
+	Term: o_data_out_ch5[2]
+	Term: o_data_out_ch5[3]
+	Term: o_data_out_ch5[4]
+	Term: o_data_out_ch5[5]
+	Term: o_data_out_ch5[6]
+	Term: o_data_out_ch5[7]
+	Term: o_data_out_ch5[8]
+	Term: o_data_out_ch5[9]
+	Term: o_data_out_ch5[10]
+	Term: o_data_out_ch5[11]
+	Term: o_data_out_ch5[12]
+	Term: o_data_out_ch5[13]
+	Term: o_data_out_ch5[14]
+	Term: o_data_out_ch5[15]
+	Term: o_data_out_ch6[0]
+	Term: o_data_out_ch6[1]
+	Term: o_data_out_ch6[2]
+	Term: o_data_out_ch6[3]
+	Term: o_data_out_ch6[4]
+	Term: o_data_out_ch6[5]
+	Term: o_data_out_ch6[6]
+	Term: o_data_out_ch6[7]
+	Term: o_data_out_ch6[8]
+	Term: o_data_out_ch6[9]
+	Term: o_data_out_ch6[10]
+	Term: o_data_out_ch6[11]
+	Term: o_data_out_ch6[12]
+	Term: o_data_out_ch6[13]
+	Term: o_data_out_ch6[14]
+	Term: o_data_out_ch6[15]
+	Term: o_data_out_ch7[0]
+	Term: o_data_out_ch7[1]
+	Term: o_data_out_ch7[2]
+	Term: o_data_out_ch7[3]
+	Term: o_data_out_ch7[4]
+	Term: o_data_out_ch7[5]
+	Term: o_data_out_ch7[6]
+	Term: o_data_out_ch7[7]
+	Term: o_data_out_ch7[8]
+	Term: o_data_out_ch7[9]
+	Term: o_data_out_ch7[10]
+	Term: o_data_out_ch7[11]
+	Term: o_data_out_ch7[12]
+	Term: o_data_out_ch7[13]
+	Term: o_data_out_ch7[14]
+	Term: o_data_out_ch7[15]
+	Term: o_debug[0]
+	Term: o_debug[1]
+	Term: o_debug[2]
+	Term: o_debug[3]
+	Term: o_debug[4]
+	Term: o_debug[5]
+	Term: o_debug[6]
+	Term: o_debug[7]
+	Term: o_debug[8]
+	Term: o_debug[9]
+	Term: o_debug[10]
+	Term: o_debug[11]
+	Term: s00_axi_ctrl_bresp[0]
+	Term: s00_axi_ctrl_bresp[1]
+	Term: s00_axi_ctrl_rresp[0]
+	Term: s00_axi_ctrl_rresp[1]
+	Term: o_ADC_nrst
+	Term: o_MOSI
+	Term: o_SCLK
+	Term: o_nCS
+	Term: s00_axi_ctrl_arready
+	Term: s00_axi_ctrl_awready
+	Term: s00_axi_ctrl_bvalid
+	Term: s00_axi_ctrl_rvalid
+	Term: s00_axi_ctrl_wready
+
+
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (251) is greater than number of available sites (150).
+The following are banks with available pins: 
+ IO Group: 3 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 150 sites available on device, but needs 185 sites.
+	Term: s00_axi_ctrl_rdata[0]
+	Term: s00_axi_ctrl_rdata[1]
+	Term: s00_axi_ctrl_rdata[2]
+	Term: s00_axi_ctrl_rdata[3]
+	Term: s00_axi_ctrl_rdata[4]
+	Term: s00_axi_ctrl_rdata[5]
+	Term: s00_axi_ctrl_rdata[6]
+	Term: s00_axi_ctrl_rdata[7]
+	Term: s00_axi_ctrl_rdata[8]
+	Term: s00_axi_ctrl_rdata[9]
+	Term: s00_axi_ctrl_rdata[10]
+	Term: s00_axi_ctrl_rdata[11]
+	Term: s00_axi_ctrl_rdata[12]
+	Term: s00_axi_ctrl_rdata[13]
+	Term: s00_axi_ctrl_rdata[14]
+	Term: s00_axi_ctrl_rdata[15]
+	Term: s00_axi_ctrl_rdata[16]
+	Term: s00_axi_ctrl_rdata[17]
+	Term: s00_axi_ctrl_rdata[18]
+	Term: s00_axi_ctrl_rdata[19]
+	Term: s00_axi_ctrl_rdata[20]
+	Term: s00_axi_ctrl_rdata[21]
+	Term: s00_axi_ctrl_rdata[22]
+	Term: s00_axi_ctrl_rdata[23]
+	Term: s00_axi_ctrl_rdata[24]
+	Term: s00_axi_ctrl_rdata[25]
+	Term: s00_axi_ctrl_rdata[26]
+	Term: s00_axi_ctrl_rdata[27]
+	Term: s00_axi_ctrl_rdata[28]
+	Term: s00_axi_ctrl_rdata[29]
+	Term: s00_axi_ctrl_rdata[30]
+	Term: s00_axi_ctrl_rdata[31]
+	Term: o_data_out_ch0[0]
+	Term: o_data_out_ch0[1]
+	Term: o_data_out_ch0[2]
+	Term: o_data_out_ch0[3]
+	Term: o_data_out_ch0[4]
+	Term: o_data_out_ch0[5]
+	Term: o_data_out_ch0[6]
+	Term: o_data_out_ch0[7]
+	Term: o_data_out_ch0[8]
+	Term: o_data_out_ch0[9]
+	Term: o_data_out_ch0[10]
+	Term: o_data_out_ch0[11]
+	Term: o_data_out_ch0[12]
+	Term: o_data_out_ch0[13]
+	Term: o_data_out_ch0[14]
+	Term: o_data_out_ch0[15]
+	Term: o_data_out_ch1[0]
+	Term: o_data_out_ch1[1]
+	Term: o_data_out_ch1[2]
+	Term: o_data_out_ch1[3]
+	Term: o_data_out_ch1[4]
+	Term: o_data_out_ch1[5]
+	Term: o_data_out_ch1[6]
+	Term: o_data_out_ch1[7]
+	Term: o_data_out_ch1[8]
+	Term: o_data_out_ch1[9]
+	Term: o_data_out_ch1[10]
+	Term: o_data_out_ch1[11]
+	Term: o_data_out_ch1[12]
+	Term: o_data_out_ch1[13]
+	Term: o_data_out_ch1[14]
+	Term: o_data_out_ch1[15]
+	Term: o_data_out_ch2[0]
+	Term: o_data_out_ch2[1]
+	Term: o_data_out_ch2[2]
+	Term: o_data_out_ch2[3]
+	Term: o_data_out_ch2[4]
+	Term: o_data_out_ch2[5]
+	Term: o_data_out_ch2[6]
+	Term: o_data_out_ch2[7]
+	Term: o_data_out_ch2[8]
+	Term: o_data_out_ch2[9]
+	Term: o_data_out_ch2[10]
+	Term: o_data_out_ch2[11]
+	Term: o_data_out_ch2[12]
+	Term: o_data_out_ch2[13]
+	Term: o_data_out_ch2[14]
+	Term: o_data_out_ch2[15]
+	Term: o_data_out_ch3[0]
+	Term: o_data_out_ch3[1]
+	Term: o_data_out_ch3[2]
+	Term: o_data_out_ch3[3]
+	Term: o_data_out_ch3[4]
+	Term: o_data_out_ch3[5]
+	Term: o_data_out_ch3[6]
+	Term: o_data_out_ch3[7]
+	Term: o_data_out_ch3[8]
+	Term: o_data_out_ch3[9]
+	Term: o_data_out_ch3[10]
+	Term: o_data_out_ch3[11]
+	Term: o_data_out_ch3[12]
+	Term: o_data_out_ch3[13]
+	Term: o_data_out_ch3[14]
+	Term: o_data_out_ch3[15]
+	Term: o_data_out_ch4[0]
+	Term: o_data_out_ch4[1]
+	Term: o_data_out_ch4[2]
+	Term: o_data_out_ch4[3]
+	Term: o_data_out_ch4[4]
+	Term: o_data_out_ch4[5]
+	Term: o_data_out_ch4[6]
+	Term: o_data_out_ch4[7]
+	Term: o_data_out_ch4[8]
+	Term: o_data_out_ch4[9]
+	Term: o_data_out_ch4[10]
+	Term: o_data_out_ch4[11]
+	Term: o_data_out_ch4[12]
+	Term: o_data_out_ch4[13]
+	Term: o_data_out_ch4[14]
+	Term: o_data_out_ch4[15]
+	Term: o_data_out_ch5[0]
+	Term: o_data_out_ch5[1]
+	Term: o_data_out_ch5[2]
+	Term: o_data_out_ch5[3]
+	Term: o_data_out_ch5[4]
+	Term: o_data_out_ch5[5]
+	Term: o_data_out_ch5[6]
+	Term: o_data_out_ch5[7]
+	Term: o_data_out_ch5[8]
+	Term: o_data_out_ch5[9]
+	Term: o_data_out_ch5[10]
+	Term: o_data_out_ch5[11]
+	Term: o_data_out_ch5[12]
+	Term: o_data_out_ch5[13]
+	Term: o_data_out_ch5[14]
+	Term: o_data_out_ch5[15]
+	Term: o_data_out_ch6[0]
+	Term: o_data_out_ch6[1]
+	Term: o_data_out_ch6[2]
+	Term: o_data_out_ch6[3]
+	Term: o_data_out_ch6[4]
+	Term: o_data_out_ch6[5]
+	Term: o_data_out_ch6[6]
+	Term: o_data_out_ch6[7]
+	Term: o_data_out_ch6[8]
+	Term: o_data_out_ch6[9]
+	Term: o_data_out_ch6[10]
+	Term: o_data_out_ch6[11]
+	Term: o_data_out_ch6[12]
+	Term: o_data_out_ch6[13]
+	Term: o_data_out_ch6[14]
+	Term: o_data_out_ch6[15]
+	Term: o_data_out_ch7[0]
+	Term: o_data_out_ch7[1]
+	Term: o_data_out_ch7[2]
+	Term: o_data_out_ch7[3]
+	Term: o_data_out_ch7[4]
+	Term: o_data_out_ch7[5]
+	Term: o_data_out_ch7[6]
+	Term: o_data_out_ch7[7]
+	Term: o_data_out_ch7[8]
+	Term: o_data_out_ch7[9]
+	Term: o_data_out_ch7[10]
+	Term: o_data_out_ch7[11]
+	Term: o_data_out_ch7[12]
+	Term: o_data_out_ch7[13]
+	Term: o_data_out_ch7[14]
+	Term: o_data_out_ch7[15]
+	Term: o_debug[0]
+	Term: o_debug[1]
+	Term: o_debug[2]
+	Term: o_debug[3]
+	Term: o_debug[4]
+	Term: o_debug[5]
+	Term: o_debug[6]
+	Term: o_debug[7]
+	Term: o_debug[8]
+	Term: o_debug[9]
+	Term: o_debug[10]
+	Term: o_debug[11]
+	Term: s00_axi_ctrl_bresp[0]
+	Term: s00_axi_ctrl_bresp[1]
+	Term: s00_axi_ctrl_rresp[0]
+	Term: s00_axi_ctrl_rresp[1]
+	Term: o_ADC_nrst
+	Term: o_MOSI
+	Term: o_SCLK
+	Term: o_nCS
+	Term: s00_axi_ctrl_arready
+	Term: s00_axi_ctrl_awready
+	Term: s00_axi_ctrl_bvalid
+	Term: s00_axi_ctrl_rvalid
+	Term: s00_axi_ctrl_wready
+
+
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 13 |    50 |     0 |                                                                        |                                          |        |        |        |     |
+| 34 |    50 |     0 |                                                                        |                                          |        |        |        |     |
+| 35 |    50 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |   150 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 3e346264
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1153.285 ; gain = 6.371
+Phase 1 Placer Initialization | Checksum: 3e346264
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1153.285 ; gain = 6.371
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 3e346264
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1153.285 ; gain = 6.371
+INFO: [Common 17-83] Releasing license: Implementation
+43 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 30 14:26:07 2023...

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../DRS4_firmware/src/drs4_firmware_v5.vhd" \
+"../../../../DRS4_firmware_v4.srcs/sim_1/imports/src/drs_tb.vhd" \
+
+# Do not sort compile order
+nosort

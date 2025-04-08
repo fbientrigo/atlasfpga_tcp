@@ -1,0 +1,926 @@
+
+*** Running vivado
+    with args -log zsys_AXI_ADC_v1_0_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source zsys_AXI_ADC_v1_0_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source zsys_AXI_ADC_v1_0_0_0.tcl -notrace
+Command: synth_design -top zsys_AXI_ADC_v1_0_0_0 -part xc7z015clg485-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7616 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 389.629 ; gain = 100.547
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'zsys_AXI_ADC_v1_0_0_0' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_v1_0_0_0/synth/zsys_AXI_ADC_v1_0_0_0.vhd:117]
+	Parameter C_S00_AXI_ctrl_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ctrl_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADC_N_bits bound to: 16 - type: integer 
+	Parameter FRAME_PATTERN bound to: 6'b111000 
+INFO: [Synth 8-3491] module 'AXI_ADC_v1_0' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0.vhd:5' bound to instance 'U0' of component 'AXI_ADC_v1_0' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_v1_0_0_0/synth/zsys_AXI_ADC_v1_0_0_0.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'AXI_ADC_v1_0' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0.vhd:98]
+	Parameter FRAME_PATTERN bound to: 6'b111000 
+	Parameter C_S00_AXI_ctrl_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ctrl_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADC_N_bits bound to: 16 - type: integer 
+	Parameter FRAME_PATTERN bound to: 6'b111000 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADC_N_bits bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'AXI_ADC_v1_0_S00_AXI_ctrl' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:11' bound to instance 'AXI_ADC_v1_0_S00_AXI_ctrl_inst' of component 'AXI_ADC_v1_0_S00_AXI_ctrl' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'AXI_ADC_v1_0_S00_AXI_ctrl' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:141]
+	Parameter FRAME_PATTERN bound to: 6'b111000 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADC_N_bits bound to: 16 - type: integer 
+	Parameter FRAME_PATTERN bound to: 6'b111000 
+INFO: [Synth 8-3491] module 'ADC_readout_2' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:46' bound to instance 'Inst_ADC_readout_12bit' of component 'ADC_readout_2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'ADC_readout_2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:87]
+	Parameter FRAME_PATTERN bound to: 6'b111000 
+INFO: [Synth 8-113] binding component instance 'bufio_lclk_sys' to cell 'BUFIO' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:238]
+	Parameter BUFR_DIVIDE bound to: 1 - type: string 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-113] binding component instance 'bufr_ad_n' to cell 'BUFR' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:245]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes0_odd' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:264]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes0_even' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:301]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes1_p' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:338]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes1_n' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:375]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes2_p' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:413]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes2_n' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:450]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes3_p' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:486]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes3_n' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:523]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes4_p' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:560]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes4_n' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:597]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes5_p' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:633]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes5_n' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:670]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes6_p' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:707]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes6_n' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:744]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes7_p' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:780]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes7_n' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:817]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: TRUE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes_frame_p_odd' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:854]
+	Parameter DATA_RATE bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: NONE - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'iserdes_frame_n_even' to cell 'ISERDESE2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:892]
+INFO: [Synth 8-256] done synthesizing module 'ADC_readout_2' (1#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_readout_2.vhd:87]
+INFO: [Synth 8-3491] module 'ADC_ctrl' declared at 'c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_ctrl.vhd:35' bound to instance 'Inst_ADC' of component 'ADC_ctrl' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:390]
+INFO: [Synth 8-638] synthesizing module 'ADC_ctrl' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_ctrl.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'SPI_core_v2' [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/SPI_core_v2.vhd:72]
+	Parameter CLK_frequency bound to: 100000000 - type: integer 
+	Parameter BAUD bound to: 5000000 - type: integer 
+	Parameter N_slaves bound to: 1 - type: integer 
+	Parameter NBytes bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SPI_core_v2' (2#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/SPI_core_v2.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ADC_ctrl' (3#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/ADC_ctrl.vhd:61]
+INFO: [Synth 8-226] default block is never used [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:517]
+INFO: [Synth 8-226] default block is never used [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:665]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:515]
+WARNING: [Synth 8-6014] Unused sequential element cntr_rst_50_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:562]
+WARNING: [Synth 8-6014] Unused sequential element cntr_rst_16_reg was removed.  [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:563]
+INFO: [Synth 8-256] done synthesizing module 'AXI_ADC_v1_0_S00_AXI_ctrl' (4#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0_S00_AXI_ctrl.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'AXI_ADC_v1_0' (5#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/AXI_ADC_v1_0.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'zsys_AXI_ADC_v1_0_0_0' (6#1) [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_v1_0_0_0/synth/zsys_AXI_ADC_v1_0_0_0.vhd:117]
+WARNING: [Synth 8-3331] design ADC_readout_2 has unconnected port i_Lclk_n
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0_S00_AXI_ctrl has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0_S00_AXI_ctrl has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0_S00_AXI_ctrl has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0_S00_AXI_ctrl has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0_S00_AXI_ctrl has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0_S00_AXI_ctrl has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 446.230 ; gain = 157.148
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 446.230 ; gain = 157.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 446.230 ; gain = 157.148
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z015clg485-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_v1_0_0_0/src/AXI_ADC_constrains.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_v1_0_0_0/src/AXI_ADC_constrains.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_AXI_ADC_v1_0_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_AXI_ADC_v1_0_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 793.449 ; gain = 0.352
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 793.449 ; gain = 504.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 793.449 ; gain = 504.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_AXI_ADC_v1_0_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 793.449 ; gain = 504.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'sm_master_reg' in module 'SPI_core_v2'
+INFO: [Synth 8-5544] ROM "o_data_from" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nCS_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "free_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "core_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sm_master" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 st_idle |                               00 |                              000
+                st_start |                               01 |                              001
+            st_write_add |                               10 |                              010
+                 st_stop |                               11 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sm_master_reg' using encoding 'sequential' in module 'SPI_core_v2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 793.449 ; gain = 504.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ADC_readout_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 4     
++---Registers : 
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module SPI_core_v2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+Module ADC_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 9     
+Module AXI_ADC_v1_0_S00_AXI_ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3936] Found unconnected internal register 'AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/core_state_reg' and it is trimmed from '2' to '1' bits. [c:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/sources_1/bd/zsys/ipshared/792f/src/SPI_core_v2.vhd:189]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0 has unconnected port i_Lclk_n
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0 has unconnected port s00_axi_ctrl_awprot[2]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0 has unconnected port s00_axi_ctrl_awprot[1]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0 has unconnected port s00_axi_ctrl_awprot[0]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0 has unconnected port s00_axi_ctrl_arprot[2]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0 has unconnected port s00_axi_ctrl_arprot[1]
+WARNING: [Synth 8-3331] design AXI_ADC_v1_0 has unconnected port s00_axi_ctrl_arprot[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\AXI_ADC_v1_0_S00_AXI_ctrl_inst/aw_en_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/adc_action_ctrl_state_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[27]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[28]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[30]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[29]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[21]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[22]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[19]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[20]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[25]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[26]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[23]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[24]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[9]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[10]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[11]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[5]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[6]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[7]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[8]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[16]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[17]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[18]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[12]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[13]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[14]' (FDC) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[15] )
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_rresp_reg[0]' (FDRE) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_bresp_reg[0]' (FDRE) to 'U0/AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/spi_core/scl_cntr_reg[15]) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_awaddr_reg[1]) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_awaddr_reg[0]) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/Inst_ADC/adc_action_ctrl_state_reg[1]) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/aw_en_reg) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_bresp_reg[1]) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_araddr_reg[1]) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_araddr_reg[0]) is unused and will be removed from module AXI_ADC_v1_0.
+WARNING: [Synth 8-3332] Sequential element (AXI_ADC_v1_0_S00_AXI_ctrl_inst/axi_rresp_reg[1]) is unused and will be removed from module AXI_ADC_v1_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 793.449 ; gain = 504.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 793.449 ; gain = 504.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 793.449 ; gain = 504.367
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFIO       |     1|
+|2     |BUFR        |     1|
+|3     |ISERDESE2   |     9|
+|4     |ISERDESE2_1 |     9|
+|5     |LUT1        |     6|
+|6     |LUT2        |    15|
+|7     |LUT3        |    11|
+|8     |LUT4        |    49|
+|9     |LUT5        |    22|
+|10    |LUT6        |    75|
+|11    |MUXF7       |     3|
+|12    |MUXF8       |     1|
+|13    |FDCE        |    43|
+|14    |FDPE        |     3|
+|15    |FDRE        |   265|
+|16    |FDSE        |     2|
++------+------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+--------------------------+------+
+|      |Instance                           |Module                    |Cells |
++------+-----------------------------------+--------------------------+------+
+|1     |top                                |                          |   515|
+|2     |  U0                               |AXI_ADC_v1_0              |   515|
+|3     |    AXI_ADC_v1_0_S00_AXI_ctrl_inst |AXI_ADC_v1_0_S00_AXI_ctrl |   513|
+|4     |      Inst_ADC                     |ADC_ctrl                  |   217|
+|5     |        spi_core                   |SPI_core_v2               |   139|
+|6     |      Inst_ADC_readout_12bit       |ADC_readout_2             |    60|
++------+-----------------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 813.660 ; gain = 524.578
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 813.660 ; gain = 177.359
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 813.660 ; gain = 524.578
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 18 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+90 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 815.340 ; gain = 534.613
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.runs/zsys_AXI_ADC_v1_0_0_0_synth_1/zsys_AXI_ADC_v1_0_0_0.dcp' has been generated.

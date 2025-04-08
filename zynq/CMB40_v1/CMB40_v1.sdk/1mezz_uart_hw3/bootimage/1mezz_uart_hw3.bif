@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\victo\Desktop\Vivados\TE0715-test_board\test_board\prebuilt\software\03_15_2i\zynq_fsbl.elf
+	C:\Users\victo\Desktop\Vivados\verDAQ8_uart\verDAQ8_uart.sdk\zsys_wrapper_hw_platform_3\zsys_wrapper.bit
+	C:\Users\victo\Desktop\Vivados\verDAQ8_uart\verDAQ8_uart.sdk\1mezz_uart_hw3\Debug\1mezz_uart_hw3.elf
+}
