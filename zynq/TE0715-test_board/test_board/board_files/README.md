@@ -1,1 +1,0 @@
-Copy this files on Xilinx\Vivado\2018.2\data\boards\board_files

@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="zsys_axi_dma_0_0_synth_1" LaunchDir="C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.runs/zsys_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="zsys_axi_smc_0_synth_1" LaunchDir="C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.runs/zsys_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="zsys_auto_cc_0_synth_1" LaunchDir="C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.runs/zsys_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="zsys_auto_pc_0_synth_1" LaunchDir="C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.runs/zsys_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-</Runs>
-

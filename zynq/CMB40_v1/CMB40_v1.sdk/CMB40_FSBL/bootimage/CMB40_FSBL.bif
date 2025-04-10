@@ -1,7 +1,0 @@
-//arch = zynq; split = false; format = BIN
-the_ROM_image:
-{
-	[bootloader]C:\Users\osotosan\2024_10_25_CMB_editable\CMB40_v1\CMB40_v1.sdk\CMB40_FSBL\Debug\CMB40_FSBL.elf
-	C:\Users\osotosan\2024_10_25_CMB_editable\CMB40_v1\CMB40_v1.sdk\zsys_wrapper_hw_platform_5\zsys_wrapper.bit
-	C:\Users\osotosan\2024_10_25_CMB_editable\CMB40_v1\CMB40_v1.sdk\CMB40_v3\Debug\CMB40_v3.elf
-}

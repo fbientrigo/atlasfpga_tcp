@@ -1,8 +1,0 @@
-12:22:38 **** Auto Build of configuration Debug for project CMB40_v1 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: Nothing to be done for 'main-build'.
-
-12:22:39 Build Finished (took 291ms)
-

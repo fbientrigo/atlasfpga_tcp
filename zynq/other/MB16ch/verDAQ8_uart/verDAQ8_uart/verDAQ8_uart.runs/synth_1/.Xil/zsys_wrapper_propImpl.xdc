@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/victo/Desktop/Vivados/verDAQ8_uart/verDAQ8_uart.srcs/constrs_1/new/timing.xdc rfile:../../../verDAQ8_uart.srcs/constrs_1/new/timing.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
-create_generated_clock -name data_clk -source [get_ports {B0_LCLK_P}] -edges {2 8 14} -add -master_clock Lclk0 [get_pins -hier -filter {NAME =~ */bufr_ad_n/O}]
-set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
-create_generated_clock -name data_clk_G -source [get_pins -hier -filter {NAME =~ */bufr_ad_n/O}] -edges {2 8 14} -add -master_clock Lclk0 [get_pins -hier -filter {NAME =~ */data_clk_bufg/BUFG_O*}]

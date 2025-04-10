@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../verdaq8_uart_trigger.srcs/sources_1/imports/ADC_sources/trigger_logic.vhd" \
-"../../../../verdaq8_uart_trigger.srcs/sim_1/new/trigg_tb.vhd" \
-
-# Do not sort compile order
-nosort

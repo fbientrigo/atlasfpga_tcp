@@ -1,7 +1,0 @@
-Running: xsim.dir/DRS4_firmware_v3_0_S00_AXI_behav/xsimk.exe -simmode gui -wdb DRS4_firmware_v3_0_S00_AXI_behav.wdb -simrunnum 0 -socket 55558
-Design successfully loaded
-Design Loading Memory Usage: 6272 KB (Peak: 6272 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 6924 KB (Peak: 6924 KB)
-Simulation CPU Usage: 62 ms

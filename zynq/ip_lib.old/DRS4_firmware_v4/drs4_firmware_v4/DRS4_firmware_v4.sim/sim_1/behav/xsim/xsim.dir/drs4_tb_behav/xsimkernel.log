@@ -1,7 +1,0 @@
-Running: xsim.dir/drs4_tb_behav/xsimk.exe -simmode gui -wdb drs4_tb_behav.wdb -simrunnum 0 -socket 56430
-Design successfully loaded
-Design Loading Memory Usage: 7288 KB (Peak: 7288 KB)
-Design Loading CPU Usage: 77 ms
-Simulation completed
-Simulation Memory Usage: 8864 KB (Peak: 8864 KB)
-Simulation CPU Usage: 140 ms

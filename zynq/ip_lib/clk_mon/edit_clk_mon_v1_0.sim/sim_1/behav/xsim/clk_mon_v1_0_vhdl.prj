@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../clk_mon_1.0/hdl/clk_mon_v1_0_S00_AXI.vhd" \
-"../../../../clk_mon_1.0/src/clk_monitor.vhd" \
-"../../../../clk_mon_1.0/hdl/clk_mon_v1_0.vhd" \
-
-# Do not sort compile order
-nosort

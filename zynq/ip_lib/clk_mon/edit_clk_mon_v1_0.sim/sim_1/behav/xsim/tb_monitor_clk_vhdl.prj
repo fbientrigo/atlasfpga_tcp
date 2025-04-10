@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../clk_mon_1.0/src/clk_monitor.vhd" \
-"../../../../edit_clk_mon_v1_0.srcs/sim_1/imports/monitor_clk/tb_monitor_clk.vhd" \
-
-# Do not sort compile order
-nosort
