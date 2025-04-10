@@ -32,7 +32,7 @@
 
 //#include "platform_config.h"
 //#define UARTLITE_DEVICE_ID	XPAR_UARTLITE_0_DEVICE_ID
-#define TEST_BUFFER_SIZE 1024 	//tamaño del buffer interno es 16 byte
+#define TEST_BUFFER_SIZE 1024 	//tamaï¿½o del buffer interno es 16 byte
 #define dac_baseaddr XPAR_DAC_I2C_0_S00_AXI_BASEADDR
 
 //#define GPIO_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
@@ -78,7 +78,7 @@ _Bool user_VETO = FALSE;
 [1]		: CAL+ para obtener 1.3[V]
 [2]		: CAL- para obtener 1.3[V]
 [3]		:ADC_VCM (disconnected)
-[4]				:BIAS 0.7 [V] ¿?
+[4]				:BIAS 0.7 [V] ï¿½?
 [5]		2456	:ROF seteado en 1.5 [V] 2000 gives 1.25V
 */
 u32 dac_values[8] = \

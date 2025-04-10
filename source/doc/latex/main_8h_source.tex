@@ -1,0 +1,119 @@
+\doxysection{main.\+h}
+\hypertarget{main_8h_source}{}\label{main_8h_source}\index{base\_code/MB40ch\_wUART/src/main.h@{base\_code/MB40ch\_wUART/src/main.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ main.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Apr\ 22,\ 2020}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Rimsky}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_MAIN\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_MAIN\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}xparameters.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}xil\_cache.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\#include\ "{}xuartlite.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}xuartps\_hw.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}xuartps.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}xil\_printf.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}sleep.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}xgpio.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\#include\ "{}AXI\_DAC.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}dac\_i2c.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}ADC\_driver.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\#include\ "{}xintc.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}xstatus.h"{}}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\#include\ "{}DRS4\_firmware.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}DRS4\_driver.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}gpio\_handler.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}xaxidma\_controller.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}tcp\_com.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}CPLD\_driver.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}clk\_mon.h"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\#include\ "{}platform\_config.h"{}}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\#define\ UARTLITE\_DEVICE\_ID\ \ \ \ XPAR\_UARTLITE\_0\_DEVICE\_ID}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ TEST\_BUFFER\_SIZE\ 1024\ \ \ }\textcolor{comment}{//tamaño del\ buffer\ interno\ es\ 16\ byte}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ dac\_baseaddr\ XPAR\_DAC\_I2C\_0\_S00\_AXI\_BASEADDR}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\#define\ GPIO\_DEVICE\_ID\ \ XPAR\_GPIO\_0\_DEVICE\_ID}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/**************************\ Function\ Prototypes\ ******************************/}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ UartLitePolledExample(u16\ DeviceId);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ UartLiteInit(u16\ DeviceId);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ test\_routine\_1(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ test\_routine\_adc(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ loop\_routine(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ test\_routine\_3\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ setup\_DACs(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ setup\_system\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00049\ \textcolor{comment}{//static\ XUartLite\ UartLite;\ \ \ \ \ \ \ \ /*\ Instance\ of\ the\ UartLite\ Device\ */}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//static\ XIntc\ InterruptController;\ /*\ Instance\ of\ the\ Interrupt\ Controller\ Device\ */}}
+\DoxyCodeLine{00051\ XUartPs\ UartPs\ \ ;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ u8\ SendBuffer[TEST\_BUFFER\_SIZE];\ \ \ \ \textcolor{comment}{/*\ Buffer\ for\ Transmitting\ Data\ */}}
+\DoxyCodeLine{00054\ u8\ RecvBuffer[TEST\_BUFFER\_SIZE];\ \ \ \ \textcolor{comment}{/*\ Buffer\ for\ Receiving\ Data\ */}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ u32\ UART\_BAUD\_RATE\ =\ 115200;\ \ \ \ \ \ \ \ \textcolor{comment}{//one\ can\ set\ BAUD\ RATE\ as\ desired\ inside\ the\ allowed\ range}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{int}\ dac0,\ dac1,\ dac2,\ dac3;}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ set\_dac\ =\ FALSE;}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{int}\ get\_dac\ =\ FALSE;}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ routine\_dac\ =\ FALSE;}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{int}\ routine\_adc\ =\ FALSE;}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{int}\ adc\_config\ =\ FALSE;}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\ adc\_send\_burst\ =\ FALSE;}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{int}\ adc\_read\_last\ =\ FALSE;}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{int}\ trigger\ =\ FALSE;}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{int}\ trigger\_counter\ =\ 0;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{int}\ dac\_ch\ =\ 0;}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{int}\ dac\_val\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \_Bool\ user\_VETO\ =\ FALSE;}
+\DoxyCodeLine{00073\ \textcolor{comment}{//u32\ states\_vector,stop\_cell;}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//dac\_values}}
+\DoxyCodeLine{00077\ \textcolor{comment}{[0]\ \ \ \ \ :\ Vcc/2\ =\ 1.65[V],\ Vcm\ en\ el\ amplificador}}
+\DoxyCodeLine{00078\ \textcolor{comment}{[1]\ \ \ \ \ :\ CAL+\ para\ obtener\ 1.3[V]}}
+\DoxyCodeLine{00079\ \textcolor{comment}{[2]\ \ \ \ \ :\ CAL-\/\ para\ obtener\ 1.3[V]}}
+\DoxyCodeLine{00080\ \textcolor{comment}{[3]\ \ \ \ \ :ADC\_VCM\ (disconnected)}}
+\DoxyCodeLine{00081\ \textcolor{comment}{[4]\ \ \ \ \ \ \ \ \ \ \ \ \ :BIAS\ 0.7\ [V]\ ¿?}}
+\DoxyCodeLine{00082\ \textcolor{comment}{[5]\ \ \ \ \ 2456\ \ \ \ :ROF\ seteado\ en\ 1.5\ [V]\ 2000\ gives\ 1.25V}}
+\DoxyCodeLine{00083\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00084\ u32\ dac\_values[8]\ =\ \(\backslash\)}
+\DoxyCodeLine{00085\ \{\ 1351,\ \(\backslash\)}
+\DoxyCodeLine{00086\ \ 0,\ \(\backslash\)}
+\DoxyCodeLine{00087\ \ 1064,\ \ \(\backslash\)}
+\DoxyCodeLine{00088\ \ 0,\ \(\backslash\)}
+\DoxyCodeLine{00089\ \ 1064,\ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{00090\ \ 1024,\ \ \(\backslash\)}
+\DoxyCodeLine{00091\ \ 1024,\ \(\backslash\)}
+\DoxyCodeLine{00092\ \ 573\};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ u32\ trigger\_values[8]\ =\ \(\backslash\)}
+\DoxyCodeLine{00096\ \{\ 1400,\ \(\backslash\)}
+\DoxyCodeLine{00097\ \ \ \ \ 1400,\ \ \ \(\backslash\)}
+\DoxyCodeLine{00098\ \ \ \ \ 1400,\ \ \ \(\backslash\)}
+\DoxyCodeLine{00099\ \ \ \ \ 1400,\ \ \ \(\backslash\)}
+\DoxyCodeLine{00100\ \ \ \ \ 1400,\ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{00101\ \ \ \ \ 1400,\ \ \ \(\backslash\)}
+\DoxyCodeLine{00102\ \ \ \ \ 1400,\ \ \ \(\backslash\)}
+\DoxyCodeLine{00103\ \ \ \ \ 1400\ \ \ \ \};}
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ bin(\textcolor{keywordtype}{unsigned}\ n)}
+\DoxyCodeLine{00105\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ >\ 1)}
+\DoxyCodeLine{00107\ \ \ \ \ bin(n>>1);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ xil\_printf(\textcolor{stringliteral}{"{}\%d"{}},\ n\ \&\ 1);}
+\DoxyCodeLine{00110\ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{float}\ DRS4\_DTAP\_meas(\textcolor{keywordtype}{int}\ sel\_mezz);}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_MAIN\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

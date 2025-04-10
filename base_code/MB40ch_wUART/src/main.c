@@ -6,7 +6,6 @@
 /* defined by each RAW mode application */
 
 
-
 //void print_app_header();
 
 void tcp_fasttmr(void);

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
+  <compounddef id="dir_3d295d85edf358891fe3228ae0776786" kind="dir">
+    <compoundname>base_code</compoundname>
+    <innerdir refid="dir_e3b0b6a4ce4eb39769f9dcb8d926076b">base_code/MB40ch_wUART</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="base_code/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
+  <compounddef id="dir_b074a0c093dd51367fbd01be4fbf72af" kind="dir">
+    <compoundname>base_code/MB40ch_wUART/src</compoundname>
+    <innerfile refid="_a_d_c__driver_8c">ADC_driver.c</innerfile>
+    <innerfile refid="_a_d_c__driver_8h">ADC_driver.h</innerfile>
+    <innerfile refid="_c_p_l_d__driver_8c">CPLD_driver.c</innerfile>
+    <innerfile refid="_c_p_l_d__driver_8h">CPLD_driver.h</innerfile>
+    <innerfile refid="_d_r_s4__driver_8c">DRS4_driver.c</innerfile>
+    <innerfile refid="_d_r_s4__driver_8h">DRS4_driver.h</innerfile>
+    <innerfile refid="echo_8c">echo.c</innerfile>
+    <innerfile refid="gpio__handler_8c">gpio_handler.c</innerfile>
+    <innerfile refid="gpio__handler_8h">gpio_handler.h</innerfile>
+    <innerfile refid="i2c__access_8c">i2c_access.c</innerfile>
+    <innerfile refid="iic__phyreset_8c">iic_phyreset.c</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <innerfile refid="main_8h">main.h</innerfile>
+    <innerfile refid="platform_8c">platform.c</innerfile>
+    <innerfile refid="platform_8h">platform.h</innerfile>
+    <innerfile refid="platform__config_8h">platform_config.h</innerfile>
+    <innerfile refid="platform__mb_8c">platform_mb.c</innerfile>
+    <innerfile refid="platform__ppc_8c">platform_ppc.c</innerfile>
+    <innerfile refid="platform__zynq_8c">platform_zynq.c</innerfile>
+    <innerfile refid="platform__zynqmp_8c">platform_zynqmp.c</innerfile>
+    <innerfile refid="sfp_8c">sfp.c</innerfile>
+    <innerfile refid="si5324_8c">si5324.c</innerfile>
+    <innerfile refid="tcp__com_8c">tcp_com.c</innerfile>
+    <innerfile refid="tcp__com_8h">tcp_com.h</innerfile>
+    <innerfile refid="xaxidma__controller_8c">xaxidma_controller.c</innerfile>
+    <innerfile refid="xaxidma__controller_8h">xaxidma_controller.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="base_code/MB40ch_wUART/src/"/>
+  </compounddef>
+</doxygen>

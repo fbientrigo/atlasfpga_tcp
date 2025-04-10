@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
+  <compounddef id="sfp_8c" kind="file" language="C++">
+    <compoundname>sfp.c</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Copyright<sp/>(C)<sp/>2013<sp/>-<sp/>2014<sp/>Xilinx,<sp/>Inc.<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>Use<sp/>of<sp/>the<sp/>Software<sp/>is<sp/>limited<sp/>solely<sp/>to<sp/>applications:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/>(a)<sp/>running<sp/>on<sp/>a<sp/>Xilinx<sp/>device,<sp/>or</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/>(b)<sp/>that<sp/>interact<sp/>with<sp/>a<sp/>Xilinx<sp/>device<sp/>through<sp/>a<sp/>bus<sp/>or<sp/>interconnect.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>XILINX<sp/><sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>Except<sp/>as<sp/>contained<sp/>in<sp/>this<sp/>notice,<sp/>the<sp/>name<sp/>of<sp/>the<sp/>Xilinx<sp/>shall<sp/>not<sp/>be<sp/>used</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>in<sp/>advertising<sp/>or<sp/>otherwise<sp/>to<sp/>promote<sp/>the<sp/>sale,<sp/>use<sp/>or<sp/>other<sp/>dealings<sp/>in</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>this<sp/>Software<sp/>without<sp/>prior<sp/>written<sp/>authorization<sp/>from<sp/>Xilinx.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*****************************<sp/>Include<sp/>Files<sp/>*********************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xparameters.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(__arm__)<sp/>&amp;&amp;<sp/>!defined<sp/>(ARMR5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>XPAR_GIGE_PCS_PMA_SGMII_CORE_PRESENT<sp/>==<sp/>1<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>XPAR_GIGE_PCS_PMA_1000BASEX_CORE_PRESENT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xil_printf.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xiicps.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sleep.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xscugic.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/**************************<sp/>Constant<sp/>Definitions<sp/>*****************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IIC_SLAVE_ADDR<sp/><sp/><sp/><sp/><sp/><sp/>0x56</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IIC_MUX_ADDRESS<sp/><sp/><sp/><sp/><sp/>0x74</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IIC_CHANNEL_ADDRESS<sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XIIC<sp/><sp/><sp/><sp/>XIicPs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTC<sp/><sp/><sp/><sp/>XScuGic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/****************************<sp/>Type<sp/>Definitions<sp/>*******************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>XIIC<sp/>I2cInstance;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>INTC<sp/>IntcInstance;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>u8<sp/>TransmitComplete;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Flag<sp/>to<sp/>check<sp/>completion<sp/>of<sp/>Transmission<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>u8<sp/>ReceiveComplete;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Flag<sp/>to<sp/>check<sp/>completion<sp/>of<sp/>Reception<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>u32<sp/>TotalErrorCount;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/>XIIC_LIB;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*****************<sp/>Macros<sp/>(Inline<sp/>Functions)<sp/>Definitions<sp/>*********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/**************************<sp/>Function<sp/>Prototypes<sp/>******************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>I2cWriteData(XIIC_LIB<sp/>*I2cLibPtr,<sp/>u8<sp/>*WrBuffer,<sp/>u16<sp/>ByteCount,<sp/>u16<sp/>SlaveAddr);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>I2cReadData(XIIC_LIB<sp/>*I2cLibPtr,<sp/>u8<sp/>*RdBuffer,<sp/>u16<sp/>ByteCount,<sp/>u16<sp/>SlaveAddr);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>I2cPhyWrite(XIIC_LIB<sp/>*I2cLibPtr,<sp/>u8<sp/>PhyAddr,<sp/>u8<sp/>Reg,<sp/>u16<sp/>Data,<sp/>u16<sp/>SlaveAddr);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>I2cPhyRead(XIIC_LIB<sp/>*I2cLibPtr,<sp/>u8<sp/>PhyAddr,<sp/>u8<sp/>Reg,<sp/>u16<sp/>*Data,<sp/>u16<sp/>SlaveAddr);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>I2cSetupHardware(XIIC_LIB<sp/>*I2cLibPtr);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/**************************<sp/>Function<sp/>Definitions<sp/>*****************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ZC706MuxInit(XIIC_LIB<sp/>*I2cLibInstancePtr)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>u8<sp/>WrBuffer;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Status;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>WrBuffer<sp/>=<sp/>IIC_CHANNEL_ADDRESS;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>Status<sp/>=<sp/>I2cWriteData(I2cLibInstancePtr,<sp/>&amp;WrBuffer,<sp/>1,<sp/>IIC_MUX_ADDRESS);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Status<sp/>!=<sp/>XST_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xil_printf(</highlight><highlight class="stringliteral">&quot;SFP_PHY:<sp/>Writing<sp/>failed\n\r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>XST_FAILURE;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>XST_SUCCESS;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ProgramSfpPhy(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>XIIC_LIB<sp/>I2cLibInstance;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Status;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>u8<sp/>WrBuffer[2];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>u16<sp/>phy_read_val;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>Status<sp/>=<sp/>I2cSetupHardware(&amp;I2cLibInstance);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Status<sp/>!=<sp/>XST_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xil_printf(</highlight><highlight class="stringliteral">&quot;Fail!!!\n\r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xil_printf(</highlight><highlight class="stringliteral">&quot;SFP_PHY:<sp/>Configuring<sp/>HW<sp/>failed\n\r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>XST_FAILURE;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>Status<sp/>=<sp/>ZC706MuxInit(&amp;I2cLibInstance);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Status<sp/>!=<sp/>XST_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xil_printf(</highlight><highlight class="stringliteral">&quot;SFP_PHY:<sp/>Mux<sp/>Init<sp/>failed\n\r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>XST_FAILURE;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>WrBuffer[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>Status<sp/>=<sp/>I2cWriteData(&amp;I2cLibInstance,<sp/>WrBuffer,<sp/>1,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Status<sp/>!=<sp/>XST_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xil_printf(</highlight><highlight class="stringliteral">&quot;SFP_PHY:<sp/>Writing<sp/>failed\n\r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>XST_FAILURE;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>XPAR_GIGE_PCS_PMA_1000BASEX_CORE_PRESENT<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enabling<sp/>1000BASEX<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x1B,<sp/>0x9088,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enabling<sp/>SGMII<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x1B,<sp/>0x9084,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Apply<sp/>Soft<sp/>Reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9140,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enable<sp/>1000BaseT<sp/>Full<sp/>Duplex<sp/>capabilities<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x09,<sp/>0x0E00,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Apply<sp/>Soft<sp/>Reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9140,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Advertise<sp/>10/100<sp/>Capabilities<sp/>else<sp/>change<sp/>the<sp/>capabilities<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x04,<sp/>0x0141,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Apply<sp/>Soft<sp/>Reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9140,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Apply<sp/>Soft<sp/>Reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9140,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x10,<sp/>0xF079,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Apply<sp/>Soft<sp/>Reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9140,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x16,<sp/>0x0001,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9140,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9340,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(1);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x16,<sp/>0x0,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>phy_read_val<sp/>=<sp/>0x0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((phy_read_val<sp/>&amp;<sp/>0x0C00)<sp/>!=<sp/>0x0C00)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>I2cPhyRead(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x11,<sp/>&amp;phy_read_val,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(1);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x16,<sp/>0x0,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyRead(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x11,<sp/>&amp;phy_read_val,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x16,<sp/>0x0001,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>configure<sp/>speed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x14,<sp/>0x0c61,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x00,<sp/>0x9340,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>I2cPhyWrite(&amp;I2cLibInstance,<sp/>IIC_SLAVE_ADDR,<sp/>0x16,<sp/>0x0,<sp/>IIC_SLAVE_ADDR);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>XST_SUCCESS;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="base_code/MB40ch_wUART/src/sfp.c"/>
+  </compounddef>
+</doxygen>

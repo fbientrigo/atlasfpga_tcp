@@ -1,0 +1,54 @@
+\doxysection{CPLD\+\_\+driver.\+h}
+\hypertarget{_c_p_l_d__driver_8h_source}{}\label{_c_p_l_d__driver_8h_source}\index{base\_code/MB40ch\_wUART/src/CPLD\_driver.h@{base\_code/MB40ch\_wUART/src/CPLD\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ CPLD\_driver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 06-\/07-\/2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ victor}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_CPLD\_DRIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_CPLD\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ Driver\ file\ to\ control\ ipcore\ of\ CPLD\ of\ CMB40}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ It\ will\ implement\ functions\ to\ assign\ values\ to\ the\ AXI\ ip\ core\ using\ the\ slave}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ registers\ inside\ the\ core.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ denable\ <=\ slv\_reg0(0);}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ nshdn\ <=\ slv\_reg0(1);}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ dac\_sel\ <=\ slv\_reg0(3)\ \&\ slv\_reg0(2);}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ nRst\ <=\ slv\_reg0(4);}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ mux\_cal\_signal\ <=\ slv\_reg0(5);}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ SPI\_mezz\_sel\ <=\ slv\_reg0(8\ downto\ 6);}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ SPI\_WR\_en\ <=\ slv\_reg0(9);}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ mezz\_mux\ <=\ slv\_reg0(12\ downto\ 10);}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ slv\_reg1(0)\ <=\ wr\_rdy;}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}sleep.h"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}xil\_types.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}xstatus.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}xil\_io.h"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ CPLD\_ctrl\_BaseAddr\ XPAR\_CPLD\_CTRL\_0\_S00\_AXI\_BASEADDR}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ u16\ CPLD\_denable,CPLD\_nshdn,CPLD\_dac\_sel1,CPLD\_dac\_sel0,CPLD\_nRst,CPLD\_mux0\_0,CPLD\_mux0\_1,CPLD\_Tcal,}
+\DoxyCodeLine{00038\ CPLD\_ADC\_nCS,CPLD\_SPI\_mezz\_sel,\ CPLD\_SPI\_wr\_en,CPLD\_mezz\_mux,CPLD\_gain\_mux;}
+\DoxyCodeLine{00039\ u16\ CPLD\_wr\_rdy;}
+\DoxyCodeLine{00040\ u32\ write\_CPLD\_signals();}
+\DoxyCodeLine{00041\ u16\ read\_cpld\_word();}
+\DoxyCodeLine{00042\ u8\ read\_CPLD\_status();}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ Mezz\_CPLD\_init(u8\ mezz\_sel);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ CPLD\_mezz\_power\_off(u8\ mezz\_sel);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_CPLD\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

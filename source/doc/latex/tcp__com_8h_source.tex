@@ -1,0 +1,62 @@
+\doxysection{tcp\+\_\+com.\+h}
+\hypertarget{tcp__com_8h_source}{}\label{tcp__com_8h_source}\index{base\_code/MB40ch\_wUART/src/tcp\_com.h@{base\_code/MB40ch\_wUART/src/tcp\_com.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ tcp\_com.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 01-\/06-\/2021}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ DAQatlas}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_TCP\_COM\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_TCP\_COM\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}lwip/tcp.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}xil\_cache.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}netif/xadapter.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}platform.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}platform\_config.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}xil\_printf.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#if\ LWIP\_IPV6==1}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}lwip/ip.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#if\ LWIP\_DHCP==1}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}lwip/dhcp.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ Char\_per\_line\ 46}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ PBUF\_LENGTH\ 50000}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ buffer\_length\ 49900}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ PORT\ 6543}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ N\_lines\ buffer\_length/Char\_per\_line}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ buffer[buffer\_length];}
+\DoxyCodeLine{00034\ \textcolor{comment}{//unsigned\ port;}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{short}\ flag\_accept\_conn;}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ flag\_ready2sent;}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ flag\_senddata\ ;}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ flag\_tcp\_done;}
+\DoxyCodeLine{00039\ \textcolor{keyword}{static}\ \textcolor{keyword}{struct\ }tcp\_pcb\ *pcb;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }pbuf*\ p;}
+\DoxyCodeLine{00042\ \textcolor{comment}{//Values\ for\ hash\ table\ of\ receibing\ message}}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ *datos\_PL;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ start\_application();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{int}\ transfer\_data(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00050\ err\_t\ accept\_callback(\textcolor{keywordtype}{void}\ *arg,\ \textcolor{keyword}{struct}\ tcp\_pcb\ *newpcb,\ err\_t\ err);}
+\DoxyCodeLine{00051\ err\_t\ recv\_callback(\textcolor{keywordtype}{void}\ *arg,\ \textcolor{keyword}{struct}\ tcp\_pcb\ *tpcb,\ \textcolor{keyword}{struct}\ pbuf\ *p,\ err\_t\ err);}
+\DoxyCodeLine{00052\ tcp\_sent\_fn\ sent\_callback(\textcolor{keywordtype}{void}\ *arg,\ \textcolor{keyword}{struct}\ tcp\_pcb\ *tpcb,\ u16\_t\ len);}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ tcp\_server\_err(\textcolor{keywordtype}{void}\ *arg,\ err\_t\ err);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ tcp\_server\_close(\textcolor{keyword}{struct}\ tcp\_pcb\ *pcb);}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ packer();}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_TCP\_COM\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

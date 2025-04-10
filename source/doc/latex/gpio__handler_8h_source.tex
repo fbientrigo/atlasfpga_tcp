@@ -1,0 +1,92 @@
+\doxysection{gpio\+\_\+handler.\+h}
+\hypertarget{gpio__handler_8h_source}{}\label{gpio__handler_8h_source}\index{base\_code/MB40ch\_wUART/src/gpio\_handler.h@{base\_code/MB40ch\_wUART/src/gpio\_handler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ gpio\_handler.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Dec\ 6,\ 2020}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Rimsky}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_GPIO\_HANDLER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_GPIO\_HANDLER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}xil\_types.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}xstatus.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}xil\_io.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}xgpio.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\#define\ Trigger\_mask\ 0x00000001}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\#define\ TEST\_mask\ 0x00000006}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\#define\ DAC\_mask\ 0x00000018}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\#define\ VETO\_mask\ 0x00000020}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\#define\ MUX\_mask\ 0x000000C0}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\#define\ GAIN\_mask\ 0x00000300}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\#define\ SHDN\_mask\ 0x00000400}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\#define\ TCal\_mask\ 0x00000800}}
+\DoxyCodeLine{00024\ \textcolor{comment}{}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\#define\ Trigger\_offset\ 0}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\#define\ TEST\_0\_offset\ 1}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\#define\ TEST\_1\_offset\ 2}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\#define\ DAC\_0\_offset\ 3}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\#define\ DAC\_1\_offset\ 4}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\#define\ VETO\_offset\ 5}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\#define\ MUX\_0\_offset\ 6}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\#define\ MUX\_1\_offset\ 7}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\#define\ GAIN\_0\_offset\ 8}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\#define\ GAIN\_1\_offset\ 9}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\#define\ SHDN\_offset\ 10}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\#define\ TCal\_offset\ 11}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ soft\_trigger\_mask\ 0x00000001\ \ \ \ }\textcolor{comment}{//-\/-\/001}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ rst\_FIFO\_mask\ 0x00000002\ \ \ \ }\textcolor{comment}{//-\/-\/-\/010}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ busy\_trigger\_mask\ 0x00000004\ \ \ \ }\textcolor{comment}{//-\/-\/-\/-\/100}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ ADC\_refclk\_mask\ 0x00000008\ \ }\textcolor{comment}{//-\/-\/-\/1000}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ trigg\_function\_mask\ 0x00000070}\textcolor{comment}{//-\/-\/0111\_0000}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ trigg\_input\_mask\ 0x00007F80}\textcolor{comment}{//\ 0111\_1111\_1000\_0000}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ VETO\_mask\ 0x00008000\ \ \ \ \ \ \ \ }\textcolor{comment}{//Pos\ 15}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ Rst\_gral\_mask\ 0x00010000\ \ \ \ \ \ \ \ }\textcolor{comment}{//Pos\ 16}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ en\_A\_vec\ 0x00020000\ \ \ \ \ }\textcolor{comment}{//Pos\ 17}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ DAC\_nCLR\_mask\ 0x00040000\ }\textcolor{comment}{//\ -\/-\/-\/100\_0000\_0000\_0000\_0000\ pos\ 18}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ soft\_trigger\_offset\ 0}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ rst\_FIFO\_offset\ 1}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ busy\_trigger\_offset\ 2}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ ADC\_refclk\_offset\ 3}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ trigg\_function\_offset\ 6}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ trigg\_input\_offset\ 14}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ VETO\_offset\ 15}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ Rst\_gral\_offset\ 16}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\#define\ MUX\_0\_offset\ 6}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\#define\ MUX\_1\_offset\ 7}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\#define\ GAIN\_0\_offset\ 8}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\#define\ GAIN\_1\_offset\ 9}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\#define\ SHDN\_offset\ 10}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\#define\ TCal\_offset\ 11}}
+\DoxyCodeLine{00069\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ DAC\_references\_offset\ DAC\_0\_offset}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ DAC\_threshold\_offset\ DAC\_1\_offset}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ GAIN\_att\_offset\ DAC\_1\_offset}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ GAIN\_uni\_offset\ DAC\_0\_offset}}
+\DoxyCodeLine{00074\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\#define\ MUX\_signal\_offset\ MUX\_1\_offset}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\#define\ MUX\_cal\_offset\ MUX\_0\_offset}}
+\DoxyCodeLine{00077\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00078\ XGpio\ gpio,gpio1;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{int}\ soft\_trig;\ \ \textcolor{comment}{//Variable\ to\ enable\ or\ disable\ soft\ trigger}}
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ gpio\_write\_reg(u32\ reg\_mask,\ u32\ reg\_offset,\ u32\ data);}
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ gpio\_unset\_reg(u32\ reg\_mask,u32\ reg\_offset,u32\ data);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_GPIO\_HANDLER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

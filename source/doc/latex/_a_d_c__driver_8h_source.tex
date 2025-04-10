@@ -1,0 +1,65 @@
+\doxysection{ADC\+\_\+driver.\+h}
+\hypertarget{_a_d_c__driver_8h_source}{}\label{_a_d_c__driver_8h_source}\index{base\_code/MB40ch\_wUART/src/ADC\_driver.h@{base\_code/MB40ch\_wUART/src/ADC\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ AXI\_ADC\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{/******************\ Include\ Files\ ********************/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}xil\_types.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}xstatus.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}xparameters.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}sleep.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_BaseAddress\ XPAR\_ADC\_AXI\_ADC\_1\_S00\_AXI\_BASEADDR}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_AXI\_ctrl\_SLV\_REG0\_OFFSET\ 0}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_AXI\_ctrl\_SLV\_REG1\_OFFSET\ 4}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_AXI\_ctrl\_SLV\_REG2\_OFFSET\ 8}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_AXI\_ctrl\_SLV\_REG3\_OFFSET\ 12}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_action\_reg\_offset\ \ \ \ \ \ \ \ \ \ \ AXI\_ADC\_S00\_AXI\_ctrl\_SLV\_REG0\_OFFSET}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_write\_n\_pointer\_reg\_offset\ \ AXI\_ADC\_S00\_AXI\_ctrl\_SLV\_REG1\_OFFSET}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_read\_reg\_offset\ \ \ \ \ \ \ \ \ \ \ \ \ AXI\_ADC\_S00\_AXI\_ctrl\_SLV\_REG2\_OFFSET}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//bits\ from\ action\ register}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_adc\_conf\_bit\_offset\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_adc\_write\_bit\_offset\ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_adc\_read\_bit\_offset\ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_ready\_state\_bit\_offset\ \ \ \ \ \ 4}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_50M\_burst\_onposedge\_offset\ \ 8}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_16M\_burst\_onposedge\_offset\ \ 9}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//bits\ from\ write\ and\ pointer\ register}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_write\_bit\_offset\ \ \ \ 0}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_pointer\_bit\_offset\ \ 16}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//bits\ from\ read\ register}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_S00\_read\_bit\_offset\ \ \ \ \ 16}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/****************************\ Type\ Definitions\ *****************************/}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_mWriteReg(BaseAddress,\ RegOffset,\ Data)\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ Xil\_Out32((BaseAddress)\ +\ (RegOffset),\ (u32)(Data))}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ AXI\_ADC\_mReadReg(BaseAddress,\ RegOffset)\ \(\backslash\)}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\ \ \ \ Xil\_In32((BaseAddress)\ +\ (RegOffset))}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{comment}{/**************************\ Function\ Prototypes\ ****************************/}}
+\DoxyCodeLine{00101\ XStatus\ AXI\_ADC\_Reg\_SelfTest(\textcolor{keywordtype}{void}\ *\ baseaddr\_p);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ AXI\_ADC\_config\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00105\ u32\ AXI\_ADC\_check\_status\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00106\ u32\ AXI\_ADC\_check\_read\_reg\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00107\ u32\ AXI\_ADC\_read\_ptr\ (u32\ ptr\_tbr);}
+\DoxyCodeLine{00108\ u32\ AXI\_ADC\_write\_reg\ (u16\ ptr\_tbw,\ u16\ data);}
+\DoxyCodeLine{00109\ u32\ AXI\_ADC\_send\_50M\_burst\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00110\ u32\ AXI\_ADC\_send\_16M\_burst\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AXI\_ADC\_H}}
+
+\end{DoxyCode}

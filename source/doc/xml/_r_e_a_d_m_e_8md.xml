@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Analisis<sp/>de<sp/>codigo</highlight></codeline>
+<codeline><highlight class="normal">Esta<sp/>carpeta<sp/>contiene<sp/>codigo<sp/>originalmente<sp/>del<sp/>proyecto<sp/>completo,<sp/>fue<sp/>separada<sp/>e<sp/>isolada<sp/>a<sp/>modo<sp/>de<sp/>tener<sp/>una<sp/>referencia<sp/>a<sp/>la<sp/>hora<sp/>de<sp/>desarrollar<sp/>el<sp/>proyecto<sp/>aislado<sp/>de<sp/>comunicacion<sp/>TCP_IP.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Los<sp/>archivos<sp/>que<sp/>han<sp/>sido<sp/>modificados<sp/>ya<sp/>sea<sp/>agregando<sp/>documentacion<sp/>breve<sp/>para<sp/>apoyarme<sp/>o<sp/>que<sp/>se<sp/>le<sp/>han<sp/>hecho<sp/>comentarios<sp/>marcados<sp/>por<sp/>`//f:`<sp/>son</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`tcp_com.c`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`main.c`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Problematicas<sp/>encontradas</highlight></codeline>
+<codeline><highlight class="normal">Listo<sp/>una<sp/>serie<sp/>de<sp/>posibles<sp/>errores<sp/>o<sp/>problemas<sp/>que<sp/>pueden<sp/>aparecer<sp/>a<sp/>futuro<sp/>tras<sp/>explorar<sp/>el<sp/>codigo</highlight></codeline>
+    </programlisting>
+    <location file="base_code/MB40ch_wUART/src/README.md"/>
+  </compounddef>
+</doxygen>
