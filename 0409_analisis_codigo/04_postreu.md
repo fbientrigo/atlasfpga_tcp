@@ -84,7 +84,7 @@ flowchart TD
     B --> C[Buffer se llena con datos procesados]
     C --> D[loop_routine detecta flag_senddata]
     D --> E[transfer_data gestiona buffer y realiza segmentación según tcp_sndbuf]
-    E --> F[Envío de paquetes TCP (evitando sobrepasar la MTU)]
+    E --> F[Envío de paquetes TCP --> evitando sobrepasar la MTU  ]
 ```
 
 ---
