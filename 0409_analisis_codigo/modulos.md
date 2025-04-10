@@ -202,7 +202,7 @@ flowchart TD
     D --> F[Evento de envío confirmado --> sent_callback]
     F --> G[flag_ready2sent habilitado]
     D --> H[Evento de error --> tcp_server_err]
-    G --> I[transfer_data() se invoca según flag_senddata]
+    G --> I[transfer_data se invoca según flag_senddata]
 ```
 
 ---
