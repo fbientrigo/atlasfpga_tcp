@@ -331,7 +331,6 @@ void tcp_server_close(struct tcp_pcb *pcb)
 	}
 }
 
-
 /**
  * tcp_server_err
  *
