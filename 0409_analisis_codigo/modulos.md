@@ -195,13 +195,13 @@ A continuación se muestra un ejemplo de diagrama de flujo en formato Mermaid pa
 
 ```mermaid
 flowchart TD
-    A[start_application()] --> B[tcp_bind & tcp_listen]
+    A[start_application] --> B[tcp_bind & tcp_listen]
     B --> C[tcp_accept (accept_callback)]
     C --> D[Configura callbacks: recv_callback, sent_callback, tcp_server_err]
-    D --> E[Evento de recepción --> recv_callback()]
-    D --> F[Evento de envío confirmado --> sent_callback()]
+    D --> E[Evento de recepción --> recv_callback__]
+    D --> F[Evento de envío confirmado --> sent_callback]
     F --> G[flag_ready2sent habilitado]
-    D --> H[Evento de error --> tcp_server_err()]
+    D --> H[Evento de error --> tcp_server_err]
     G --> I[transfer_data() se invoca según flag_senddata]
 ```
 
