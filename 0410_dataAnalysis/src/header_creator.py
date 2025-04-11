@@ -1,7 +1,5 @@
 import sys
-import re
 from lib import extract_data, create_header
-
 
 def main():
     if len(sys.argv) != 3:
@@ -24,9 +22,8 @@ def main():
         print("No se han encontrado líneas con el formato de datos esperado.")
         sys.exit(1)
     
-    # Si deseas, puedes realizar una verificación adicional, por ejemplo:
-    # comprobar que el número de tokens en cada línea sea el esperado.
-    expected_tokens = 9  # en el ejemplo cada línea tiene 9 tokens
+    # Verificar que cada línea tenga 9 tokens y mostrar advertencias si no es así.
+    expected_tokens = 9
     for i, line in enumerate(data_lines, start=1):
         tokens = line.split()
         if len(tokens) != expected_tokens:
