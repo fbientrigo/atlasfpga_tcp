@@ -145,12 +145,16 @@ class MainWindow(QMainWindow):
         # Se actualiza cada mini canvas correspondiente al canal
         for idx, canvas in enumerate(self.mini_canvases):
             channel = f"ch{idx}"
+            channel_title = f"ch{idx+1}"
             canvas.ax.cla()
+            canvas.ax.ticklabel_format(useOffset=False, style='plain')
+            canvas.ax.tick_params(axis='both', which='major', labelsize=6)
+
             # Se utiliza la columna "Nsample" como eje x si existe; de lo contrario, se usa el índice
             x = df["Nsample"] if "Nsample" in df.columns else df.index
             y = df[channel]
             canvas.ax.plot(x, y)
-            canvas.ax.set_title(channel)
+            canvas.ax.set_title(channel_title)
             canvas.draw()
     
     def show_zoom_view(self, channel_index):
