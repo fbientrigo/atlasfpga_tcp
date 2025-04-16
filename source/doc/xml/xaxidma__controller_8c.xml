@@ -2,6 +2,464 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="xaxidma__controller_8c" kind="file" language="C++">
     <compoundname>xaxidma_controller.c</compoundname>
+    <includes refid="xaxidma__controller_8h" local="yes">xaxidma_controller.h</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>gpio_handler.h</label>
+        <link refid="gpio__handler_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>platform.h</label>
+        <link refid="platform_8h_source"/>
+      </node>
+      <node id="13">
+        <label>platform_config.h</label>
+        <link refid="platform__config_8h_source"/>
+      </node>
+      <node id="7">
+        <label>tcp_com.h</label>
+        <link refid="tcp__com_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/xaxidma_controller.c</label>
+        <link refid="xaxidma__controller_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xaxidma_controller.h</label>
+        <link refid="xaxidma__controller_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>lwip/tcp.h</label>
+      </node>
+      <node id="11">
+        <label>netif/xadapter.h</label>
+      </node>
+      <node id="10">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>xaxidma.h</label>
+      </node>
+      <node id="6">
+        <label>xdebug.h</label>
+      </node>
+      <node id="19">
+        <label>xgpio.h</label>
+      </node>
+      <node id="9">
+        <label>xil_cache.h</label>
+      </node>
+      <node id="5">
+        <label>xil_exception.h</label>
+      </node>
+      <node id="18">
+        <label>xil_io.h</label>
+      </node>
+      <node id="14">
+        <label>xil_printf.h</label>
+      </node>
+      <node id="16">
+        <label>xil_types.h</label>
+      </node>
+      <node id="4">
+        <label>xparameters.h</label>
+      </node>
+      <node id="20">
+        <label>xscugic.h</label>
+      </node>
+      <node id="17">
+        <label>xstatus.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="xaxidma__controller_8c_1a447efb52bdea94d5d9cfe0d53a27190d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setup_DMA</definition>
+        <argsstring>(void)</argsstring>
+        <name>setup_DMA</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main function</para>
+<para>This function is the main entry of the interrupt test. It does the following:<itemizedlist>
+<listitem><para>Set up the output terminal if UART16550 is in the hardware build</para>
+</listitem><listitem><para>Initialize the DMA engine</para>
+</listitem><listitem><para>Set up Tx and Rx channels</para>
+</listitem><listitem><para>Set up the interrupt system for the Tx and Rx interrupts</para>
+</listitem><listitem><para>Submit a transfer</para>
+</listitem><listitem><para>Wait for the transfer to finish</para>
+</listitem><listitem><para>Check transfer status</para>
+</listitem><listitem><para>Disable Tx and Rx interrupts</para>
+</listitem><listitem><para>Print test status and exit</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>XST_SUCCESS if tests pass</para>
+</listitem><listitem><para>XST_FAILURE if fails.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="note"><para>None. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="118" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="118" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1acca8061cadc05fcdfbf1d19244bf6777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DMA_test_routine</definition>
+        <argsstring>()</argsstring>
+        <name>DMA_test_routine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="182" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="182" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a062c6cfa4fd500a3e2d9306436771653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int close_DMA</definition>
+        <argsstring>()</argsstring>
+        <name>close_DMA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="237" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="237" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a244c02d1a957da140c5273bee4a01cab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CheckData</definition>
+        <argsstring>(int Length, u8 StartValue)</argsstring>
+        <name>CheckData</name>
+        <param>
+          <type>int</type>
+          <declname>Length</declname>
+        </param>
+        <param>
+          <type>u8</type>
+          <declname>StartValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="263" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="263" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1afa5bdb508415a6cc4d9ef0411de10d50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TxCallBack</definition>
+        <argsstring>(XAxiDma_BdRing *TxRingPtr)</argsstring>
+        <name>TxCallBack</name>
+        <param>
+          <type>XAxiDma_BdRing *</type>
+          <declname>TxRingPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="305" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="305" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a4f411d53a8c6984cb6209fa8fbb81859" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TxIntrHandler</definition>
+        <argsstring>(void *Callback)</argsstring>
+        <name>TxIntrHandler</name>
+        <param>
+          <type>void *</type>
+          <declname>Callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="372" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="372" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1afac6b6ceaaf7e816a7136342107ceb8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RxCallBack_back</definition>
+        <argsstring>(XAxiDma_BdRing *RxRingPtr)</argsstring>
+        <name>RxCallBack_back</name>
+        <param>
+          <type>XAxiDma_BdRing *</type>
+          <declname>RxRingPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="443" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="443" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a09f61fd854b66d68484441b69fadadc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void process_n_send_data</definition>
+        <argsstring>(int cont, int max_count)</argsstring>
+        <name>process_n_send_data</name>
+        <param>
+          <type>int</type>
+          <declname>cont</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Verifies DMA completed data transfer</para>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="477" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="477" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1ad7e0504080579c51b723afadb77d6d81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cleanup_buffer</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="578" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="578" bodyend="598"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1ae914239bfa80d08ef4d19de0df38cff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RxCallBack</definition>
+        <argsstring>(XAxiDma_BdRing *RxRingPtr)</argsstring>
+        <name>RxCallBack</name>
+        <param>
+          <type>XAxiDma_BdRing *</type>
+          <declname>RxRingPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="601" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="601" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a91633c2fb06c128e8181eb2e5364d524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RxIntrHandler</definition>
+        <argsstring>(void *Callback)</argsstring>
+        <name>RxIntrHandler</name>
+        <param>
+          <type>void *</type>
+          <declname>Callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="629" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="629" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a9e46b951a0da6f610d3030c2ac9c0259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SetupIntrSystem</definition>
+        <argsstring>(INTC *IntcInstancePtr, XAxiDma *AxiDmaPtr, u16 TxIntrId, u16 RxIntrId)</argsstring>
+        <name>SetupIntrSystem</name>
+        <param>
+          <type>INTC *</type>
+          <declname>IntcInstancePtr</declname>
+        </param>
+        <param>
+          <type>XAxiDma *</type>
+          <declname>AxiDmaPtr</declname>
+        </param>
+        <param>
+          <type>u16</type>
+          <declname>TxIntrId</declname>
+        </param>
+        <param>
+          <type>u16</type>
+          <declname>RxIntrId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="705" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="705" bodyend="768"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a91e13835ea870fd2d1d20372c67f530f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisableIntrSystem</definition>
+        <argsstring>(INTC *IntcInstancePtr, u16 TxIntrId, u16 RxIntrId)</argsstring>
+        <name>DisableIntrSystem</name>
+        <param>
+          <type>INTC *</type>
+          <declname>IntcInstancePtr</declname>
+        </param>
+        <param>
+          <type>u16</type>
+          <declname>TxIntrId</declname>
+        </param>
+        <param>
+          <type>u16</type>
+          <declname>RxIntrId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function disables the interrupts for DMA engine.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>IntcInstancePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the pointer to the INTC component instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TxIntrId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is interrupt ID associated w/ DMA TX channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RxIntrId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is interrupt ID associated w/ DMA RX channel</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None.</para>
+</simplesect>
+<simplesect kind="note"><para>None. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="784" column="6" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="784" bodyend="795"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1afb21950998d5a2d19678dbf5aa69cccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RxSetup</definition>
+        <argsstring>(XAxiDma *AxiDmaInstPtr)</argsstring>
+        <name>RxSetup</name>
+        <param>
+          <type>XAxiDma *</type>
+          <declname>AxiDmaInstPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="811" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="811" bodyend="926"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a7febbc91fe1841cdaae28ccd7fe54539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TxSetup</definition>
+        <argsstring>(XAxiDma *AxiDmaInstPtr)</argsstring>
+        <name>TxSetup</name>
+        <param>
+          <type>XAxiDma *</type>
+          <declname>AxiDmaInstPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="942" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="942" bodyend="1005"/>
+      </memberdef>
+      <memberdef kind="function" id="xaxidma__controller_8c_1a91c37f645b66ea665e6c4a59d7af1a29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SendPacket</definition>
+        <argsstring>(XAxiDma *AxiDmaInstPtr)</argsstring>
+        <name>SendPacket</name>
+        <param>
+          <type>XAxiDma *</type>
+          <declname>AxiDmaInstPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/xaxidma_controller.c" line="1021" column="5" bodyfile="base_code/MB40ch_wUART/src/xaxidma_controller.c" bodystart="1021" bodyend="1156"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

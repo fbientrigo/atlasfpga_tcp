@@ -2,6 +2,480 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="_a_d_c__driver_8h" kind="file" language="C++">
     <compoundname>ADC_driver.h</compoundname>
+    <includes local="yes">xil_types.h</includes>
+    <includes local="yes">xstatus.h</includes>
+    <includes local="yes">xparameters.h</includes>
+    <includes local="yes">sleep.h</includes>
+    <includedby refid="_a_d_c__driver_8c" local="yes">base_code/MB40ch_wUART/src/ADC_driver.c</includedby>
+    <includedby refid="main_8h" local="yes">base_code/MB40ch_wUART/src/main.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/ADC_driver.h</label>
+        <link refid="_a_d_c__driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>sleep.h</label>
+      </node>
+      <node id="2">
+        <label>xil_types.h</label>
+      </node>
+      <node id="4">
+        <label>xparameters.h</label>
+      </node>
+      <node id="3">
+        <label>xstatus.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/ADC_driver.h</label>
+        <link refid="_a_d_c__driver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>base_code/MB40ch_wUART/src/main.h</label>
+        <link refid="main_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_a_d_c__driver_8h_1addae79e1bc8ceb633e08ad077ffc3f15" prot="public" static="no">
+        <name>AXI_ADC_BaseAddress</name>
+        <initializer>XPAR_ADC_AXI_ADC_1_S00_AXI_BASEADDR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="12" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a4ec16ba7a062c7c839d0ae95d38591fd" prot="public" static="no">
+        <name>AXI_ADC_S00_AXI_ctrl_SLV_REG0_OFFSET</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="13" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a055084825b02d4daab66f4580dd9b75e" prot="public" static="no">
+        <name>AXI_ADC_S00_AXI_ctrl_SLV_REG1_OFFSET</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="14" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a21574321455623c27d02573e00d47b1e" prot="public" static="no">
+        <name>AXI_ADC_S00_AXI_ctrl_SLV_REG2_OFFSET</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="15" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a8e0911bb7cd06b4786a0a5126a22951f" prot="public" static="no">
+        <name>AXI_ADC_S00_AXI_ctrl_SLV_REG3_OFFSET</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="16" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1aaa1f2f59f753f5f4a26950f183996ce8" prot="public" static="no">
+        <name>AXI_ADC_S00_action_reg_offset</name>
+        <initializer>AXI_ADC_S00_AXI_ctrl_SLV_REG0_OFFSET</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="18" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a9feee9ae24c2efd525175663afbd47b5" prot="public" static="no">
+        <name>AXI_ADC_S00_write_n_pointer_reg_offset</name>
+        <initializer>AXI_ADC_S00_AXI_ctrl_SLV_REG1_OFFSET</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="19" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1aca9455e684496d74d6507f2b79440dff" prot="public" static="no">
+        <name>AXI_ADC_S00_read_reg_offset</name>
+        <initializer>AXI_ADC_S00_AXI_ctrl_SLV_REG2_OFFSET</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="20" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a04860c2c2892645b209e650eefbe87ed" prot="public" static="no">
+        <name>AXI_ADC_S00_adc_conf_bit_offset</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="24" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a57c6ecb53ce7f943c2654e8bc43f39c3" prot="public" static="no">
+        <name>AXI_ADC_S00_adc_write_bit_offset</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="25" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a4a0a0397058a2ed442f20e7dd2a02899" prot="public" static="no">
+        <name>AXI_ADC_S00_adc_read_bit_offset</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="26" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a612562386f4675ebfffe99b5a15aa2e9" prot="public" static="no">
+        <name>AXI_ADC_S00_ready_state_bit_offset</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="27" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a277fedbb8746bbe91ff601495421dcf3" prot="public" static="no">
+        <name>AXI_ADC_S00_50M_burst_onposedge_offset</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="28" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a9cc1d39f20901c1469bb6ff7b7db0422" prot="public" static="no">
+        <name>AXI_ADC_S00_16M_burst_onposedge_offset</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="29" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a9548322e5d48833d95c1439f4d35a17a" prot="public" static="no">
+        <name>AXI_ADC_S00_write_bit_offset</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="32" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1af60f4652c32478a050d0f488cc04d0af" prot="public" static="no">
+        <name>AXI_ADC_S00_pointer_bit_offset</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="33" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1a618d31b174460414733181145b134ecf" prot="public" static="no">
+        <name>AXI_ADC_S00_read_bit_offset</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="36" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1ae85a0998015f375674accbcc26018f95" prot="public" static="no">
+        <name>AXI_ADC_mWriteReg</name>
+        <param><defname>BaseAddress</defname></param>
+        <param><defname>RegOffset</defname></param>
+        <param><defname>Data</defname></param>
+        <initializer>  	Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a value to a AXI_ADC register. A 32 bit write is performed. If the component is implemented in a smaller width, only the least significant data is written.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BaseAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the base address of the AXI_ADCdevice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RegOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the register offset from the base to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the data written to the register.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None.</para>
+</simplesect>
+<simplesect kind="note"><para>C-style signature: void AXI_ADC_mWriteReg(u32 BaseAddress, unsigned RegOffset, u32 Data) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="58" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="58" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d_c__driver_8h_1ac8ef4ac1758923a63b00af1c37973cc0" prot="public" static="no">
+        <name>AXI_ADC_mReadReg</name>
+        <param><defname>BaseAddress</defname></param>
+        <param><defname>RegOffset</defname></param>
+        <initializer>    Xil_In32((BaseAddress) + (RegOffset))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read a value from a AXI_ADC register. A 32 bit read is performed. If the component is implemented in a smaller width, only the least significant data is read from the register. The most significant data will be read as 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BaseAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the base address of the AXI_ADC device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>RegOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the register offset from the base to write to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Data is the data from the register.</para>
+</simplesect>
+<simplesect kind="note"><para>C-style signature: u32 AXI_ADC_mReadReg(u32 BaseAddress, unsigned RegOffset) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="78" column="9" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.h" bodystart="78" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_a_d_c__driver_8h_1a544bda0fe081b82367ed8bd5f707a25e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>XStatus</type>
+        <definition>XStatus AXI_ADC_Reg_SelfTest</definition>
+        <argsstring>(void *baseaddr_p)</argsstring>
+        <name>AXI_ADC_Reg_SelfTest</name>
+        <param>
+          <type>void *</type>
+          <declname>baseaddr_p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run a self-test on the driver/device. Note this may be a destructive test if resets of the device are performed.</para>
+<para>If the hardware system is not built correctly, this function may never return to the caller.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseaddr_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the base address of the AXI_ADC instance to be worked on.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+<itemizedlist>
+<listitem><para>XST_SUCCESS if all self-test code passed</para>
+</listitem><listitem><para>XST_FAILURE if any self-test code failed</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="note"><para>Caching must be turned off for this function to work. </para>
+</simplesect>
+<simplesect kind="note"><para>Self test may fail if data memory and device are not on the same bus. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="101" column="9" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="101" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_d_c__driver_8h_1a9099b9757d1c863a72d59e7f4fbe38ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AXI_ADC_config</definition>
+        <argsstring>(void)</argsstring>
+        <name>AXI_ADC_config</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="104" column="6" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.c" bodystart="8" bodyend="14" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_d_c__driver_8h_1a80a4f95e870f03aaacb3a21081bba016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 AXI_ADC_check_status</definition>
+        <argsstring>(void)</argsstring>
+        <name>AXI_ADC_check_status</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="105" column="5" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.c" bodystart="17" bodyend="22" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="105" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_d_c__driver_8h_1a53bcf143208a1c7e6e1299d97a616d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 AXI_ADC_check_read_reg</definition>
+        <argsstring>(void)</argsstring>
+        <name>AXI_ADC_check_read_reg</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="106" column="5" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.c" bodystart="24" bodyend="29" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="106" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_d_c__driver_8h_1ad2e6f8c161508b187d430b09bc9c0c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 AXI_ADC_read_ptr</definition>
+        <argsstring>(u32 ptr_tbr)</argsstring>
+        <name>AXI_ADC_read_ptr</name>
+        <param>
+          <type>u32</type>
+          <declname>ptr_tbr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="107" column="5" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.c" bodystart="76" bodyend="97" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="107" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_d_c__driver_8h_1a51c88ee0fddf8804f994b77bf320c1c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 AXI_ADC_write_reg</definition>
+        <argsstring>(u16 ptr_tbw, u16 data)</argsstring>
+        <name>AXI_ADC_write_reg</name>
+        <param>
+          <type>u16</type>
+          <declname>ptr_tbw</declname>
+        </param>
+        <param>
+          <type>u16</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="108" column="5" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.c" bodystart="99" bodyend="119" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="108" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_d_c__driver_8h_1a851d03e8261a2c3a5d9c3a2e3238c127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 AXI_ADC_send_50M_burst</definition>
+        <argsstring>(void)</argsstring>
+        <name>AXI_ADC_send_50M_burst</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="109" column="5" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.c" bodystart="31" bodyend="51" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="109" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_a_d_c__driver_8h_1a312b457e4642d4ca891cc6798946193d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 AXI_ADC_send_16M_burst</definition>
+        <argsstring>(void)</argsstring>
+        <name>AXI_ADC_send_16M_burst</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/ADC_driver.h" line="110" column="5" bodyfile="base_code/MB40ch_wUART/src/ADC_driver.c" bodystart="53" bodyend="73" declfile="base_code/MB40ch_wUART/src/ADC_driver.h" declline="110" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

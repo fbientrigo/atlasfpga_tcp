@@ -2,6 +2,114 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="_c_p_l_d__driver_8c" kind="file" language="C++">
     <compoundname>CPLD_driver.c</compoundname>
+    <includes refid="_c_p_l_d__driver_8h" local="yes">CPLD_driver.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/CPLD_driver.c</label>
+        <link refid="_c_p_l_d__driver_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CPLD_driver.h</label>
+        <link refid="_c_p_l_d__driver_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sleep.h</label>
+      </node>
+      <node id="6">
+        <label>xil_io.h</label>
+      </node>
+      <node id="4">
+        <label>xil_types.h</label>
+      </node>
+      <node id="5">
+        <label>xstatus.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_c_p_l_d__driver_8c_1afb7fd43b26f9058214f1cb1059da76a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 write_CPLD_signals</definition>
+        <argsstring>()</argsstring>
+        <name>write_CPLD_signals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/CPLD_driver.c" line="28" column="5" bodyfile="base_code/MB40ch_wUART/src/CPLD_driver.c" bodystart="28" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_p_l_d__driver_8c_1afe4012ac5ef829b5e9793abde9aca870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u8</type>
+        <definition>u8 read_CPLD_status</definition>
+        <argsstring>()</argsstring>
+        <name>read_CPLD_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/CPLD_driver.c" line="95" column="4" bodyfile="base_code/MB40ch_wUART/src/CPLD_driver.c" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_p_l_d__driver_8c_1a4dec39c495dd54a4f60eb23950553fb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u16</type>
+        <definition>u16 read_cpld_word</definition>
+        <argsstring>()</argsstring>
+        <name>read_cpld_word</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/CPLD_driver.c" line="102" column="5" bodyfile="base_code/MB40ch_wUART/src/CPLD_driver.c" bodystart="102" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_p_l_d__driver_8c_1a97350d0f7c01dbe4a01d5470d7db4c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mezz_CPLD_init</definition>
+        <argsstring>(u8 mezz_sel)</argsstring>
+        <name>Mezz_CPLD_init</name>
+        <param>
+          <type>u8</type>
+          <declname>mezz_sel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/CPLD_driver.c" line="112" column="6" bodyfile="base_code/MB40ch_wUART/src/CPLD_driver.c" bodystart="112" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_p_l_d__driver_8c_1a748b84a3d63b13cba2a4e665ea19e2bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPLD_mezz_power_off</definition>
+        <argsstring>(u8 mezz_sel)</argsstring>
+        <name>CPLD_mezz_power_off</name>
+        <param>
+          <type>u8</type>
+          <declname>mezz_sel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/CPLD_driver.c" line="158" column="6" bodyfile="base_code/MB40ch_wUART/src/CPLD_driver.c" bodystart="158" bodyend="177"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

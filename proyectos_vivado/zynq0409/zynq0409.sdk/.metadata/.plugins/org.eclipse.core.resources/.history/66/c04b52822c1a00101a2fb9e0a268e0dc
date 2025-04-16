@@ -1,0 +1,345 @@
+
+#include <stdio.h>
+#include <string.h>
+
+#include "lwip/err.h"
+#include "lwip/tcp.h"
+
+//hardocded data
+#include "massive_data.h"
+#include "small_data.h"
+
+// line blocker logica
+#include "line_blocker.h"
+
+
+#define MASSIVE_PAYLOAD_SIZE 512
+#define BLOCK_SIZE 120
+
+
+#if defined (__arm__) || defined (__aarch64__)
+#include "xil_printf.h"
+#endif
+
+
+// --- 0410
+// Declaración externa del massive_payload definido en main.c
+extern char massive_payload[];
+
+// PCB global para la conexión actual
+struct tcp_pcb *global_pcb = NULL;
+// Bandera para el envío único del massive_payload
+static int massive_sent = 0;
+
+// ---
+
+// --- // f:0411:4pm --> f0411b
+
+static int total_sent = 0;   // Contador de bytes enviados del massive_payload
+static int payload_complete = 0;  // Bandera para indicar que se terminó el envío completo
+
+
+// f0411c (6pm)
+
+
+
+// Callback de envío (sent_callback) que se invoca cuando se confirma la transmisión de un bloque
+err_t sent_callback(void *arg, struct tcp_pcb *tpcb, u16_t len)
+{
+	// Aumentamos el contador de bytes enviados con la cantidad confirmada
+	total_sent += len;
+	xil_printf("Bloque de %d bytes confirmado. Total enviado: %d\n\r", len, total_sent);
+
+	// Si aún quedan datos en massive_payload, enviamos el siguiente bloque
+	if (total_sent < strlen(massive_payload)) {
+		// Llamamos a transfer_data() para enviar el siguiente bloque
+		transfer_data();
+	} else {
+		payload_complete = 1;
+		xil_printf("Todos los datos han sido enviados.\n\r");
+	}
+	return ERR_OK;
+}
+
+
+// ----
+
+
+
+
+err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
+                    struct pbuf *p, err_t err)
+{
+    if (!p) {
+        tcp_close(tpcb);
+        tcp_recv(tpcb, NULL);
+        xil_printf("Cliente desconectado\n");
+        return ERR_OK;
+    }
+
+    tcp_recved(tpcb, p->len);
+
+    // Convertir el payload a string
+    char recv_buf[128] = {0};
+    size_t len = (p->len < sizeof(recv_buf)-1) ? p->len : sizeof(recv_buf)-1;
+    memcpy(recv_buf, p->payload, len);
+    recv_buf[len] = '\0'; // asegurar terminación
+
+    xil_printf("Comando recibido: %s\n\r", recv_buf);
+
+    // Comandos especiales
+    if (strncmp(recv_buf, "-data", 5) == 0) {
+        xil_printf("Cliente solicitó datos. Enviando...\n\r");
+        transfer_data(); // Esto podría iniciar una secuencia si es por bloques
+    }
+    else if (strncmp(recv_buf, "-q", 2) == 0) {
+        xil_printf("Cliente solicitó cerrar conexión\n\r");
+        tcp_close(tpcb);
+        tcp_recv(tpcb, NULL);
+        return ERR_OK;
+    }
+    else {
+        // eco clásico como fallback
+        err_t error = tcp_write(tpcb, recv_buf, strlen(recv_buf), TCP_WRITE_FLAG_COPY);
+        if (error == ERR_OK) {
+            tcp_output(tpcb);
+            xil_printf("Eco enviado al cliente\n\r");
+        } else {
+            xil_printf("Error al enviar eco, código: %d\n\r", error);
+        }
+    }
+
+    pbuf_free(p);
+    return ERR_OK;
+}
+
+
+/*
+* accept_callback: Callback que se invoca al aceptar una nueva conexión TCP.
+*/
+err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
+{
+	static int connection_id = 1;
+
+	/* set the receive callback for this connection */
+	tcp_recv(newpcb, recv_callback);
+	/* just use an integer number indicating the connection id as the
+	   callback argument */
+	tcp_arg(newpcb, (void*)(UINTPTR)connection_id);
+
+	/* increment for subsequent accepted connections */
+	connection_id++;
+
+    global_pcb = newpcb;
+
+    // podria acabar siendo legacy
+    massive_sent = 0; // Resetea el indicador de envío para esta conexión nueva
+
+    // f0411b --
+
+    total_sent = 0;
+    payload_complete =0;
+
+    // --
+
+    xil_printf("Nueva conexion aceptada. global_pcb asignado\n\r");
+
+    // f0411b enviar de inmediato el primer bloque
+    //transfer_data();
+
+    // 0415: nueva linea
+    //tcp_sent(newpcb, sent_callback);
+
+	return ERR_OK;
+}
+
+
+/*
+* load_massive_data: Carga los datos masivos desde massive_data (definido en massive_data.h)
+*                      al buffer global massive_payload. simulando el sistema completo
+*/
+// version comentada el 0415
+//void load_massive_data(void)
+//{
+//    // Usamos strncpy para evitar sobreescritura
+//    strncpy(massive_payload, massive_data, MASSIVE_PAYLOAD_SIZE - 1);
+//
+//    //strncpy(massive_payload, small_data, MASSIVE_PAYLOAD_SIZE - 1);
+//
+//    // Aseguramos la terminación nula
+//    massive_payload[MASSIVE_PAYLOAD_SIZE - 1] = '\0';
+//    xil_printf("Massive data loaded:\n%s\n", massive_payload);
+//}
+
+// 0415 version temporal para probar line blocker
+void load_massive_data(void) {
+    init_line_blocks();
+    xil_printf("Bloques inicializados desde massive_data\n\r");
+}
+
+
+/*
+* transfer_data: Envía massive_payload al cliente si aún no se ha enviado.
+*/
+// 0415 comentada para implementar lineblocking
+//int transfer_data() {
+//
+//
+//	// 0411b envio de paquetes
+//
+//    if (global_pcb == NULL || payload_complete) {
+//        return 0;
+//    }
+//
+//    // Determinar la longitud total del payload
+//    u16_t total_len = strlen(massive_payload);
+//    // Calcular cuántos bytes quedan por enviar
+//    u16_t remaining = total_len - total_sent;
+//    // El bloque que enviaremos es el mínimo entre BLOCK_SIZE y lo que queda
+//    u16_t send_len = (remaining > BLOCK_SIZE) ? BLOCK_SIZE : remaining;
+//
+//    // Verificar espacio disponible en tcp_sndbuf
+//    u16_t sndbuf_space = tcp_sndbuf(global_pcb);
+//    xil_printf("Intentando enviar %d bytes. Space in tcp_sndbuf: %d\n\r", send_len, sndbuf_space);
+//
+//
+//    /*0411b nota importante TODO
+//     * Necesitas implementar un interrupt para cuando el cliente quiera deternse de enviar datos o lo siguiente correra todo el tiempo
+//     * algo que diferencia una señal de interrumpir vs que se haya cortado la transmision y lo intente denuevo*/
+//    if (sndbuf_space >= send_len) {
+//        // Escribimos el bloque usando tcp_write
+//        err_t err = tcp_write(global_pcb, massive_payload + total_sent, send_len, TCP_WRITE_FLAG_COPY);
+//        if (err == ERR_OK) {
+//            tcp_output(global_pcb);
+//            xil_printf("Bloque de %d bytes enviado\n\r", send_len);
+//        } else {
+//            xil_printf("Error enviando bloque, código: %d\n\r", err);
+//        }
+//    } else {
+//        xil_printf("Espacio insuficiente en tcp_sndbuf para enviar bloque\n\r");
+//    }
+//    return 0;
+
+//	// 0411b: legacy?: reemplazado por el cambio nuevo de arriba
+//    if (!massive_sent && global_pcb != NULL) {
+//        u16_t payload_len = strlen(massive_payload);
+//        u16_t sndbuf_space = tcp_sndbuf(global_pcb);
+//        xil_printf("Massive payload length: %d, available tcp_sndbuf: %d\n\r", payload_len, sndbuf_space);
+//
+//        if (sndbuf_space > payload_len) {
+//            err_t err = tcp_write(global_pcb, massive_payload, payload_len, TCP_WRITE_FLAG_COPY);
+//            if (err == ERR_OK) {
+//                tcp_output(global_pcb);
+//                xil_printf("Massive payload enviado\n\r");
+//                massive_sent = 1;
+//            } else {
+//                xil_printf("Error enviando massive payload, código: %d\n\r", err);
+//            }
+//        } else {
+//            xil_printf("No hay suficiente espacio en tcp_sndbuf para massive payload\n\r");
+//        }
+//    }
+//    return 0;
+//}
+
+#include "line_blocker.h"
+
+int transfer_data() {
+    if (global_pcb == NULL || payload_complete) {
+        xil_printf("No hay conexión activa o ya se envió todo.\n\r");
+        return 0;
+    }
+
+    char block[BLOCK_BUFFER_SIZE];
+    int block_len = get_next_block(block, sizeof(block));
+
+    if (block_len <= 0) {
+        payload_complete = 1;
+        xil_printf("Fin de datos. Todo enviado\n\r");
+        return 0;
+    }
+
+    // Preparar header de longitud en orden de red
+    uint16_t len_net = htons((uint16_t)block_len);
+
+    // Verificar si hay suficiente espacio en el buffer de envío de TCP
+    u16_t sndbuf_space = tcp_sndbuf(global_pcb);
+    xil_printf("tcp_sndbuf disponible: %d, requerido: %d\n\r", sndbuf_space, (int)(sizeof(len_net) + block_len));
+
+    if (sndbuf_space >= block_len + sizeof(len_net)) {
+        // Enviar header
+        err_t err = tcp_write(global_pcb, &len_net, sizeof(len_net), TCP_WRITE_FLAG_COPY);
+        if (err != ERR_OK) {
+            xil_printf("Error al enviar encabezado del bloque: %d\n\r", err);
+            return -1;
+        }
+
+        // Enviar bloque
+        err = tcp_write(global_pcb, block, block_len, TCP_WRITE_FLAG_COPY);
+        if (err != ERR_OK) {
+            xil_printf("Error al enviar datos del bloque: %d\n\r", err);
+            return -1;
+        }
+
+        // Forzar el envío inmediato
+        tcp_output(global_pcb);
+        xil_printf("Bloque enviado (%d bytes):\n%.*s\n\r", block_len, block_len, block);
+    } else {
+        xil_printf("Espacio insuficiente en tcp_sndbuf, espera antes de reenviar\n\r");
+    }
+
+    return 0;
+}
+
+
+
+
+void print_app_header()
+{
+#if (LWIP_IPV6==0)
+	xil_printf("\n\r\n\r-----lwIP TCP echo server ------\n\r");
+#else
+	xil_printf("\n\r\n\r-----lwIPv6 TCP echo server ------\n\r");
+#endif
+	xil_printf("TCP packets sent to port 6001 will be echoed back\n\r");
+}
+
+
+
+int start_application()
+{
+	struct tcp_pcb *pcb;
+	err_t err;
+	unsigned port = 7;
+
+	/* create new TCP PCB structure */
+	pcb = tcp_new_ip_type(IPADDR_TYPE_ANY);
+	if (!pcb) {
+		xil_printf("Error creating PCB. Out of Memory\n\r");
+		return -1;
+	}
+
+	/* bind to specified @port */
+	err = tcp_bind(pcb, IP_ANY_TYPE, port);
+	if (err != ERR_OK) {
+		xil_printf("Unable to bind to port %d: err = %d\n\r", port, err);
+		return -2;
+	}
+
+	/* we do not need any arguments to callback functions */
+	tcp_arg(pcb, NULL);
+
+	/* listen for connections */
+	pcb = tcp_listen(pcb);
+	if (!pcb) {
+		xil_printf("Out of memory while tcp_listen\n\r");
+		return -3;
+	}
+
+	/* specify callback to use for incoming connections */
+	tcp_accept(pcb, accept_callback);
+
+	xil_printf("TCP echo server started @ port %d\n\r", port);
+
+	return 0;
+}

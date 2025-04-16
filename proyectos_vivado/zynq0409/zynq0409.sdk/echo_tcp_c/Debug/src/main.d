@@ -1,6 +1,7 @@
 src/main.o src/main.o: ../src/main.c \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters_ps.h \
+ ../src/platform.h ../src/platform_config.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/netif/xadapter.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwipopts.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/netif.h \
@@ -26,22 +27,26 @@ src/main.o src/main.o: ../src/main.c \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/ip6.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/ip.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/netif/xtopology.h \
- ../src/platform.h ../src/platform_config.h \
- ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_printf.h \
- ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_types.h \
- ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters.h \
- ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/bspconfig.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/tcp.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/icmp.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/icmp.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_cache.h \
+ ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_types.h \
+ ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_printf.h \
+ ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters.h \
+ ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/bspconfig.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/dhcp.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/udp.h \
- ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/udp.h
+ ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/udp.h \
+ ../src/massive_data.h ../src/small_data.h ../src/line_blocker.h
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters.h:
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters_ps.h:
+
+../src/platform.h:
+
+../src/platform_config.h:
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/netif/xadapter.h:
 
@@ -93,18 +98,6 @@ src/main.o src/main.o: ../src/main.c \
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/netif/xtopology.h:
 
-../src/platform.h:
-
-../src/platform_config.h:
-
-../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_printf.h:
-
-../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_types.h:
-
-../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters.h:
-
-../../echo_tcp_c_bsp/ps7_cortexa9_0/include/bspconfig.h:
-
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/tcp.h:
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/icmp.h:
@@ -113,8 +106,22 @@ src/main.o src/main.o: ../src/main.c \
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_cache.h:
 
+../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_types.h:
+
+../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_printf.h:
+
+../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters.h:
+
+../../echo_tcp_c_bsp/ps7_cortexa9_0/include/bspconfig.h:
+
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/dhcp.h:
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/udp.h:
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/udp.h:
+
+../src/massive_data.h:
+
+../src/small_data.h:
+
+../src/line_blocker.h:

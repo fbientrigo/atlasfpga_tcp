@@ -1,0 +1,192 @@
+/*
+ * main.c - Simulación del sistema aislado
+ *
+ * Esta versión simula la inicialización de la plataforma, la carga de un massive_payload,
+ * la configuración de la red utilizando lwIP, y el inicio del servidor TCP.
+ * Se ejecuta un bucle principal que invoca funciones de temporización de lwIP y procesa
+ * las entradas de red.
+ *
+ */
+
+ #include <stdio.h>
+ #include <string.h>
+ #include "xparameters.h"
+ #include "platform.h"
+ #include "platform_config.h"
+ #include "netif/xadapter.h"
+ #include "lwip/tcp.h"
+ #include "xil_cache.h"
+
+ #if defined (__arm__) || defined(__aarch64__)
+ #include "xil_printf.h"
+ #endif
+
+ #if LWIP_IPV6==1
+ #include "lwip/ip.h"
+ #else
+   #if LWIP_DHCP==1
+     #include "lwip/dhcp.h"
+   #endif
+ #endif
+
+ // Inclusión del header con datos masivos
+ #include "massive_data.h"
+ #include "small_data.h"
+
+ // Declaración de funciones de lwIP
+ void lwip_init();
+
+ // Declaración de funciones del servidor TCP (definidas en echo.c)
+ int start_application();
+ int transfer_data();
+ void tcp_fasttmr(void);
+ void tcp_slowtmr(void);
+
+ // Definición de variables globales para lwIP y la interfaz de red
+ extern volatile int TcpFastTmrFlag;
+ extern volatile int TcpSlowTmrFlag;
+ static struct netif server_netif;
+ struct netif *echo_netif;
+
+ //f: prueba a sacar la definicion afuera
+ extern volatile int dhcp_timoutcntr;
+
+ // Tamaño del buffer para massive_payload
+ #define MASSIVE_PAYLOAD_SIZE 512
+
+ // Buffer global para almacenar el massive_payload
+ char massive_payload[MASSIVE_PAYLOAD_SIZE];
+
+ /*
+  * load_massive_data: Carga los datos masivos desde massive_data (definido en massive_data.h)
+  *                      al buffer global massive_payload.
+  */
+ void load_massive_data(void)
+ {
+     // Usamos strncpy para evitar sobreescritura
+     //strncpy(massive_payload, massive_data, MASSIVE_PAYLOAD_SIZE - 1);
+
+     strncpy(massive_payload, small_data, MASSIVE_PAYLOAD_SIZE - 1);
+
+
+     // Aseguramos la terminación nula
+     massive_payload[MASSIVE_PAYLOAD_SIZE - 1] = '\0';
+     xil_printf("Massive data loaded:\n%s\n", massive_payload);
+ }
+
+ #if LWIP_IPV6==0
+ /*
+  * print_ip: Función auxiliar para imprimir una dirección IP.
+  */
+ void print_ip(char *msg, ip_addr_t *ip)
+ {
+     xil_printf("%s%d.%d.%d.%d\n\r", msg, ip4_addr1(ip), ip4_addr2(ip),
+                ip4_addr3(ip), ip4_addr4(ip));
+ }
+
+ /*
+  * print_ip_settings: Imprime la configuración completa de red (IP, netmask y gateway).
+  */
+ void print_ip_settings(ip_addr_t *ip, ip_addr_t *mask, ip_addr_t *gw)
+ {
+     print_ip("Board IP: ", ip);
+     print_ip("Netmask : ", mask);
+     print_ip("Gateway : ", gw);
+ }
+ #endif
+
+ int main()
+ {
+ #if LWIP_IPV6==0
+     ip_addr_t ipaddr, netmask, gw;
+ #endif
+     // Dirección MAC única para el dispositivo
+     unsigned char mac_ethernet_address[] = { 0x00, 0x0a, 0x35, 0x00, 0x01, 0x02 };
+
+     echo_netif = &server_netif;
+
+     // Inicializar la plataforma
+     init_platform();
+
+ #if LWIP_IPV6==0
+     #if LWIP_DHCP==1
+         ipaddr.addr = 0;
+         gw.addr = 0;
+         netmask.addr = 0;
+     #else
+         IP4_ADDR(&ipaddr, 192, 168, 1, 10);
+         IP4_ADDR(&netmask, 255, 255, 255, 0);
+         IP4_ADDR(&gw, 192, 168, 1, 1);
+     #endif
+ #endif
+
+     // Imprimir encabezado de la aplicación
+     print_app_header();
+
+     // Inicializar la pila lwIP
+     lwip_init();
+
+ #if LWIP_IPV6==0
+     if (!xemac_add(echo_netif, &ipaddr, &netmask, &gw, mac_ethernet_address, PLATFORM_EMAC_BASEADDR)) {
+         xil_printf("Error adding N/W interface\n\r");
+         return -1;
+     }
+     netif_set_default(echo_netif);
+     netif_set_up(echo_netif);
+     #if LWIP_DHCP==1
+         dhcp_start(echo_netif);
+         /* Espera simple de DHCP con decremento del contador */
+         dhcp_timoutcntr = 900;
+         while (((echo_netif->ip_addr.addr) == 0) && (dhcp_timoutcntr > 0)) {
+             xemacif_input(echo_netif);
+             dhcp_timoutcntr--;
+         }
+         if ((echo_netif->ip_addr.addr) == 0) {
+             xil_printf("DHCP Timeout, configuring default IP\n\r");
+             IP4_ADDR(&(echo_netif->ip_addr), 192, 168, 1, 10);
+             IP4_ADDR(&(echo_netif->netmask), 255, 255, 255, 0);
+             IP4_ADDR(&(echo_netif->gw), 192, 168, 1, 1);
+         }
+         /* Actualizar las variables locales para la impresión */
+         ipaddr = echo_netif->ip_addr;
+         netmask = echo_netif->netmask;
+         gw = echo_netif->gw;
+         xil_printf("Assigned IP: %d.%d.%d.%d\n\r",
+             ip4_addr1(&ipaddr), ip4_addr2(&ipaddr),
+             ip4_addr3(&ipaddr), ip4_addr4(&ipaddr));
+         xil_printf("Netmask:    %d.%d.%d.%d\n\r",
+             ip4_addr1(&netmask), ip4_addr2(&netmask),
+             ip4_addr3(&netmask), ip4_addr4(&netmask));
+         xil_printf("Gateway:    %d.%d.%d.%d\n\r",
+             ip4_addr1(&gw), ip4_addr2(&gw),
+             ip4_addr3(&gw), ip4_addr4(&gw));
+     #endif
+ #else
+     // Configuración para IPv6 si fuera necesario.
+ #endif
+
+
+     // Cargar massive_payload desde massive_data.h
+     load_massive_data();
+
+     // Iniciar el servidor TCP (simulado en echo.c)
+     start_application();
+
+     // Bucle principal: invocar temporizadores TCP y procesar entradas de red.
+     while (1) {
+         if (TcpFastTmrFlag) {
+             tcp_fasttmr();
+             TcpFastTmrFlag = 0;
+         }
+         if (TcpSlowTmrFlag) {
+             tcp_slowtmr();
+             TcpSlowTmrFlag = 0;
+         }
+         xemacif_input(echo_netif);
+         // Transferir massive_payload a conexiones activas (si es aplicable)
+         transfer_data();
+     }
+
+     cleanup_platform();
+     return 0;
+ }

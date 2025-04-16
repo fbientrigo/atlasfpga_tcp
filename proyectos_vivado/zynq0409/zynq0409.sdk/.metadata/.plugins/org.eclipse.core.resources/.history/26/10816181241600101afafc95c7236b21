@@ -1,0 +1,23 @@
+#ifndef MASSIVE_DATA_H_
+#define MASSIVE_DATA_H_
+
+// Esta constante simula la entrada de datos masivos.
+// Cada línea representa un conjunto de datos, separados por espacios.
+static const char *massive_data =
+    "800 FC0 040 7C0 7C0 A81 9C0 040 080\n"
+    "801 FC0 040 7C0 7C0 B81 9C0 1C0 C8A\n"
+    "802 7C0 0C0 7C0 7C0 A8A A40 1C0 C80\n"
+    "803 FC0 040 640 7C0 F81 9C0 040 B80\n"
+    "804 540 1C0 7C0 7C0 780 9C0 1C0 080\n"
+    "805 D40 1C0 640 7C0 B80 940 040 C8A\n"
+    "806 5C0 0C0 1C0 6C0 98A 9C0 040 B80\n"
+    "807 FC0 040 640 7C0 E81 9C0 040 B80\n"
+    "808 540 040 640 FC0 780 940 FC0 B80\n"
+    "809 E40 040 7C0 7C1 880 9C0 07F C80\n"
+    "80A FC0 040 640 7C0 781 9C0 040 B80\n"
+    "80B E40 0C0 7C0 7C0 E80 A40 1C0 B80\n"
+    "80C E40 040 7C0 7C0 881 940 040 B80\n"
+    "80D E40 040 640 7C0 F81 AC0 1C0 B80\n"
+    "80E E40 1C0 640 BC0 680 A40 1C0 B80\n";
+
+#endif /* MASSIVE_DATA_H_ */

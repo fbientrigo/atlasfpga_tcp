@@ -1,36 +1,267 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="es">
   <compound refid="_a_d_c__driver_8c" kind="file"><name>ADC_driver.c</name>
+    <member refid="_a_d_c__driver_8c_1a9099b9757d1c863a72d59e7f4fbe38ad" kind="function"><name>AXI_ADC_config</name></member>
+    <member refid="_a_d_c__driver_8c_1a80a4f95e870f03aaacb3a21081bba016" kind="function"><name>AXI_ADC_check_status</name></member>
+    <member refid="_a_d_c__driver_8c_1a53bcf143208a1c7e6e1299d97a616d1e" kind="function"><name>AXI_ADC_check_read_reg</name></member>
+    <member refid="_a_d_c__driver_8c_1a851d03e8261a2c3a5d9c3a2e3238c127" kind="function"><name>AXI_ADC_send_50M_burst</name></member>
+    <member refid="_a_d_c__driver_8c_1a312b457e4642d4ca891cc6798946193d" kind="function"><name>AXI_ADC_send_16M_burst</name></member>
+    <member refid="_a_d_c__driver_8c_1ad2e6f8c161508b187d430b09bc9c0c17" kind="function"><name>AXI_ADC_read_ptr</name></member>
+    <member refid="_a_d_c__driver_8c_1a51c88ee0fddf8804f994b77bf320c1c4" kind="function"><name>AXI_ADC_write_reg</name></member>
+    <member refid="_a_d_c__driver_8c_1a752e04377f2a3bb919cc6229fd20daf1" kind="function"><name>AXI_ADC_read_register</name></member>
   </compound>
   <compound refid="_a_d_c__driver_8h" kind="file"><name>ADC_driver.h</name>
+    <member refid="_a_d_c__driver_8h_1addae79e1bc8ceb633e08ad077ffc3f15" kind="define"><name>AXI_ADC_BaseAddress</name></member>
+    <member refid="_a_d_c__driver_8h_1a4ec16ba7a062c7c839d0ae95d38591fd" kind="define"><name>AXI_ADC_S00_AXI_ctrl_SLV_REG0_OFFSET</name></member>
+    <member refid="_a_d_c__driver_8h_1a055084825b02d4daab66f4580dd9b75e" kind="define"><name>AXI_ADC_S00_AXI_ctrl_SLV_REG1_OFFSET</name></member>
+    <member refid="_a_d_c__driver_8h_1a21574321455623c27d02573e00d47b1e" kind="define"><name>AXI_ADC_S00_AXI_ctrl_SLV_REG2_OFFSET</name></member>
+    <member refid="_a_d_c__driver_8h_1a8e0911bb7cd06b4786a0a5126a22951f" kind="define"><name>AXI_ADC_S00_AXI_ctrl_SLV_REG3_OFFSET</name></member>
+    <member refid="_a_d_c__driver_8h_1aaa1f2f59f753f5f4a26950f183996ce8" kind="define"><name>AXI_ADC_S00_action_reg_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a9feee9ae24c2efd525175663afbd47b5" kind="define"><name>AXI_ADC_S00_write_n_pointer_reg_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1aca9455e684496d74d6507f2b79440dff" kind="define"><name>AXI_ADC_S00_read_reg_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a04860c2c2892645b209e650eefbe87ed" kind="define"><name>AXI_ADC_S00_adc_conf_bit_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a57c6ecb53ce7f943c2654e8bc43f39c3" kind="define"><name>AXI_ADC_S00_adc_write_bit_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a4a0a0397058a2ed442f20e7dd2a02899" kind="define"><name>AXI_ADC_S00_adc_read_bit_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a612562386f4675ebfffe99b5a15aa2e9" kind="define"><name>AXI_ADC_S00_ready_state_bit_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a277fedbb8746bbe91ff601495421dcf3" kind="define"><name>AXI_ADC_S00_50M_burst_onposedge_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a9cc1d39f20901c1469bb6ff7b7db0422" kind="define"><name>AXI_ADC_S00_16M_burst_onposedge_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a9548322e5d48833d95c1439f4d35a17a" kind="define"><name>AXI_ADC_S00_write_bit_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1af60f4652c32478a050d0f488cc04d0af" kind="define"><name>AXI_ADC_S00_pointer_bit_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1a618d31b174460414733181145b134ecf" kind="define"><name>AXI_ADC_S00_read_bit_offset</name></member>
+    <member refid="_a_d_c__driver_8h_1ae85a0998015f375674accbcc26018f95" kind="define"><name>AXI_ADC_mWriteReg</name></member>
+    <member refid="_a_d_c__driver_8h_1ac8ef4ac1758923a63b00af1c37973cc0" kind="define"><name>AXI_ADC_mReadReg</name></member>
+    <member refid="_a_d_c__driver_8h_1a544bda0fe081b82367ed8bd5f707a25e" kind="function"><name>AXI_ADC_Reg_SelfTest</name></member>
+    <member refid="_a_d_c__driver_8h_1a9099b9757d1c863a72d59e7f4fbe38ad" kind="function"><name>AXI_ADC_config</name></member>
+    <member refid="_a_d_c__driver_8h_1a80a4f95e870f03aaacb3a21081bba016" kind="function"><name>AXI_ADC_check_status</name></member>
+    <member refid="_a_d_c__driver_8h_1a53bcf143208a1c7e6e1299d97a616d1e" kind="function"><name>AXI_ADC_check_read_reg</name></member>
+    <member refid="_a_d_c__driver_8h_1ad2e6f8c161508b187d430b09bc9c0c17" kind="function"><name>AXI_ADC_read_ptr</name></member>
+    <member refid="_a_d_c__driver_8h_1a51c88ee0fddf8804f994b77bf320c1c4" kind="function"><name>AXI_ADC_write_reg</name></member>
+    <member refid="_a_d_c__driver_8h_1a851d03e8261a2c3a5d9c3a2e3238c127" kind="function"><name>AXI_ADC_send_50M_burst</name></member>
+    <member refid="_a_d_c__driver_8h_1a312b457e4642d4ca891cc6798946193d" kind="function"><name>AXI_ADC_send_16M_burst</name></member>
   </compound>
   <compound refid="_c_p_l_d__driver_8c" kind="file"><name>CPLD_driver.c</name>
+    <member refid="_c_p_l_d__driver_8c_1afb7fd43b26f9058214f1cb1059da76a0" kind="function"><name>write_CPLD_signals</name></member>
+    <member refid="_c_p_l_d__driver_8c_1afe4012ac5ef829b5e9793abde9aca870" kind="function"><name>read_CPLD_status</name></member>
+    <member refid="_c_p_l_d__driver_8c_1a4dec39c495dd54a4f60eb23950553fb7" kind="function"><name>read_cpld_word</name></member>
+    <member refid="_c_p_l_d__driver_8c_1a97350d0f7c01dbe4a01d5470d7db4c2e" kind="function"><name>Mezz_CPLD_init</name></member>
+    <member refid="_c_p_l_d__driver_8c_1a748b84a3d63b13cba2a4e665ea19e2bc" kind="function"><name>CPLD_mezz_power_off</name></member>
   </compound>
   <compound refid="_c_p_l_d__driver_8h" kind="file"><name>CPLD_driver.h</name>
+    <member refid="_c_p_l_d__driver_8h_1a85b9f4fdc05b5ad4a256dc3675e096f2" kind="define"><name>CPLD_ctrl_BaseAddr</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a9c3606351dd4196dfe3f0300ade294a6" kind="variable"><name>CPLD_denable</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a22a32e1403862c06e36cac65dab49aec" kind="variable"><name>CPLD_nshdn</name></member>
+    <member refid="_c_p_l_d__driver_8h_1abeb47d758b2bb1dd5cf1cb35f911f358" kind="variable"><name>CPLD_dac_sel1</name></member>
+    <member refid="_c_p_l_d__driver_8h_1aeac52071e4f0b2f05cd4423cdb56cedf" kind="variable"><name>CPLD_dac_sel0</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a69f15cd80582f11ec424a3cc53876994" kind="variable"><name>CPLD_nRst</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a6536b67aa98ce478511bb2aea4b463f8" kind="variable"><name>CPLD_mux0_0</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a4ffa135ea3b451f7d791e960522f33bd" kind="variable"><name>CPLD_mux0_1</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a66ba5557afe45e82f65c79dbc8ec9c3f" kind="variable"><name>CPLD_Tcal</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a75d02e31f40ecae1a3652a3276d1df27" kind="variable"><name>CPLD_ADC_nCS</name></member>
+    <member refid="_c_p_l_d__driver_8h_1adbbc928ebb62806361c1b46bc2c2a813" kind="variable"><name>CPLD_SPI_mezz_sel</name></member>
+    <member refid="_c_p_l_d__driver_8h_1ab45ffb06c3ce257cba6a714e0cc347bc" kind="variable"><name>CPLD_SPI_wr_en</name></member>
+    <member refid="_c_p_l_d__driver_8h_1aae59eebd2ec6f94e7472fead39ace65e" kind="variable"><name>CPLD_mezz_mux</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a08388ff7789126b63237c34679ba3b86" kind="variable"><name>CPLD_gain_mux</name></member>
+    <member refid="_c_p_l_d__driver_8h_1abe3fce3d58e3b327814808639627aee2" kind="variable"><name>CPLD_wr_rdy</name></member>
+    <member refid="_c_p_l_d__driver_8h_1afb7fd43b26f9058214f1cb1059da76a0" kind="function"><name>write_CPLD_signals</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a4dec39c495dd54a4f60eb23950553fb7" kind="function"><name>read_cpld_word</name></member>
+    <member refid="_c_p_l_d__driver_8h_1afe4012ac5ef829b5e9793abde9aca870" kind="function"><name>read_CPLD_status</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a97350d0f7c01dbe4a01d5470d7db4c2e" kind="function"><name>Mezz_CPLD_init</name></member>
+    <member refid="_c_p_l_d__driver_8h_1a748b84a3d63b13cba2a4e665ea19e2bc" kind="function"><name>CPLD_mezz_power_off</name></member>
   </compound>
   <compound refid="_d_r_s4__driver_8c" kind="file"><name>DRS4_driver.c</name>
+    <member refid="_d_r_s4__driver_8c_1aea191e67b6639ebdcd9d00890745f8c7" kind="variable"><name>ctrl_sig</name></member>
+    <member refid="_d_r_s4__driver_8c_1a044d4a533ae7b6e6cc42bc36bbd8f389" kind="variable"><name>register_signals</name></member>
+    <member refid="_d_r_s4__driver_8c_1a4ca46ffd8087bbbf67d833f943ffd38d" kind="variable"><name>SR_init</name></member>
+    <member refid="_d_r_s4__driver_8c_1a31bff2e70a3eb9aa619021e0966059e1" kind="variable"><name>Conf_reg_init</name></member>
+    <member refid="_d_r_s4__driver_8c_1aa2e9a3a3ce7a711d2adce005d7a03d1e" kind="variable"><name>ROI</name></member>
+    <member refid="_d_r_s4__driver_8c_1ab046bab82fa928cfc4e960437c81a3a5" kind="variable"><name>Full_read</name></member>
+    <member refid="_d_r_s4__driver_8c_1a4bfaa2dcbabaf8d9833dac780806cc8a" kind="variable"><name>refclk_counter</name></member>
+    <member refid="_d_r_s4__driver_8c_1afe71ebd52ef3d9da4ee95e146c1a8b4b" kind="variable"><name>readout_cells</name></member>
+    <member refid="_d_r_s4__driver_8c_1acc6e5ceb306312469fa28b720165e362" kind="variable"><name>conf_bits</name></member>
+    <member refid="_d_r_s4__driver_8c_1a529e290e544495d6124f5dd5ec21478e" kind="variable"><name>delay_trig</name></member>
+    <member refid="_d_r_s4__driver_8c_1a99e50660a4a11c4868d98915e08f905a" kind="variable"><name>axi_rst</name></member>
+    <member refid="_d_r_s4__driver_8c_1a5b5d083aab0319a8d07f57b278c65d55" kind="variable"><name>states_vector</name></member>
+    <member refid="_d_r_s4__driver_8c_1a236fdd2a9b0dba25719f000d5848027a" kind="variable"><name>stop_cell</name></member>
+    <member refid="_d_r_s4__driver_8c_1a11c8749f166d5b7fd26d50d518788c35" kind="variable"><name>ROFS</name></member>
+    <member refid="_d_r_s4__driver_8c_1a6ae4542e81054e76bf03d501618eb102" kind="variable"><name>nReset</name></member>
+    <member refid="_d_r_s4__driver_8c_1af246b3fabc145e5c8c9d2b7ed1ebfca8" kind="variable"><name>state1</name></member>
+    <member refid="_d_r_s4__driver_8c_1a60cff25ad9a51049c69a11f8be27be64" kind="variable"><name>state2</name></member>
+    <member refid="_d_r_s4__driver_8c_1ab17029634fe412894c41fd46e8509e17" kind="variable"><name>state3</name></member>
+    <member refid="_d_r_s4__driver_8c_1a5af6ee202d58a43673c00b4893a6bfc1" kind="variable"><name>state4</name></member>
+    <member refid="_d_r_s4__driver_8c_1a8e2b022030e19b8a667ef4f2bc05e924" kind="function"><name>DRS4_Init</name></member>
+    <member refid="_d_r_s4__driver_8c_1acf73616c2fdc209fa47a0ff88e261aa1" kind="function"><name>DRS4_config</name></member>
+    <member refid="_d_r_s4__driver_8c_1a5b843d8517ff28c606824f45c92308e2" kind="function"><name>DRS4_start_ROI</name></member>
+    <member refid="_d_r_s4__driver_8c_1a7c515e750acb8a258cc5388501944f50" kind="function"><name>DRS4_start_FullRO</name></member>
+    <member refid="_d_r_s4__driver_8c_1aa9dfbeec906e3dbfc135aee1dd35343b" kind="function"><name>DRS4_Safe_shutdown</name></member>
+    <member refid="_d_r_s4__driver_8c_1a6dd97ba9d02aa85ff3a963ff0fba3fb3" kind="function"><name>DRS4_ctrl_signal</name></member>
+    <member refid="_d_r_s4__driver_8c_1ad7d665e222124d39684f650ba950d18a" kind="function"><name>DRS4_register_signal</name></member>
+    <member refid="_d_r_s4__driver_8c_1a374102208caee5c5f4c7279825d1c139" kind="function"><name>write_DRS4_control_signals</name></member>
+    <member refid="_d_r_s4__driver_8c_1a773a217633920942ad269009c326b383" kind="function"><name>write_DRS4_register_signals</name></member>
+    <member refid="_d_r_s4__driver_8c_1a87cbc9152b76639570cd70ecfd1116fd" kind="function"><name>get_states_machine</name></member>
+    <member refid="_d_r_s4__driver_8c_1a148a807abd07446484d002c1df919a4c" kind="function"><name>get_stop_cell_SROUT</name></member>
   </compound>
   <compound refid="_d_r_s4__driver_8h" kind="file"><name>DRS4_driver.h</name>
+    <member refid="_d_r_s4__driver_8h_1a6d88c8373398650dc0e20aec8556e018" kind="define"><name>DRS4_FIRMWARE_S00_AXI_SLV_REG0_OFFSET</name></member>
+    <member refid="_d_r_s4__driver_8h_1a6579a6e6dd8ae1e345248fbb713b5795" kind="define"><name>DRS4_FIRMWARE_S00_AXI_SLV_REG1_OFFSET</name></member>
+    <member refid="_d_r_s4__driver_8h_1a5d455ff182a0ecd8a10f74c09fe52716" kind="define"><name>DRS4_FIRMWARE_S00_AXI_SLV_REG2_OFFSET</name></member>
+    <member refid="_d_r_s4__driver_8h_1aeb80cf1cfa41d82c0e81e4f70e2ecd66" kind="define"><name>DRS4_FIRMWARE_S00_AXI_SLV_REG3_OFFSET</name></member>
+    <member refid="_d_r_s4__driver_8h_1a920e4474c98bb48cac5a6357ca3a718a" kind="define"><name>DRS4_ctrl_signals</name></member>
+    <member refid="_d_r_s4__driver_8h_1acf733d43f6fa1d03f9c33f68029902f7" kind="define"><name>DRS4_register_signals</name></member>
+    <member refid="_d_r_s4__driver_8h_1aa7460d0410664f81b1b0225c159cb3de" kind="define"><name>DRS4_read_signals</name></member>
+    <member refid="_d_r_s4__driver_8h_1a0856249aeb180e8754fb3ff42e923c17" kind="define"><name>DRS4_base_addr</name></member>
+    <member refid="_d_r_s4__driver_8h_1adf0bd8c790318354b7c1c6c09253713c" kind="define"><name>DRS4_FIRMWARE_mWriteReg</name></member>
+    <member refid="_d_r_s4__driver_8h_1ac815314abc5e1fe8026fdcd9cf1f5d93" kind="define"><name>DRS4_FIRMWARE_mReadReg</name></member>
+    <member refid="_d_r_s4__driver_8h_1a77b2b031a24774c3f59a0eaab32afa80" kind="variable"><name>DRS_start_adq</name></member>
+    <member refid="_d_r_s4__driver_8h_1a6488d4c7ca247509425b8a07e842e533" kind="function"><name>DRS4_FIRMWARE_Reg_SelfTest</name></member>
+    <member refid="_d_r_s4__driver_8h_1a6dd97ba9d02aa85ff3a963ff0fba3fb3" kind="function"><name>DRS4_ctrl_signal</name></member>
+    <member refid="_d_r_s4__driver_8h_1ad7d665e222124d39684f650ba950d18a" kind="function"><name>DRS4_register_signal</name></member>
+    <member refid="_d_r_s4__driver_8h_1a374102208caee5c5f4c7279825d1c139" kind="function"><name>write_DRS4_control_signals</name></member>
+    <member refid="_d_r_s4__driver_8h_1a773a217633920942ad269009c326b383" kind="function"><name>write_DRS4_register_signals</name></member>
+    <member refid="_d_r_s4__driver_8h_1a87cbc9152b76639570cd70ecfd1116fd" kind="function"><name>get_states_machine</name></member>
+    <member refid="_d_r_s4__driver_8h_1a148a807abd07446484d002c1df919a4c" kind="function"><name>get_stop_cell_SROUT</name></member>
+    <member refid="_d_r_s4__driver_8h_1a8e2b022030e19b8a667ef4f2bc05e924" kind="function"><name>DRS4_Init</name></member>
+    <member refid="_d_r_s4__driver_8h_1acf73616c2fdc209fa47a0ff88e261aa1" kind="function"><name>DRS4_config</name></member>
+    <member refid="_d_r_s4__driver_8h_1a5b843d8517ff28c606824f45c92308e2" kind="function"><name>DRS4_start_ROI</name></member>
+    <member refid="_d_r_s4__driver_8h_1a7c515e750acb8a258cc5388501944f50" kind="function"><name>DRS4_start_FullRO</name></member>
+    <member refid="_d_r_s4__driver_8h_1aa9dfbeec906e3dbfc135aee1dd35343b" kind="function"><name>DRS4_Safe_shutdown</name></member>
   </compound>
   <compound refid="echo_8c" kind="file"><name>echo.c</name>
+    <member refid="echo_8c_1ac4bd67922aa300b8dca3d64a603ab664" kind="function"><name>print_app_header</name></member>
   </compound>
   <compound refid="gpio__handler_8c" kind="file"><name>gpio_handler.c</name>
+    <member refid="gpio__handler_8c_1a97f299c3b55dc7f075d0ca45e4628e71" kind="variable"><name>registro</name></member>
+    <member refid="gpio__handler_8c_1a5a0d86535ca2e7abcdb735089d5ab78d" kind="function"><name>gpio_write_reg</name></member>
+    <member refid="gpio__handler_8c_1a1ff25f0faed2ad290ec383743fe040b7" kind="function"><name>gpio_unset_reg</name></member>
   </compound>
   <compound refid="gpio__handler_8h" kind="file"><name>gpio_handler.h</name>
+    <member refid="gpio__handler_8h_1a48874986fa95e764b2aaf580992821ec" kind="define"><name>soft_trigger_mask</name></member>
+    <member refid="gpio__handler_8h_1aad14157386fe6c945078b5814d7919c2" kind="define"><name>rst_FIFO_mask</name></member>
+    <member refid="gpio__handler_8h_1a3320985923c1c5f4ce80e4c820c5dcb3" kind="define"><name>busy_trigger_mask</name></member>
+    <member refid="gpio__handler_8h_1a0799af21feff9366b1f0416f12b3691c" kind="define"><name>ADC_refclk_mask</name></member>
+    <member refid="gpio__handler_8h_1ae03115a8fc145d6e56a2dd1b94574479" kind="define"><name>trigg_function_mask</name></member>
+    <member refid="gpio__handler_8h_1aaefa1f2de5997f6d48a2035122c914f5" kind="define"><name>trigg_input_mask</name></member>
+    <member refid="gpio__handler_8h_1a42b30ec81a1259d77f4c0877269f8376" kind="define"><name>VETO_mask</name></member>
+    <member refid="gpio__handler_8h_1ad2905f2682f570a71efb07ff920e7b75" kind="define"><name>Rst_gral_mask</name></member>
+    <member refid="gpio__handler_8h_1afc1219f433f889d9d58938f7f3d4604f" kind="define"><name>en_A_vec</name></member>
+    <member refid="gpio__handler_8h_1a8d5d7a2f4fbf2208f6cebcc867f1091a" kind="define"><name>DAC_nCLR_mask</name></member>
+    <member refid="gpio__handler_8h_1ae634312ee8598823ea9eddedcaf2fe01" kind="define"><name>soft_trigger_offset</name></member>
+    <member refid="gpio__handler_8h_1a7429cd7768ab208686fd2d7949f26479" kind="define"><name>rst_FIFO_offset</name></member>
+    <member refid="gpio__handler_8h_1a6afd06e644ac9592a4b4b698c187f29e" kind="define"><name>busy_trigger_offset</name></member>
+    <member refid="gpio__handler_8h_1a411300c74281af225a037d4c6ec1e6f7" kind="define"><name>ADC_refclk_offset</name></member>
+    <member refid="gpio__handler_8h_1a8f0ebc5cd5a875b45688f9301fd4b15c" kind="define"><name>trigg_function_offset</name></member>
+    <member refid="gpio__handler_8h_1af214b144cf980f9ae4579684edbc6dad" kind="define"><name>trigg_input_offset</name></member>
+    <member refid="gpio__handler_8h_1aa8a83ec778ad5cfe38a333313b707510" kind="define"><name>VETO_offset</name></member>
+    <member refid="gpio__handler_8h_1aaabf4702bab58baea515bfd93a251bbf" kind="define"><name>Rst_gral_offset</name></member>
+    <member refid="gpio__handler_8h_1a604389f31f76c213581cdb81e5a9ad0c" kind="define"><name>DAC_references_offset</name></member>
+    <member refid="gpio__handler_8h_1a1cb6f34c67f8eb2157681b8a905fc4a5" kind="define"><name>DAC_threshold_offset</name></member>
+    <member refid="gpio__handler_8h_1a4b9b30b1e41c026bb46b198598eccdd9" kind="define"><name>GAIN_att_offset</name></member>
+    <member refid="gpio__handler_8h_1aa06306cca78df1e59fe08d936eef16c1" kind="define"><name>GAIN_uni_offset</name></member>
+    <member refid="gpio__handler_8h_1af698fd588259a5015051c4e902342b7c" kind="variable"><name>gpio</name></member>
+    <member refid="gpio__handler_8h_1a3acfbd75190831c301aed22c89df2cd4" kind="variable"><name>gpio1</name></member>
+    <member refid="gpio__handler_8h_1a35d6b631621a603b2463faadd22ceb1a" kind="variable"><name>soft_trig</name></member>
+    <member refid="gpio__handler_8h_1a5a0d86535ca2e7abcdb735089d5ab78d" kind="function"><name>gpio_write_reg</name></member>
+    <member refid="gpio__handler_8h_1a1ff25f0faed2ad290ec383743fe040b7" kind="function"><name>gpio_unset_reg</name></member>
   </compound>
   <compound refid="i2c__access_8c" kind="file"><name>i2c_access.c</name>
   </compound>
   <compound refid="iic__phyreset_8c" kind="file"><name>iic_phyreset.c</name>
   </compound>
   <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1a811cc3ee7f4b9e9dc5c873f48b6e0e6a" kind="variable"><name>dac_set</name></member>
+    <member refid="main_8c_1a6e9c8ce4af149589e2f69a77a6c0e91e" kind="variable"><name>TcpFastTmrFlag</name></member>
+    <member refid="main_8c_1a5937f9377d2f9f748b260efb82901fcc" kind="variable"><name>TcpSlowTmrFlag</name></member>
+    <member refid="main_8c_1aa991163c679cf98d9c1815fb386d27b4" kind="variable"><name>server_netif</name></member>
+    <member refid="main_8c_1acd12279932e5216593ee76d4eebdd996" kind="variable"><name>echo_netif</name></member>
+    <member refid="main_8c_1a869830a4824d0bdba156874ba7f142c0" kind="variable"><name>rst_fifo</name></member>
+    <member refid="main_8c_1ae4596ff119ce36a50ef95fa42acbd67a" kind="variable"><name>en_adc_clk</name></member>
+    <member refid="main_8c_1a060d3b134576a0a21958d15e27ebbeb9" kind="variable"><name>en_adc</name></member>
+    <member refid="main_8c_1a6ef23ce4d0841cd83b18558d51836171" kind="variable"><name>buffer_test</name></member>
+    <member refid="main_8c_1af31a464672b7a0c2709792d5086e7fee" kind="variable"><name>Data_send</name></member>
+    <member refid="main_8c_1abf5fa7e6a529fe38d850a2c285cfdccc" kind="variable"><name>cpld_ack</name></member>
+    <member refid="main_8c_1a8806fa17d9958ad1cd9110b6b759cd80" kind="variable"><name>send_cpld</name></member>
+    <member refid="main_8c_1adcff9a2eeef44349f305975899c7bbbb" kind="variable"><name>rst_system</name></member>
+    <member refid="main_8c_1a387ae75f4135fabbc38b6785ca17e16f" kind="variable"><name>adclk_cnt</name></member>
+    <member refid="main_8c_1aee9acc511895c3d7385d599be7f81876" kind="variable"><name>lclk_cnt</name></member>
+    <member refid="main_8c_1a1aebf6833b58d9a39c386d70a90692f0" kind="variable"><name>flag_ready2sent</name></member>
+    <member refid="main_8c_1ad2761044264ff9f54b993b098311f024" kind="variable"><name>flag_sentdata</name></member>
+    <member refid="main_8c_1ad82c4619ccd49319855ccbde6734de72" kind="variable"><name>counter_send</name></member>
+    <member refid="main_8c_1a368a94563ed6e980ef41ad39dc413d4f" kind="variable"><name>en_busy</name></member>
+    <member refid="main_8c_1a33ee725b79ef2a7fc04774ba9ad894c5" kind="variable"><name>soft_trigg_en</name></member>
+    <member refid="main_8c_1a5161d377a61befc3f8103e794d5cb582" kind="variable"><name>shutdown</name></member>
+    <member refid="main_8c_1a12d4bd627ad809a95f42effc902c3411" kind="variable"><name>max_count_send</name></member>
+    <member refid="main_8c_1a1e8a8a54d1a8385e1fc56a739e1cb9eb" kind="variable"><name>read_GPIO</name></member>
+    <member refid="main_8c_1a50ea33258d2701d71a2404696165b878" kind="variable"><name>rst_drs4</name></member>
+    <member refid="main_8c_1aa7d2fdde9f830a6fc296c73f58be881a" kind="variable"><name>clk_count</name></member>
+    <member refid="main_8c_1a29ebab967e4c66e255988906d9615d03" kind="variable"><name>gpio_read</name></member>
+    <member refid="main_8c_1aa2db8c04da1b4b44900008b1fe848e9d" kind="variable"><name>DTAP_meas</name></member>
+    <member refid="main_8c_1a6947f8eb9ed60315edf45064f8475a81" kind="variable"><name>delay_GPIO</name></member>
+    <member refid="main_8c_1a3dafc45c7315d3a5dcc82cabc8823a5b" kind="variable"><name>update_delay</name></member>
+    <member refid="main_8c_1a1b285f6a669f32bf76b6ae1d4a29f2c0" kind="variable"><name>en_A</name></member>
+    <member refid="main_8c_1abf446b07e52161b8a53cea07bc6c366d" kind="function"><name>tcp_fasttmr</name></member>
+    <member refid="main_8c_1a421fb42ef919018e14ae413adfee9905" kind="function"><name>tcp_slowtmr</name></member>
+    <member refid="main_8c_1ab031d4a93545c284333fba30349a481a" kind="function"><name>lwip_init</name></member>
+    <member refid="main_8c_1aa02d18f45d97038d810218c3799060ec" kind="function"><name>init_DACs</name></member>
+    <member refid="main_8c_1a40b3f92271a9aeab485e8f3df09ad678" kind="function"><name>command_is</name></member>
+    <member refid="main_8c_1a67432a7ce691c63b8b0753121f2ff6ea" kind="function"><name>DRS4_restart_ROI</name></member>
+    <member refid="main_8c_1acd9422450b64c14b070dfc17088f7457" kind="function"><name>shutdown_all</name></member>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+    <member refid="main_8c_1a59e8ce388b5dcb747495a5d72be5c92c" kind="function"><name>setup_system</name></member>
+    <member refid="main_8c_1a87550be060eb43c7bb98581cf6b6dc63" kind="function"><name>ADC_SPI_init</name></member>
+    <member refid="main_8c_1a0d71ff0b731218ea30bce2f6e8c6d77b" kind="function"><name>setup_DACs</name></member>
+    <member refid="main_8c_1a130db1a42490734b4c567392d7c5949f" kind="function"><name>loop_routine</name></member>
+    <member refid="main_8c_1a11906e292daf6122d81a75c498068366" kind="function"><name>recv_callback</name></member>
+    <member refid="main_8c_1a961b086c2ce94a3de192d9a2fd22e6a6" kind="function"><name>DRS4_DTAP_meas</name></member>
   </compound>
   <compound refid="main_8h" kind="file"><name>main.h</name>
+    <member refid="main_8h_1a0b71e527200033092ab1ebd5c0c077ed" kind="define"><name>TEST_BUFFER_SIZE</name></member>
+    <member refid="main_8h_1a1ce3e9a8fdd0b911719375e02885ea6c" kind="define"><name>dac_baseaddr</name></member>
+    <member refid="main_8h_1ab3787fde8ffe5678ebc1a52acb8b2908" kind="variable"><name>UartPs</name></member>
+    <member refid="main_8h_1a21a34b7f8d09398f53237562bd1f579b" kind="variable"><name>SendBuffer</name></member>
+    <member refid="main_8h_1a97ff43d2dc0c58afc33efc1304f40b09" kind="variable"><name>RecvBuffer</name></member>
+    <member refid="main_8h_1a3b7858267a6744de219521109be0a90f" kind="variable"><name>UART_BAUD_RATE</name></member>
+    <member refid="main_8h_1a5d5b1744ccbe86d72872e6d6ce83cad7" kind="variable"><name>dac0</name></member>
+    <member refid="main_8h_1a3741aac45a9d06c52fc06134fbba1ef0" kind="variable"><name>dac1</name></member>
+    <member refid="main_8h_1abfe4a5f73dc2ff957edd74b6f33dfad0" kind="variable"><name>dac2</name></member>
+    <member refid="main_8h_1ab817182b68f699f28f64c7d50cdd8099" kind="variable"><name>dac3</name></member>
+    <member refid="main_8h_1a1d13d9bff9a61940fa61988c8c5056fd" kind="variable"><name>set_dac</name></member>
+    <member refid="main_8h_1acba479d03a5acdcfed7c48cd41961c9e" kind="variable"><name>get_dac</name></member>
+    <member refid="main_8h_1ae3037fd9bfbfbb5b15d4c66b841d6b6d" kind="variable"><name>routine_dac</name></member>
+    <member refid="main_8h_1a210872df654d7f8089ef741f05541fc0" kind="variable"><name>routine_adc</name></member>
+    <member refid="main_8h_1aa57d9667d4cf5de48f80e658ee7035a2" kind="variable"><name>adc_config</name></member>
+    <member refid="main_8h_1a61c02c53d075c31f208b987c17cb5fcd" kind="variable"><name>adc_send_burst</name></member>
+    <member refid="main_8h_1a1280a22ce3b8dbe6d83d86b08615b795" kind="variable"><name>adc_read_last</name></member>
+    <member refid="main_8h_1a5d749c756efaaca7675b43a418c6d100" kind="variable"><name>trigger</name></member>
+    <member refid="main_8h_1a4286869b970565dbe3059d44700c05ec" kind="variable"><name>trigger_counter</name></member>
+    <member refid="main_8h_1aac4f3d1cdea16e01fc8d97f4433af3ca" kind="variable"><name>dac_ch</name></member>
+    <member refid="main_8h_1a30836a36b5ef47961fdab58cc3925780" kind="variable"><name>dac_val</name></member>
+    <member refid="main_8h_1aee7ae9a581183d0ee4ec23c95dca52d2" kind="variable"><name>user_VETO</name></member>
+    <member refid="main_8h_1afc950b853d8792131aaa6a1e2e7bc810" kind="variable"><name>dac_values</name></member>
+    <member refid="main_8h_1a6a26711bb44fcbc08b4869310aa09fb3" kind="variable"><name>trigger_values</name></member>
+    <member refid="main_8h_1a607e1a223534673ff024c2941e59f2ff" kind="function"><name>UartLitePolledExample</name></member>
+    <member refid="main_8h_1ab1c2fd3aceb66b64df86134b5bc63869" kind="function"><name>UartLiteInit</name></member>
+    <member refid="main_8h_1a2980b605d24d42cafe4abce4bbb765fe" kind="function"><name>test_routine_1</name></member>
+    <member refid="main_8h_1af4d255334b6ed185eceb37df43f2a9c9" kind="function"><name>test_routine_adc</name></member>
+    <member refid="main_8h_1a130db1a42490734b4c567392d7c5949f" kind="function"><name>loop_routine</name></member>
+    <member refid="main_8h_1a5d26b4e05f1aacc25a9a589c5c9f6fe8" kind="function"><name>test_routine_3</name></member>
+    <member refid="main_8h_1a0d71ff0b731218ea30bce2f6e8c6d77b" kind="function"><name>setup_DACs</name></member>
+    <member refid="main_8h_1a6d5f438dfc0f638dd87efa27867ea2cb" kind="function"><name>setup_system</name></member>
+    <member refid="main_8h_1a5e49de157946ecccd8d1e1a9f655cd1c" kind="function"><name>bin</name></member>
+    <member refid="main_8h_1a961b086c2ce94a3de192d9a2fd22e6a6" kind="function"><name>DRS4_DTAP_meas</name></member>
   </compound>
   <compound refid="platform_8c" kind="file"><name>platform.c</name>
   </compound>
   <compound refid="platform_8h" kind="file"><name>platform.h</name>
+    <member refid="platform_8h_1a3ee623bff56b2be4d1721c259f1f0cdc" kind="define"><name>ETH_LINK_DETECT_INTERVAL</name></member>
+    <member refid="platform_8h_1afddcfa5cf23f52259c9da7f926a4af57" kind="function"><name>init_platform</name></member>
+    <member refid="platform_8h_1a074e46b818accd4588b2fdf6dee7ec00" kind="function"><name>cleanup_platform</name></member>
+    <member refid="platform_8h_1a64a3c17f27c38f0815f46e5e54808af1" kind="function"><name>platform_setup_timer</name></member>
+    <member refid="platform_8h_1a5ace1681c4e75789243609b4c2fad156" kind="function"><name>platform_enable_interrupts</name></member>
   </compound>
   <compound refid="platform__config_8h" kind="file"><name>platform_config.h</name>
+    <member refid="platform__config_8h_1a8686e1ba2dea594c17d9b991280a5c77" kind="define"><name>PLATFORM_EMAC_BASEADDR</name></member>
+    <member refid="platform__config_8h_1a1556d56c40da47e192e6767b8b15003b" kind="define"><name>GPIO_DEVICE_ID</name></member>
+    <member refid="platform__config_8h_1a012dabe2440567491183c498244620ab" kind="define"><name>GPIO_DEVICE_ID1</name></member>
+    <member refid="platform__config_8h_1a23262b19793128f3e1f6eb64c52a6d14" kind="define"><name>PLATFORM_ZYNQ</name></member>
   </compound>
   <compound refid="platform__mb_8c" kind="file"><name>platform_mb.c</name>
   </compound>
@@ -47,12 +278,111 @@
   <compound refid="si5324_8c" kind="file"><name>si5324.c</name>
   </compound>
   <compound refid="tcp__com_8c" kind="file"><name>tcp_com.c</name>
+    <member refid="tcp__com_8c_1a689d5b27c26c3219e2734cf083020c32" kind="define"><name>dcorr</name></member>
+    <member refid="tcp__com_8c_1a9ed6a247bc316da9276bbc62748fbc54" kind="define"><name>kaliv</name></member>
+    <member refid="tcp__com_8c_1a0c69e634bdcf9eb82783f548b3f9e187" kind="define"><name>recok</name></member>
+    <member refid="tcp__com_8c_1afd51c6ba698aaa1a0d7989a5818a6c3e" kind="function"><name>rand_data</name></member>
+    <member refid="tcp__com_8c_1ae6eebda0957833b626bcecacfcf9b7fd" kind="function"><name>packer</name></member>
+    <member refid="tcp__com_8c_1af3eae4c3b427dfe050e36557db53650f" kind="function"><name>hash</name></member>
+    <member refid="tcp__com_8c_1acf75bb5ef6105dd155ddc36f84a71606" kind="function"><name>print_ip</name></member>
+    <member refid="tcp__com_8c_1a267907eb6db3b11649fd717d308572fb" kind="function"><name>print_ip_settings</name></member>
+    <member refid="tcp__com_8c_1a2beb53f1e92fbfa2217fa39c983d8202" kind="function"><name>transfer_data_bkup</name></member>
+    <member refid="tcp__com_8c_1a6f76e8c361bc90b5b8b689e0ee7309a4" kind="function"><name>transfer_data</name></member>
+    <member refid="tcp__com_8c_1a8bff9fa25a621d38c253d35bd0984584" kind="function"><name>tcp_server_close</name></member>
+    <member refid="tcp__com_8c_1a9804e3442adfd5065e1de662f06c1949" kind="function"><name>tcp_server_err</name></member>
+    <member refid="tcp__com_8c_1a3720d702a61e4d4cee2a4903373db7d4" kind="function"><name>accept_callback</name></member>
+    <member refid="tcp__com_8c_1a801824bc66ef5f24d02c9def1d4ece62" kind="function"><name>start_application</name></member>
+    <member refid="tcp__com_8c_1a0584df6fdfa48022831dec27f863e371" kind="function"><name>sent_callback</name></member>
   </compound>
   <compound refid="tcp__com_8h" kind="file"><name>tcp_com.h</name>
+    <member refid="tcp__com_8h_1a25672de2f50bd9fcdead740aeec253c6" kind="define"><name>Char_per_line</name></member>
+    <member refid="tcp__com_8h_1af7dd5c1342ac6c75eea7c43dc6cace4f" kind="define"><name>PBUF_LENGTH</name></member>
+    <member refid="tcp__com_8h_1a06efc83102d00988c828079a61bd3494" kind="define"><name>buffer_length</name></member>
+    <member refid="tcp__com_8h_1a614217d263be1fb1a5f76e2ff7be19a2" kind="define"><name>PORT</name></member>
+    <member refid="tcp__com_8h_1a001341f08507c2c5d932bdcd6231e446" kind="define"><name>N_lines</name></member>
+    <member refid="tcp__com_8h_1a454b66af16ce0e02c7524adac54c1199" kind="variable"><name>buffer</name></member>
+    <member refid="tcp__com_8h_1a0da926ef114de4ef5c3cf494b97c77fd" kind="variable"><name>flag_accept_conn</name></member>
+    <member refid="tcp__com_8h_1a1aebf6833b58d9a39c386d70a90692f0" kind="variable"><name>flag_ready2sent</name></member>
+    <member refid="tcp__com_8h_1a1fd95a1a7156f584506a8fd0ee749b7d" kind="variable"><name>flag_senddata</name></member>
+    <member refid="tcp__com_8h_1a586065401b404ad3263034934f708e48" kind="variable"><name>flag_tcp_done</name></member>
+    <member refid="tcp__com_8h_1a7d8c5f5eed3154f7848c3a2ac9a9863a" kind="variable"><name>pcb</name></member>
+    <member refid="tcp__com_8h_1a572769313f4d379b0fbdbddfcf5d2030" kind="variable"><name>p</name></member>
+    <member refid="tcp__com_8h_1a0b1c177bd408d52f8194bcdf0899fdbb" kind="variable"><name>datos_PL</name></member>
+    <member refid="tcp__com_8h_1a801824bc66ef5f24d02c9def1d4ece62" kind="function"><name>start_application</name></member>
+    <member refid="tcp__com_8h_1aa9561090660f8b0de8bd35f174c121bd" kind="function"><name>transfer_data</name></member>
+    <member refid="tcp__com_8h_1a3720d702a61e4d4cee2a4903373db7d4" kind="function"><name>accept_callback</name></member>
+    <member refid="tcp__com_8h_1a11906e292daf6122d81a75c498068366" kind="function"><name>recv_callback</name></member>
+    <member refid="tcp__com_8h_1a0584df6fdfa48022831dec27f863e371" kind="function"><name>sent_callback</name></member>
+    <member refid="tcp__com_8h_1a9804e3442adfd5065e1de662f06c1949" kind="function"><name>tcp_server_err</name></member>
+    <member refid="tcp__com_8h_1a8bff9fa25a621d38c253d35bd0984584" kind="function"><name>tcp_server_close</name></member>
+    <member refid="tcp__com_8h_1ae6eebda0957833b626bcecacfcf9b7fd" kind="function"><name>packer</name></member>
   </compound>
   <compound refid="xaxidma__controller_8c" kind="file"><name>xaxidma_controller.c</name>
+    <member refid="xaxidma__controller_8c_1a447efb52bdea94d5d9cfe0d53a27190d" kind="function"><name>setup_DMA</name></member>
+    <member refid="xaxidma__controller_8c_1acca8061cadc05fcdfbf1d19244bf6777" kind="function"><name>DMA_test_routine</name></member>
+    <member refid="xaxidma__controller_8c_1a062c6cfa4fd500a3e2d9306436771653" kind="function"><name>close_DMA</name></member>
+    <member refid="xaxidma__controller_8c_1a244c02d1a957da140c5273bee4a01cab" kind="function"><name>CheckData</name></member>
+    <member refid="xaxidma__controller_8c_1afa5bdb508415a6cc4d9ef0411de10d50" kind="function"><name>TxCallBack</name></member>
+    <member refid="xaxidma__controller_8c_1a4f411d53a8c6984cb6209fa8fbb81859" kind="function"><name>TxIntrHandler</name></member>
+    <member refid="xaxidma__controller_8c_1afac6b6ceaaf7e816a7136342107ceb8f" kind="function"><name>RxCallBack_back</name></member>
+    <member refid="xaxidma__controller_8c_1a09f61fd854b66d68484441b69fadadc5" kind="function"><name>process_n_send_data</name></member>
+    <member refid="xaxidma__controller_8c_1ad7e0504080579c51b723afadb77d6d81" kind="function"><name>cleanup_buffer</name></member>
+    <member refid="xaxidma__controller_8c_1ae914239bfa80d08ef4d19de0df38cff9" kind="function"><name>RxCallBack</name></member>
+    <member refid="xaxidma__controller_8c_1a91633c2fb06c128e8181eb2e5364d524" kind="function"><name>RxIntrHandler</name></member>
+    <member refid="xaxidma__controller_8c_1a9e46b951a0da6f610d3030c2ac9c0259" kind="function"><name>SetupIntrSystem</name></member>
+    <member refid="xaxidma__controller_8c_1a91e13835ea870fd2d1d20372c67f530f" kind="function"><name>DisableIntrSystem</name></member>
+    <member refid="xaxidma__controller_8c_1afb21950998d5a2d19678dbf5aa69cccb" kind="function"><name>RxSetup</name></member>
+    <member refid="xaxidma__controller_8c_1a7febbc91fe1841cdaae28ccd7fe54539" kind="function"><name>TxSetup</name></member>
+    <member refid="xaxidma__controller_8c_1a91c37f645b66ea665e6c4a59d7af1a29" kind="function"><name>SendPacket</name></member>
   </compound>
   <compound refid="xaxidma__controller_8h" kind="file"><name>xaxidma_controller.h</name>
+    <member refid="xaxidma__controller_8h_1ac6ec5bfec1d732682c68fddba1493883" kind="define"><name>DMA_DEV_ID</name></member>
+    <member refid="xaxidma__controller_8h_1a4f2d87307e70466c4fae03a069fe9195" kind="define"><name>MEM_BASE_ADDR</name></member>
+    <member refid="xaxidma__controller_8h_1af75e1e9c876ef6424b065d68425ef19d" kind="define"><name>RX_INTR_ID</name></member>
+    <member refid="xaxidma__controller_8h_1ac5652fc289e0dcfc7200f47395b4536a" kind="define"><name>TX_INTR_ID</name></member>
+    <member refid="xaxidma__controller_8h_1a5f4b38298cc7e97a070bfc199c3d025c" kind="define"><name>RX_BD_SPACE_BASE</name></member>
+    <member refid="xaxidma__controller_8h_1a2648de6386a940bec3e6fa851a6ddc3b" kind="define"><name>RX_BD_SPACE_HIGH</name></member>
+    <member refid="xaxidma__controller_8h_1ac042cf56128e2d79e25efaa77e1cbeba" kind="define"><name>TX_BD_SPACE_BASE</name></member>
+    <member refid="xaxidma__controller_8h_1a06bc15184ce5e6708777e34bde5d9610" kind="define"><name>TX_BD_SPACE_HIGH</name></member>
+    <member refid="xaxidma__controller_8h_1a21c7ab0233ec781d5ed4bd61bcc27ad6" kind="define"><name>TX_BUFFER_BASE</name></member>
+    <member refid="xaxidma__controller_8h_1abd40075f9ebd69d344db57858e63a744" kind="define"><name>RX_BUFFER_BASE</name></member>
+    <member refid="xaxidma__controller_8h_1ab6edc88e5140241a95184cc6f926b734" kind="define"><name>RX_BUFFER_HIGH</name></member>
+    <member refid="xaxidma__controller_8h_1a90bc74590962865fc1ab7ee1be0f4b64" kind="define"><name>INTC_DEVICE_ID</name></member>
+    <member refid="xaxidma__controller_8h_1a4152919e50ca8a7f89d0c981eabd0593" kind="define"><name>RESET_TIMEOUT_COUNTER</name></member>
+    <member refid="xaxidma__controller_8h_1aa2cbdec5743bbebc99afa6729c5b98f1" kind="define"><name>MAX_PKT_LEN</name></member>
+    <member refid="xaxidma__controller_8h_1a3d3d08ac7e14972de42a210ee15b7216" kind="define"><name>MARK_UNCACHEABLE</name></member>
+    <member refid="xaxidma__controller_8h_1af0709e32aed9c2104734aa9e5761590c" kind="define"><name>MAX_STORED_EVENTS</name></member>
+    <member refid="xaxidma__controller_8h_1a4c850c92fe393b5099dcf0cefe24173e" kind="define"><name>NUMBER_OF_BDS_PER_PKT</name></member>
+    <member refid="xaxidma__controller_8h_1a014a3adba0cfa2dc2faced4a68114fbe" kind="define"><name>NUMBER_OF_PKTS_TO_TRANSFER</name></member>
+    <member refid="xaxidma__controller_8h_1ad145c274adf210cacf11db6de650c93d" kind="define"><name>NUMBER_OF_BDS_TO_TRANSFER</name></member>
+    <member refid="xaxidma__controller_8h_1aca7eb78ffe9c1c90d6aadffd9c832501" kind="define"><name>COALESCING_COUNT</name></member>
+    <member refid="xaxidma__controller_8h_1a2e4ace81a47e8546df7b794320761272" kind="define"><name>DELAY_TIMER_COUNT</name></member>
+    <member refid="xaxidma__controller_8h_1acbad0bcec47edfd40d1ca213be24408d" kind="define"><name>INTC</name></member>
+    <member refid="xaxidma__controller_8h_1a1774a555f3fbdee1c1a31fd1dfda655d" kind="define"><name>INTC_HANDLER</name></member>
+    <member refid="xaxidma__controller_8h_1a19e117de53f70f4391bf2e1d876a1af5" kind="variable"><name>AxiDma</name></member>
+    <member refid="xaxidma__controller_8h_1a7e3a639e570fded599c3950439c4ba2f" kind="variable"><name>Intc</name></member>
+    <member refid="xaxidma__controller_8h_1aa7595dc18d0b6aaa09016a6db3ddc83b" kind="variable"><name>TxDone</name></member>
+    <member refid="xaxidma__controller_8h_1af7b197147bd2d018fd8df5bbd3aed7a7" kind="variable"><name>RxDone</name></member>
+    <member refid="xaxidma__controller_8h_1a0b12f25a7314aa1e5c2847df101fb54f" kind="variable"><name>Error</name></member>
+    <member refid="xaxidma__controller_8h_1ab6b7f6bfa7fd9510f4b6e50e157b878d" kind="variable"><name>c_glob_ev</name></member>
+    <member refid="xaxidma__controller_8h_1a34fe58f36275178124b9695ad8dddd73" kind="variable"><name>start_send_event</name></member>
+    <member refid="xaxidma__controller_8h_1a6f5238f0e85b26afe61a79f1ca8d8435" kind="variable"><name>Packet</name></member>
+    <member refid="xaxidma__controller_8h_1a5a790b8c158dcec4a1e38a9cbb243501" kind="variable"><name>read_pointer</name></member>
+    <member refid="xaxidma__controller_8h_1aa5e9c7bbd80ce6cd69be345bf6fb4e43" kind="variable"><name>n_events</name></member>
+    <member refid="xaxidma__controller_8h_1ad29568bf33fe85cabeb0615ae8ebc67b" kind="function"><name>xil_printf</name></member>
+    <member refid="xaxidma__controller_8h_1a244c02d1a957da140c5273bee4a01cab" kind="function"><name>CheckData</name></member>
+    <member refid="xaxidma__controller_8h_1afa5bdb508415a6cc4d9ef0411de10d50" kind="function"><name>TxCallBack</name></member>
+    <member refid="xaxidma__controller_8h_1a4f411d53a8c6984cb6209fa8fbb81859" kind="function"><name>TxIntrHandler</name></member>
+    <member refid="xaxidma__controller_8h_1ae914239bfa80d08ef4d19de0df38cff9" kind="function"><name>RxCallBack</name></member>
+    <member refid="xaxidma__controller_8h_1a91633c2fb06c128e8181eb2e5364d524" kind="function"><name>RxIntrHandler</name></member>
+    <member refid="xaxidma__controller_8h_1a7190e070499a829289bdb8de7174a7f8" kind="function"><name>process_n_send_data</name></member>
+    <member refid="xaxidma__controller_8h_1ad7e0504080579c51b723afadb77d6d81" kind="function"><name>cleanup_buffer</name></member>
+    <member refid="xaxidma__controller_8h_1a447efb52bdea94d5d9cfe0d53a27190d" kind="function"><name>setup_DMA</name></member>
+    <member refid="xaxidma__controller_8h_1a5249d0c78797c780baf88c91003c8c3d" kind="function"><name>SetupIntrSystem</name></member>
+    <member refid="xaxidma__controller_8h_1a91e13835ea870fd2d1d20372c67f530f" kind="function"><name>DisableIntrSystem</name></member>
+    <member refid="xaxidma__controller_8h_1afb21950998d5a2d19678dbf5aa69cccb" kind="function"><name>RxSetup</name></member>
+    <member refid="xaxidma__controller_8h_1a7febbc91fe1841cdaae28ccd7fe54539" kind="function"><name>TxSetup</name></member>
+    <member refid="xaxidma__controller_8h_1a91c37f645b66ea665e6c4a59d7af1a29" kind="function"><name>SendPacket</name></member>
   </compound>
   <compound refid="dir_3d295d85edf358891fe3228ae0776786" kind="dir"><name>base_code</name>
   </compound>

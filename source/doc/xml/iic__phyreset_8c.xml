@@ -2,6 +2,24 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="iic__phyreset_8c" kind="file" language="C++">
     <compoundname>iic_phyreset.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">xparameters.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/iic_phyreset.c</label>
+        <link refid="iic__phyreset_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>xparameters.h</label>
+      </node>
+    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

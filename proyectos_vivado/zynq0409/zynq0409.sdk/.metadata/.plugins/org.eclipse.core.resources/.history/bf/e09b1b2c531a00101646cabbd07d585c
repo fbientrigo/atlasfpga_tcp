@@ -1,0 +1,28 @@
+// line_blocker.h
+#ifndef LINE_BLOCKER_H
+#define LINE_BLOCKER_H
+
+#define MAX_LINES 1024
+#define MAX_LINE_LEN 80
+#define LINES_PER_BLOCK 2
+
+#define RING_BUFFER_CAPACITY 16   // número de bloques
+#define BLOCK_BUFFER_SIZE 1024     // cada bloque puede contener varias líneas
+
+typedef struct {
+    char data[RING_BUFFER_CAPACITY][BLOCK_BUFFER_SIZE];
+    int head;  // índice de escritura
+    int tail;  // índice de lectura
+    int count; // bloques ocupados
+} LineRingBuffer;
+
+extern LineRingBuffer line_rb;
+static const char *read_ptr = NULL;
+
+void debug_test_ring_buffer();
+void init_line_blocks();
+int load_lines_to_buffer(LineRingBuffer *rb);
+int read_next_block_from_buffer(LineRingBuffer *rb, char *out_block, size_t max_len);
+
+
+#endif

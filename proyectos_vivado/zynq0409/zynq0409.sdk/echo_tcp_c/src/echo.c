@@ -1,47 +1,195 @@
-/******************************************************************************
-*
-* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* Use of the Software is limited solely to applications:
-* (a) running on a Xilinx device, or
-* (b) that interact with a Xilinx device through a bus or interconnect.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
-* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-* SOFTWARE.
-*
-* Except as contained in this notice, the name of the Xilinx shall not be used
-* in advertising or otherwise to promote the sale, use or other dealings in
-* this Software without prior written authorization from Xilinx.
-*
-******************************************************************************/
-
 #include <stdio.h>
 #include <string.h>
 
 #include "lwip/err.h"
 #include "lwip/tcp.h"
+
+//hardocded data
+#include "massive_data.h"
+#include "small_data.h"
+
+// line blocker logica
+#include "line_blocker.h"
+
+
+
 #if defined (__arm__) || defined (__aarch64__)
 #include "xil_printf.h"
 #endif
 
-int transfer_data() {
-	return 0;
+
+int transfer_data(void);
+// PCB global para la conexión actual
+struct tcp_pcb *global_pcb = NULL;
+// Bandera para el envío único del massive_payload
+
+
+// f0415a
+LineRingBuffer line_rb;
+
+
+
+// ----
+err_t sent_callback(void *arg, struct tcp_pcb *tpcb, u16_t len) {
+    xil_printf("ACK recibido: len=%u bytes. tcp_sndbuf=%u\n\r", len, tcp_sndbuf(tpcb));
+    return transfer_data();
 }
+
+static int pending_transfer = 0;
+
+
+err_t poll_callback(void *arg, struct tcp_pcb *tpcb) {
+    if (pending_transfer) {
+        xil_printf("Reintentando transferencia por poll...\n\r");
+        transfer_data();
+    }
+    return ERR_OK;
+}
+
+
+/*
+ * Recibe comandos del usuario
+ * Llama a sent_callback
+ * */
+err_t recv_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
+{
+    if (!p) {
+        xil_printf("Cliente desconectado\n\r");
+        tcp_close(tpcb);
+        return ERR_OK;
+    }
+
+    tcp_recved(tpcb, p->len);
+
+    char cmd[128] = {0};
+    int len = (p->len < 127) ? p->len : 127;
+    memcpy(cmd, p->payload, len);
+
+    xil_printf("Comando recibido: %s\n\r", cmd);
+
+    if (strncmp(cmd, "-data", 5) == 0) {
+        xil_printf(">> Cliente pidió datos. Iniciando transferencia...\n\r");
+
+        // Guardar pcb y registrar callback de envío
+        global_pcb = tpcb;
+        tcp_sent(tpcb, sent_callback);
+
+        transfer_data(); // enviamos primer bloque
+    }
+    else if (strncmp(cmd, "-q", 2) == 0) {
+        xil_printf(">> Cliente pidió cerrar.\n\r");
+        tcp_close(tpcb);
+        return ERR_OK;
+    }
+    else {
+        // Echo básico
+        tcp_write(tpcb, cmd, len, TCP_WRITE_FLAG_COPY);
+        tcp_output(tpcb);
+    }
+
+    pbuf_free(p);
+    return ERR_OK;
+}
+
+
+
+/*
+* accept_callback: Callback que se invoca al aceptar una nueva conexión TCP.
+*/
+err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
+{
+    xil_printf(">>> NUEVA CONEXIÓN TCP <<<\n\r");
+
+    // Registrar callback de recepción de datos
+    tcp_recv(newpcb, recv_callback);
+    tcp_poll(newpcb, poll_callback, 4); // Llama poll_callback cada 2s aprox. (4 * 500ms)
+
+    // Almacenar temporal si quieres enviar algo luego
+    global_pcb = newpcb;
+
+    return ERR_OK;
+}
+
+
+
+
+
+
+/*
+* load_massive_data: Carga los datos masivos desde massive_data (definido en massive_data.h)
+*                      al buffer global massive_payload. simulando el sistema completo
+*/
+// version comentada el 0415
+//void load_massive_data(void)
+//{
+//    // Usamos strncpy para evitar sobreescritura
+//    strncpy(massive_payload, massive_data, MASSIVE_PAYLOAD_SIZE - 1);
+//
+//    //strncpy(massive_payload, small_data, MASSIVE_PAYLOAD_SIZE - 1);
+//
+//    // Aseguramos la terminación nula
+//    massive_payload[MASSIVE_PAYLOAD_SIZE - 1] = '\0';
+//    xil_printf("Massive data loaded:\n%s\n", massive_payload);
+//}
+
+// 0415 version temporal para probar line blocker
+
+
+void load_massive_data(void) {
+    init_line_blocks();
+    memset(&line_rb, 0, sizeof(line_rb));
+    load_lines_to_buffer(&line_rb);
+#ifdef DEBUG
+    xil_printf("Bloques cargados en buffer: %d\n\r", line_rb.count);
+#endif
+}
+
+
+
+int transfer_data() {
+	xil_printf("\t-- llamada a transfer_data()--\n");
+    if (global_pcb == NULL) return 0;
+
+    char block[BLOCK_BUFFER_SIZE];
+    int block_len = read_next_block_from_buffer(&line_rb, block, sizeof(block));
+    if (block_len <= 0) {
+        xil_printf("Todos los datos han sido enviados o buffer vacio.\n\r");
+        return 0;
+    }
+
+    // framing binario con header (2 bytes de longitud)
+    uint16_t len_net = htons((uint16_t)block_len);
+
+    if (tcp_sndbuf(global_pcb) < block_len + sizeof(len_net)) {
+        xil_printf("Buffer TCP lleno. Esperando ACK para continuar...\n\r");
+        pending_transfer = 1;
+        return 0;
+    }
+    // primero el header
+    err_t err = tcp_write(global_pcb, &len_net, sizeof(len_net), TCP_WRITE_FLAG_COPY);
+    if (err != ERR_OK) {
+        xil_printf("Error al enviar header (%d)\n\r", err);
+        return 0;
+    }
+
+    // luego los datos
+    err = tcp_write(global_pcb, block, block_len, TCP_WRITE_FLAG_COPY);
+    if (err != ERR_OK) {
+        xil_printf("Error al enviar bloque (%d)\n\r", err);
+        return 0;
+    }
+
+    tcp_output(global_pcb);
+#ifdef DEBUG
+    xil_printf("Bloque de %d bytes enviado:\n%.*s\n\r", block_len, block_len, block);
+#endif
+    xil_printf("Bloque de %d bytes enviado\n\r", block_len);
+
+    return 1;
+}
+
+
+
 
 void print_app_header()
 {
@@ -53,85 +201,35 @@ void print_app_header()
 	xil_printf("TCP packets sent to port 6001 will be echoed back\n\r");
 }
 
-err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
-                               struct pbuf *p, err_t err)
-{
-	/* do not read the packet if we are not in ESTABLISHED state */
-	if (!p) {
-		tcp_close(tpcb);
-		tcp_recv(tpcb, NULL);
-		return ERR_OK;
-	}
-
-	/* indicate that the packet has been received */
-	tcp_recved(tpcb, p->len);
-
-	/* echo back the payload */
-	/* in this case, we assume that the payload is < TCP_SND_BUF */
-	if (tcp_sndbuf(tpcb) > p->len) {
-		err = tcp_write(tpcb, p->payload, p->len, 1);
-		xil_printf("enviando datos del buffer %s", p->payload);
-	} else
-		xil_printf("no space in tcp_sndbuf\n\r");
-
-	/* free the received pbuf */
-	pbuf_free(p);
-
-	return ERR_OK;
-}
-
-err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
-{
-	static int connection = 1;
-
-	/* set the receive callback for this connection */
-	tcp_recv(newpcb, recv_callback);
-
-	/* just use an integer number indicating the connection id as the
-	   callback argument */
-	tcp_arg(newpcb, (void*)(UINTPTR)connection);
-
-	/* increment for subsequent accepted connections */
-	connection++;
-
-	return ERR_OK;
-}
 
 
 int start_application()
 {
-	struct tcp_pcb *pcb;
-	err_t err;
-	unsigned port = 7;
+    struct tcp_pcb *pcb;
+    err_t err;
 
-	/* create new TCP PCB structure */
-	pcb = tcp_new_ip_type(IPADDR_TYPE_ANY);
-	if (!pcb) {
-		xil_printf("Error creating PCB. Out of Memory\n\r");
-		return -1;
-	}
+    pcb = tcp_new_ip_type(IPADDR_TYPE_ANY);
+    if (!pcb) {
+        xil_printf("Error al crear PCB\n\r");
+        return -1;
+    }
 
-	/* bind to specified @port */
-	err = tcp_bind(pcb, IP_ANY_TYPE, port);
-	if (err != ERR_OK) {
-		xil_printf("Unable to bind to port %d: err = %d\n\r", port, err);
-		return -2;
-	}
+    err = tcp_bind(pcb, IP_ANY_TYPE, 12345);
+    if (err != ERR_OK) {
+        xil_printf("No se pudo hacer bind al puerto: %d\n\r", err);
+        return -2;
+    }
 
-	/* we do not need any arguments to callback functions */
-	tcp_arg(pcb, NULL);
+    pcb = tcp_listen(pcb);
+    if (!pcb) {
+        xil_printf("Error: pcb listen es NULL\n\r");
+        return -3;
+    }
 
-	/* listen for connections */
-	pcb = tcp_listen(pcb);
-	if (!pcb) {
-		xil_printf("Out of memory while tcp_listen\n\r");
-		return -3;
-	}
+    xil_printf("Registrando accept_callback...\n\r");
+    tcp_accept(pcb, accept_callback);
+    xil_printf("Echo server escuchando en puerto 12345\n\r");
 
-	/* specify callback to use for incoming connections */
-	tcp_accept(pcb, accept_callback);
-
-	xil_printf("TCP echo server started @ port %d\n\r", port);
-
-	return 0;
+    return 0;
 }
+

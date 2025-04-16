@@ -1,0 +1,60 @@
+// line_blocker.c
+#include <stdlib.h>
+#include <string.h>
+#include "line_blocker.h"
+
+// massive_data debe ser accesible aquí
+#include "massive_data.h"
+static const char *read_ptr = NULL;
+
+void init_line_blocks() {
+    read_ptr = massive_data;
+    xil_printf("Inicializando línea por línea desde massive_data\n\r");
+}
+
+int load_lines_to_buffer(LineRingBuffer *rb) {
+    if (!read_ptr || *read_ptr == '\0') return 0;
+
+    while (rb->count < RING_BUFFER_CAPACITY) {
+        char *write_block = rb->data[rb->head];
+        write_block[0] = '\0';
+        size_t written = 0;
+        int lines_added = 0;
+
+        while (lines_added < LINES_PER_BLOCK && *read_ptr != '\0') {
+            const char *line_start = read_ptr;
+            const char *newline = strchr(line_start, '\n');
+
+            if (!newline) break;
+
+            size_t line_len = newline - line_start + 1;
+            if (written + line_len >= BLOCK_BUFFER_SIZE) break;
+
+            strncat(write_block, line_start, line_len);
+            written += line_len;
+            read_ptr = newline + 1;
+            lines_added++;
+        }
+
+        if (written == 0) break; // No más líneas o no cupieron
+
+        // Actualizar punteros del ring buffer
+        rb->head = (rb->head + 1) % RING_BUFFER_CAPACITY;
+        rb->count++;
+    }
+
+    return rb->count;
+}
+
+int read_next_block_from_buffer(LineRingBuffer *rb, char *out_block, size_t max_len) {
+    if (rb->count == 0) return 0;
+
+    strncpy(out_block, rb->data[rb->tail], max_len - 1);
+    out_block[max_len - 1] = '\0';
+
+    rb->tail = (rb->tail + 1) % RING_BUFFER_CAPACITY;
+    rb->count--;
+
+    return strlen(out_block);
+}
+

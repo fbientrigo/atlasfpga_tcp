@@ -2,9 +2,30 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="sfp_8c" kind="file" language="C++">
     <compoundname>sfp.c</compoundname>
+    <includes local="yes">xparameters.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/sfp.c</label>
+        <link refid="sfp_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xparameters.h</label>
+      </node>
+    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>This file programs sfp phy chip.</para>
+<para><preformatted>
+MODIFICATION HISTORY:
+
+Ver   Who  Date  Changes
+----- ---- -------- ---------------------------------------------------------
+1.0   srt  10/19/13 Initial Version
+
+</preformatted> </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>

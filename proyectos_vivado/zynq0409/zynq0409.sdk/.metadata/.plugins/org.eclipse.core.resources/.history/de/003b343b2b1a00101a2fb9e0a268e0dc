@@ -1,0 +1,12 @@
+#ifndef LINE_BLOCKER_H
+#define LINE_BLOCKER_H
+
+#include <stddef.h>
+
+#define LINES_PER_BLOCK 2
+#define BLOCK_BUFFER_SIZE 512
+
+void init_line_blocks();
+int get_next_block(char *out_block, size_t max_len);
+
+#endif

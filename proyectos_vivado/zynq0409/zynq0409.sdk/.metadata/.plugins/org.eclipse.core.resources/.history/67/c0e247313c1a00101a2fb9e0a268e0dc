@@ -1,0 +1,114 @@
+// line_blocker.c
+#include <stdlib.h>
+#include <string.h>
+#include "line_blocker.h"
+
+// massive_data debe ser accesible aquí
+#include "massive_data.h"
+static const char *read_ptr = NULL;
+
+void init_line_blocks() {
+    read_ptr = massive_data;
+
+    xil_printf("Primeros 80 bytes de massive_data:\n\r");
+    for (int i = 0; i < 80; i++) {
+        xil_printf("%c", massive_data[i]);
+    }
+    xil_printf("\n\r");
+
+
+    xil_printf("Dump HEX de los primeros 40 bytes:\n\r");
+    for (int i = 0; i < 40; ++i) {
+        xil_printf("%02X ", (unsigned char)massive_data[i]);
+    }
+    xil_printf("\n\r");
+
+
+    xil_printf("Inicializando línea por línea desde massive_data\n\r");
+}
+
+int load_lines_to_buffer(LineRingBuffer *rb) {
+    if (!read_ptr || *read_ptr == '\0') return 0;
+
+    while (rb->count < RING_BUFFER_CAPACITY) {
+        char *write_block = rb->data[rb->head];
+        size_t written = 0;
+        int lines_added = 0;
+
+        write_block[0] = '\0';  // aseguramos limpieza
+
+        while (lines_added < LINES_PER_BLOCK && *read_ptr != '\0') {
+            const char *line_start = read_ptr;
+            const char *newline = strchr(line_start, '\n');
+            if (!newline) break;
+
+            // aqui ya deberi estar hecho el proceso de copia, comprobemos
+            xil_printf("[Parser] Procesando línea: ");
+            for (size_t j = 0; j < line_len; j++) {
+                xil_printf("%c", line_start[j]);
+            }
+            xil_printf("\n\r");
+            // ---
+
+
+
+            size_t line_len = newline - line_start + 1;
+
+            // ¿cabe esta línea en el bloque?
+            if (written + line_len >= BLOCK_BUFFER_SIZE - 1) break;
+
+            // copiamos la línea manualmente
+            memcpy(write_block + written, line_start, line_len);
+            written += line_len;
+            write_block[written] = '\0'; // mantener terminación segura
+
+            // tras el proceso de copia
+            xil_printf("[Parser] Línea copiada (%zu bytes): %.*s\n\r", line_len, (int)line_len, write_block + written - line_len);
+
+
+            read_ptr = newline + 1;
+            lines_added++;
+        }
+
+        if (written == 0) break;
+
+        // Avanzamos en el ring buffer
+        rb->head = (rb->head + 1) % RING_BUFFER_CAPACITY;
+        rb->count++;
+    }
+
+    return rb->count;
+}
+
+/* 0415
+ * Debugging para el ring buffer
+ * 	nota: desarrollo y testeo mientras recupero el dhcp
+ * */
+void debug_test_ring_buffer() {
+	char block[BLOCK_BUFFER_SIZE];
+	int bloques_cargados = load_lines_to_buffer(&line_rb);
+
+	xil_printf("\n[Test] Bloques cargados al ring buffer: %d\n\r", bloques_cargados);
+
+	for (int i = 0; i < bloques_cargados; ++i) {
+		int len = read_next_block_from_buffer(&line_rb, block, sizeof(block));
+		xil_printf("[Test] Bloque %d (%d bytes):\n%.*s\n\r", i, len, len, block);
+	}
+
+	xil_printf("[Test] Fin de prueba de lectura secuencial del buffer.\n\r");
+}
+
+
+
+int read_next_block_from_buffer(LineRingBuffer *rb, char *out_block, size_t max_len) {
+    if (rb->count == 0) return 0;
+
+    strncpy(out_block, rb->data[rb->tail], max_len - 1);
+    out_block[max_len - 1] = '\0';
+
+    rb->tail = (rb->tail + 1) % RING_BUFFER_CAPACITY;
+    rb->count--;
+
+    return strlen(out_block);
+}
+

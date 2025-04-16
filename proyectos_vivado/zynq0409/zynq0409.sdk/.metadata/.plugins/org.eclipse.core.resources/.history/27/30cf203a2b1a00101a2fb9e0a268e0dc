@@ -1,0 +1,37 @@
+#include <string.h>
+#include "line_blocker.h"
+#include "massive_data.h"
+
+// Puntero de lectura global sobre massive_data
+static const char *read_ptr = NULL;
+
+void init_line_blocks() {
+    read_ptr = massive_data;
+}
+
+int get_next_block(char *out_block, size_t max_len) {
+    if (!read_ptr || *read_ptr == '\0') return 0;
+
+    out_block[0] = '\0';
+
+    size_t written = 0;
+    int lines_added = 0;
+
+    while (lines_added < LINES_PER_BLOCK && *read_ptr != '\0') {
+        const char *line_start = read_ptr;
+        const char *newline = strchr(line_start, '\n');
+
+        if (!newline) break; // No más líneas
+
+        size_t line_len = newline - line_start + 1;
+
+        if (written + line_len >= max_len) break;
+
+        strncat(out_block, line_start, line_len);
+        written += line_len;
+        read_ptr = newline + 1;
+        lines_added++;
+    }
+
+    return written;
+}

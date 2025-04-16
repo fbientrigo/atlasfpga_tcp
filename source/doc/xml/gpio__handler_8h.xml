@@ -2,6 +2,396 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="gpio__handler_8h" kind="file" language="C++">
     <compoundname>gpio_handler.h</compoundname>
+    <includes local="yes">xil_types.h</includes>
+    <includes local="yes">xstatus.h</includes>
+    <includes local="yes">xil_io.h</includes>
+    <includes local="yes">xgpio.h</includes>
+    <includedby refid="gpio__handler_8c" local="yes">base_code/MB40ch_wUART/src/gpio_handler.c</includedby>
+    <includedby refid="main_8h" local="yes">base_code/MB40ch_wUART/src/main.h</includedby>
+    <includedby refid="xaxidma__controller_8h" local="yes">base_code/MB40ch_wUART/src/xaxidma_controller.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/gpio_handler.h</label>
+        <link refid="gpio__handler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>xgpio.h</label>
+      </node>
+      <node id="4">
+        <label>xil_io.h</label>
+      </node>
+      <node id="2">
+        <label>xil_types.h</label>
+      </node>
+      <node id="3">
+        <label>xstatus.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/gpio_handler.h</label>
+        <link refid="gpio__handler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>base_code/MB40ch_wUART/src/main.h</label>
+        <link refid="main_8h_source"/>
+      </node>
+      <node id="3">
+        <label>base_code/MB40ch_wUART/src/xaxidma_controller.h</label>
+        <link refid="xaxidma__controller_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="gpio__handler_8h_1a48874986fa95e764b2aaf580992821ec" prot="public" static="no">
+        <name>soft_trigger_mask</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="40" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1aad14157386fe6c945078b5814d7919c2" prot="public" static="no">
+        <name>rst_FIFO_mask</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="41" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a3320985923c1c5f4ce80e4c820c5dcb3" prot="public" static="no">
+        <name>busy_trigger_mask</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="42" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a0799af21feff9366b1f0416f12b3691c" prot="public" static="no">
+        <name>ADC_refclk_mask</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="43" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1ae03115a8fc145d6e56a2dd1b94574479" prot="public" static="no">
+        <name>trigg_function_mask</name>
+        <initializer>0x00000070</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="44" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1aaefa1f2de5997f6d48a2035122c914f5" prot="public" static="no">
+        <name>trigg_input_mask</name>
+        <initializer>0x00007F80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="45" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a42b30ec81a1259d77f4c0877269f8376" prot="public" static="no">
+        <name>VETO_mask</name>
+        <initializer>0x00008000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="46" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1ad2905f2682f570a71efb07ff920e7b75" prot="public" static="no">
+        <name>Rst_gral_mask</name>
+        <initializer>0x00010000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="47" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1afc1219f433f889d9d58938f7f3d4604f" prot="public" static="no">
+        <name>en_A_vec</name>
+        <initializer>0x00020000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="48" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a8d5d7a2f4fbf2208f6cebcc867f1091a" prot="public" static="no">
+        <name>DAC_nCLR_mask</name>
+        <initializer>0x00040000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="49" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1ae634312ee8598823ea9eddedcaf2fe01" prot="public" static="no">
+        <name>soft_trigger_offset</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="52" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a7429cd7768ab208686fd2d7949f26479" prot="public" static="no">
+        <name>rst_FIFO_offset</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="53" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a6afd06e644ac9592a4b4b698c187f29e" prot="public" static="no">
+        <name>busy_trigger_offset</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="54" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a411300c74281af225a037d4c6ec1e6f7" prot="public" static="no">
+        <name>ADC_refclk_offset</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="55" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a8f0ebc5cd5a875b45688f9301fd4b15c" prot="public" static="no">
+        <name>trigg_function_offset</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="56" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1af214b144cf980f9ae4579684edbc6dad" prot="public" static="no">
+        <name>trigg_input_offset</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="57" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1aa8a83ec778ad5cfe38a333313b707510" prot="public" static="no">
+        <name>VETO_offset</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="58" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1aaabf4702bab58baea515bfd93a251bbf" prot="public" static="no">
+        <name>Rst_gral_offset</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="59" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a604389f31f76c213581cdb81e5a9ad0c" prot="public" static="no">
+        <name>DAC_references_offset</name>
+        <initializer>DAC_0_offset</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="70" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a1cb6f34c67f8eb2157681b8a905fc4a5" prot="public" static="no">
+        <name>DAC_threshold_offset</name>
+        <initializer>DAC_1_offset</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="71" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1a4b9b30b1e41c026bb46b198598eccdd9" prot="public" static="no">
+        <name>GAIN_att_offset</name>
+        <initializer>DAC_1_offset</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="72" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gpio__handler_8h_1aa06306cca78df1e59fe08d936eef16c1" prot="public" static="no">
+        <name>GAIN_uni_offset</name>
+        <initializer>DAC_0_offset</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="73" column="9" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="gpio__handler_8h_1af698fd588259a5015051c4e902342b7c" prot="public" static="no" mutable="no">
+        <type>XGpio</type>
+        <definition>XGpio gpio</definition>
+        <argsstring></argsstring>
+        <name>gpio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="78" column="7" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gpio__handler_8h_1a3acfbd75190831c301aed22c89df2cd4" prot="public" static="no" mutable="no">
+        <type>XGpio</type>
+        <definition>XGpio gpio1</definition>
+        <argsstring></argsstring>
+        <name>gpio1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="78" column="11" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gpio__handler_8h_1a35d6b631621a603b2463faadd22ceb1a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int soft_trig</definition>
+        <argsstring></argsstring>
+        <name>soft_trig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="81" column="5" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="gpio__handler_8h_1a5a0d86535ca2e7abcdb735089d5ab78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gpio_write_reg</definition>
+        <argsstring>(u32 reg_mask, u32 reg_offset, u32 data)</argsstring>
+        <name>gpio_write_reg</name>
+        <param>
+          <type>u32</type>
+          <declname>reg_mask</declname>
+        </param>
+        <param>
+          <type>u32</type>
+          <declname>reg_offset</declname>
+        </param>
+        <param>
+          <type>u32</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="82" column="6" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.c" bodystart="5" bodyend="8" declfile="base_code/MB40ch_wUART/src/gpio_handler.h" declline="82" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="gpio__handler_8h_1a1ff25f0faed2ad290ec383743fe040b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gpio_unset_reg</definition>
+        <argsstring>(u32 reg_mask, u32 reg_offset, u32 data)</argsstring>
+        <name>gpio_unset_reg</name>
+        <param>
+          <type>u32</type>
+          <declname>reg_mask</declname>
+        </param>
+        <param>
+          <type>u32</type>
+          <declname>reg_offset</declname>
+        </param>
+        <param>
+          <type>u32</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/gpio_handler.h" line="83" column="6" bodyfile="base_code/MB40ch_wUART/src/gpio_handler.c" bodystart="10" bodyend="12" declfile="base_code/MB40ch_wUART/src/gpio_handler.h" declline="83" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

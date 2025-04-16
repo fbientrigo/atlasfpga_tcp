@@ -2,9 +2,32 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="si5324_8c" kind="file" language="C++">
     <compoundname>si5324.c</compoundname>
+    <includes local="yes">xparameters.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/si5324.c</label>
+        <link refid="si5324_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xparameters.h</label>
+      </node>
+    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>This file programs si5324 chip which generates clock for the peripherals.</para>
+<para>Please refer to Si5324 Datasheet for more information <ulink url="http://www.silabs.com/Support%20Documents/TechnicalDocs/Si5324.pdf">http://www.silabs.com/Support%20Documents/TechnicalDocs/Si5324.pdf</ulink></para>
+<para>Tested on Zynq ZC706 platform</para>
+<para><preformatted>
+MODIFICATION HISTORY:
+
+Ver   Who  Date  Changes
+----- ---- -------- ---------------------------------------------------------
+1.0   srt  10/19/13 Initial Version
+
+</preformatted> </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>

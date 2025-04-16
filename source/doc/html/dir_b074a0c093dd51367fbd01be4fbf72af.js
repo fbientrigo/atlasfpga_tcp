@@ -7,6 +7,8 @@ var dir_b074a0c093dd51367fbd01be4fbf72af =
     [ "main.h", "main_8h_source.html", null ],
     [ "platform.h", "platform_8h_source.html", null ],
     [ "platform_config.h", "platform__config_8h_source.html", null ],
+    [ "sfp.c", "sfp_8c.html", null ],
+    [ "si5324.c", "si5324_8c.html", null ],
     [ "tcp_com.h", "tcp__com_8h_source.html", null ],
     [ "xaxidma_controller.h", "xaxidma__controller_8h_source.html", null ]
 ];

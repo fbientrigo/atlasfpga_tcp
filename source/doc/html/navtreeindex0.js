@@ -13,6 +13,8 @@ var NAVTREEINDEX0 =
 "pages.html":[],
 "platform_8h_source.html":[0,0,0,0,0,5],
 "platform__config_8h_source.html":[0,0,0,0,0,6],
-"tcp__com_8h_source.html":[0,0,0,0,0,7],
-"xaxidma__controller_8h_source.html":[0,0,0,0,0,8]
+"sfp_8c.html":[0,0,0,0,0,7],
+"si5324_8c.html":[0,0,0,0,0,8],
+"tcp__com_8h_source.html":[0,0,0,0,0,9],
+"xaxidma__controller_8h_source.html":[0,0,0,0,0,10]
 };

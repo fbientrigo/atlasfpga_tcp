@@ -1,8 +1,36 @@
-16:09:00 **** Incremental Build of configuration Debug for project echo_tcp_c ****
+12:40:25 **** Auto Build of configuration Debug for project echo_tcp_c ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../echo_tcp_c_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:241:2: warning: implicit declaration of function 'load_massive_data' [-Wimplicit-function-declaration]
+  load_massive_data();
+  ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:30:0:
+At top level:
+../src/small_data.h:13:20: warning: 'small_data' defined but not used [-Wunused-variable]
+ static const char *small_data=
+                    ^~~~~~~~~~
+In file included from ../src/main.c:29:0:
+../src/massive_data.h:6:20: warning: 'massive_data' defined but not used [-Wunused-variable]
+ static const char *massive_data =
+                    ^~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_tcp_c.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../echo_tcp_c_bsp/ps7_cortexa9_0/lib -o "echo_tcp_c.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/line_blocker.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_tcp_c.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size echo_tcp_c.elf  |tee "echo_tcp_c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 538924	   3856	2218272	2761052	 2a215c	echo_tcp_c.elf
+'Finished building: echo_tcp_c.elf.size'
+' '
 
-16:09:00 Build Finished (took 593ms)
+12:40:27 Build Finished (took 1s.635ms)
 

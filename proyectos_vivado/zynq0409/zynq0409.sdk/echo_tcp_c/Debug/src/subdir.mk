@@ -10,6 +10,7 @@ C_SRCS += \
 ../src/echo.c \
 ../src/i2c_access.c \
 ../src/iic_phyreset.c \
+../src/line_blocker.c \
 ../src/main.c \
 ../src/platform.c \
 ../src/platform_mb.c \
@@ -23,6 +24,7 @@ OBJS += \
 ./src/echo.o \
 ./src/i2c_access.o \
 ./src/iic_phyreset.o \
+./src/line_blocker.o \
 ./src/main.o \
 ./src/platform.o \
 ./src/platform_mb.o \
@@ -36,6 +38,7 @@ C_DEPS += \
 ./src/echo.d \
 ./src/i2c_access.d \
 ./src/iic_phyreset.d \
+./src/line_blocker.d \
 ./src/main.d \
 ./src/platform.d \
 ./src/platform_mb.d \

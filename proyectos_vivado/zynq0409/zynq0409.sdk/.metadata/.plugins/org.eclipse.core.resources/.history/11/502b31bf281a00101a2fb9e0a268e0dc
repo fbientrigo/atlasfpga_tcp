@@ -1,0 +1,59 @@
+// line_blocker.c
+#include <stdlib.h>
+#include <string.h>
+#include "line_blocker.h"
+
+// massive_data debe ser accesible aquí
+#include "massive_data.h"
+
+char *line_list[MAX_LINES];
+int total_lines = 0;
+int current_line = 0;
+
+void init_line_blocks() {
+	char *data_copy = malloc(strlen(massive_data) + 1);
+	if (!data_copy) {
+	    xil_printf("Error: no se pudo asignar memoria para data_copy\n\r");
+	    return;
+	}
+	strcpy(data_copy, massive_data);
+
+    char *line = strtok(data_copy, "\n");
+
+    xil_printf("Iniciando separación de líneas...\n\r");
+
+    while (line && total_lines < MAX_LINES) {
+        xil_printf("Línea %d: %s\n\r", total_lines, line);
+        line_list[total_lines++] = strdup(line);
+        line = strtok(NULL, "\n");
+    }
+
+    xil_printf("Total líneas cargadas: %d\n\r", total_lines);
+    free(data_copy);
+
+    xil_printf("Revisando los hex values \n");
+    print_hex("Dump de massive_data (primeros 64 bytes):", massive_data, 64);
+
+}
+
+
+int get_next_block(char *out_block, size_t max_len) {
+
+	// debug
+	xil_printf("Primera parte de massive_data: %.40s\n\r", massive_data);
+
+	// en get_next_block
+	xil_printf("[get_next_block] current_line: %d / total: %d\n\r", current_line, total_lines);
+
+    if (current_line >= total_lines) return 0;
+
+    out_block[0] = '\0';
+    for (int i = 0; i < LINES_PER_BLOCK && current_line < total_lines; ++i, ++current_line) {
+        strncat(out_block, line_list[current_line], max_len - strlen(out_block) - 2);
+        strncat(out_block, "\n", max_len - strlen(out_block) - 1);
+    }
+
+    return strlen(out_block);
+}
+
+

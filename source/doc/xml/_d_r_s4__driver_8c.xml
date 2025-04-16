@@ -2,6 +2,446 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="_d_r_s4__driver_8c" kind="file" language="C++">
     <compoundname>DRS4_driver.c</compoundname>
+    <includes refid="_d_r_s4__driver_8h" local="yes">DRS4_driver.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/DRS4_driver.c</label>
+        <link refid="_d_r_s4__driver_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DRS4_driver.h</label>
+        <link refid="_d_r_s4__driver_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sleep.h</label>
+      </node>
+      <node id="6">
+        <label>xil_io.h</label>
+      </node>
+      <node id="4">
+        <label>xil_types.h</label>
+      </node>
+      <node id="5">
+        <label>xstatus.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1aea191e67b6639ebdcd9d00890745f8c7" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 ctrl_sig</definition>
+        <argsstring></argsstring>
+        <name>ctrl_sig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="10" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a044d4a533ae7b6e6cc42bc36bbd8f389" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 register_signals</definition>
+        <argsstring></argsstring>
+        <name>register_signals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="10" column="13" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a4ca46ffd8087bbbf67d833f943ffd38d" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 SR_init</definition>
+        <argsstring></argsstring>
+        <name>SR_init</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="11" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a31bff2e70a3eb9aa619021e0966059e1" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 Conf_reg_init</definition>
+        <argsstring></argsstring>
+        <name>Conf_reg_init</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="12" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1aa2e9a3a3ce7a711d2adce005d7a03d1e" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 ROI</definition>
+        <argsstring></argsstring>
+        <name>ROI</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="13" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1ab046bab82fa928cfc4e960437c81a3a5" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 Full_read</definition>
+        <argsstring></argsstring>
+        <name>Full_read</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="14" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a4bfaa2dcbabaf8d9833dac780806cc8a" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 refclk_counter</definition>
+        <argsstring></argsstring>
+        <name>refclk_counter</name>
+        <initializer>= 24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="15" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1afe71ebd52ef3d9da4ee95e146c1a8b4b" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 readout_cells</definition>
+        <argsstring></argsstring>
+        <name>readout_cells</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="16" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1acc6e5ceb306312469fa28b720165e362" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 conf_bits</definition>
+        <argsstring></argsstring>
+        <name>conf_bits</name>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="17" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a529e290e544495d6124f5dd5ec21478e" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 delay_trig</definition>
+        <argsstring></argsstring>
+        <name>delay_trig</name>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="18" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a99e50660a4a11c4868d98915e08f905a" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 axi_rst</definition>
+        <argsstring></argsstring>
+        <name>axi_rst</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="19" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a5b5d083aab0319a8d07f57b278c65d55" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 states_vector</definition>
+        <argsstring></argsstring>
+        <name>states_vector</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="20" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a236fdd2a9b0dba25719f000d5848027a" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 stop_cell</definition>
+        <argsstring></argsstring>
+        <name>stop_cell</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="21" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a11c8749f166d5b7fd26d50d518788c35" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 ROFS</definition>
+        <argsstring></argsstring>
+        <name>ROFS</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="22" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a6ae4542e81054e76bf03d501618eb102" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 nReset</definition>
+        <argsstring></argsstring>
+        <name>nReset</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="23" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1af246b3fabc145e5c8c9d2b7ed1ebfca8" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 state1</definition>
+        <argsstring></argsstring>
+        <name>state1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="25" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a60cff25ad9a51049c69a11f8be27be64" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 state2</definition>
+        <argsstring></argsstring>
+        <name>state2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="25" column="12" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1ab17029634fe412894c41fd46e8509e17" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 state3</definition>
+        <argsstring></argsstring>
+        <name>state3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="25" column="19" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_d_r_s4__driver_8c_1a5af6ee202d58a43673c00b4893a6bfc1" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 state4</definition>
+        <argsstring></argsstring>
+        <name>state4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="25" column="26" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a8e2b022030e19b8a667ef4f2bc05e924" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DRS4_Init</definition>
+        <argsstring>()</argsstring>
+        <name>DRS4_Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="28" column="6" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="28" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1acf73616c2fdc209fa47a0ff88e261aa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DRS4_config</definition>
+        <argsstring>()</argsstring>
+        <name>DRS4_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="44" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="44" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a5b843d8517ff28c606824f45c92308e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DRS4_start_ROI</definition>
+        <argsstring>()</argsstring>
+        <name>DRS4_start_ROI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="68" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="68" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a7c515e750acb8a258cc5388501944f50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DRS4_start_FullRO</definition>
+        <argsstring>()</argsstring>
+        <name>DRS4_start_FullRO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="81" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="81" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1aa9dfbeec906e3dbfc135aee1dd35343b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DRS4_Safe_shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>DRS4_Safe_shutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="95" column="6" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="95" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a6dd97ba9d02aa85ff3a963ff0fba3fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 DRS4_ctrl_signal</definition>
+        <argsstring>()</argsstring>
+        <name>DRS4_ctrl_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="112" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="112" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1ad7d665e222124d39684f650ba950d18a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 DRS4_register_signal</definition>
+        <argsstring>()</argsstring>
+        <name>DRS4_register_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="129" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="129" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a374102208caee5c5f4c7279825d1c139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void write_DRS4_control_signals</definition>
+        <argsstring>()</argsstring>
+        <name>write_DRS4_control_signals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="147" column="6" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a773a217633920942ad269009c326b383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void write_DRS4_register_signals</definition>
+        <argsstring>()</argsstring>
+        <name>write_DRS4_register_signals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="154" column="6" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a87cbc9152b76639570cd70ecfd1116fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 get_states_machine</definition>
+        <argsstring>()</argsstring>
+        <name>get_states_machine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="159" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="159" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="_d_r_s4__driver_8c_1a148a807abd07446484d002c1df919a4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>u32</type>
+        <definition>u32 get_stop_cell_SROUT</definition>
+        <argsstring>()</argsstring>
+        <name>get_stop_cell_SROUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/DRS4_driver.c" line="165" column="5" bodyfile="base_code/MB40ch_wUART/src/DRS4_driver.c" bodystart="165" bodyend="170"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

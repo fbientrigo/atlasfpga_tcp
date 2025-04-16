@@ -2,6 +2,771 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="main_8h" kind="file" language="C++">
     <compoundname>main.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">xparameters.h</includes>
+    <includes local="yes">xil_cache.h</includes>
+    <includes local="yes">xuartps_hw.h</includes>
+    <includes local="yes">xuartps.h</includes>
+    <includes local="yes">xil_printf.h</includes>
+    <includes local="yes">sleep.h</includes>
+    <includes local="yes">xgpio.h</includes>
+    <includes local="yes">dac_i2c.h</includes>
+    <includes refid="_a_d_c__driver_8h" local="yes">ADC_driver.h</includes>
+    <includes local="yes">xstatus.h</includes>
+    <includes refid="_d_r_s4__driver_8h" local="yes">DRS4_driver.h</includes>
+    <includes refid="gpio__handler_8h" local="yes">gpio_handler.h</includes>
+    <includes refid="xaxidma__controller_8h" local="yes">xaxidma_controller.h</includes>
+    <includes refid="tcp__com_8h" local="yes">tcp_com.h</includes>
+    <includes refid="_c_p_l_d__driver_8h" local="yes">CPLD_driver.h</includes>
+    <includes local="yes">clk_mon.h</includes>
+    <includedby refid="main_8c" local="yes">base_code/MB40ch_wUART/src/main.c</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>ADC_driver.h</label>
+        <link refid="_a_d_c__driver_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>CPLD_driver.h</label>
+        <link refid="_c_p_l_d__driver_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DRS4_driver.h</label>
+        <link refid="_d_r_s4__driver_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>gpio_handler.h</label>
+        <link refid="gpio__handler_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>platform.h</label>
+        <link refid="platform_8h_source"/>
+      </node>
+      <node id="26">
+        <label>platform_config.h</label>
+        <link refid="platform__config_8h_source"/>
+      </node>
+      <node id="21">
+        <label>tcp_com.h</label>
+        <link refid="tcp__com_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>xaxidma_controller.h</label>
+        <link refid="xaxidma__controller_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>clk_mon.h</label>
+      </node>
+      <node id="10">
+        <label>dac_i2c.h</label>
+      </node>
+      <node id="22">
+        <label>lwip/tcp.h</label>
+      </node>
+      <node id="24">
+        <label>netif/xadapter.h</label>
+      </node>
+      <node id="8">
+        <label>sleep.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="23">
+        <label>string.h</label>
+      </node>
+      <node id="18">
+        <label>xaxidma.h</label>
+      </node>
+      <node id="20">
+        <label>xdebug.h</label>
+      </node>
+      <node id="9">
+        <label>xgpio.h</label>
+      </node>
+      <node id="4">
+        <label>xil_cache.h</label>
+      </node>
+      <node id="19">
+        <label>xil_exception.h</label>
+      </node>
+      <node id="15">
+        <label>xil_io.h</label>
+      </node>
+      <node id="7">
+        <label>xil_printf.h</label>
+      </node>
+      <node id="12">
+        <label>xil_types.h</label>
+      </node>
+      <node id="3">
+        <label>xparameters.h</label>
+      </node>
+      <node id="27">
+        <label>xscugic.h</label>
+      </node>
+      <node id="13">
+        <label>xstatus.h</label>
+      </node>
+      <node id="6">
+        <label>xuartps.h</label>
+      </node>
+      <node id="5">
+        <label>xuartps_hw.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="main_8h_1a0b71e527200033092ab1ebd5c0c077ed" prot="public" static="no">
+        <name>TEST_BUFFER_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="35" column="9" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8h_1a1ce3e9a8fdd0b911719375e02885ea6c" prot="public" static="no">
+        <name>dac_baseaddr</name>
+        <initializer>XPAR_DAC_I2C_0_S00_AXI_BASEADDR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="36" column="9" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8h_1ab3787fde8ffe5678ebc1a52acb8b2908" prot="public" static="no" mutable="no">
+        <type>XUartPs</type>
+        <definition>XUartPs UartPs</definition>
+        <argsstring></argsstring>
+        <name>UartPs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="51" column="9" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a21a34b7f8d09398f53237562bd1f579b" prot="public" static="no" mutable="no">
+        <type>u8</type>
+        <definition>u8 SendBuffer[TEST_BUFFER_SIZE]</definition>
+        <argsstring>[TEST_BUFFER_SIZE]</argsstring>
+        <name>SendBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="53" column="4" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a97ff43d2dc0c58afc33efc1304f40b09" prot="public" static="no" mutable="no">
+        <type>u8</type>
+        <definition>u8 RecvBuffer[TEST_BUFFER_SIZE]</definition>
+        <argsstring>[TEST_BUFFER_SIZE]</argsstring>
+        <name>RecvBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="54" column="4" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a3b7858267a6744de219521109be0a90f" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 UART_BAUD_RATE</definition>
+        <argsstring></argsstring>
+        <name>UART_BAUD_RATE</name>
+        <initializer>= 115200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="56" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a5d5b1744ccbe86d72872e6d6ce83cad7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dac0</definition>
+        <argsstring></argsstring>
+        <name>dac0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="58" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a3741aac45a9d06c52fc06134fbba1ef0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dac1</definition>
+        <argsstring></argsstring>
+        <name>dac1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="58" column="10" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1abfe4a5f73dc2ff957edd74b6f33dfad0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dac2</definition>
+        <argsstring></argsstring>
+        <name>dac2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="58" column="15" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1ab817182b68f699f28f64c7d50cdd8099" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dac3</definition>
+        <argsstring></argsstring>
+        <name>dac3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="58" column="20" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a1d13d9bff9a61940fa61988c8c5056fd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int set_dac</definition>
+        <argsstring></argsstring>
+        <name>set_dac</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="59" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1acba479d03a5acdcfed7c48cd41961c9e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int get_dac</definition>
+        <argsstring></argsstring>
+        <name>get_dac</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="60" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1ae3037fd9bfbfbb5b15d4c66b841d6b6d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int routine_dac</definition>
+        <argsstring></argsstring>
+        <name>routine_dac</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="61" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a210872df654d7f8089ef741f05541fc0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int routine_adc</definition>
+        <argsstring></argsstring>
+        <name>routine_adc</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="62" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1aa57d9667d4cf5de48f80e658ee7035a2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int adc_config</definition>
+        <argsstring></argsstring>
+        <name>adc_config</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="63" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a61c02c53d075c31f208b987c17cb5fcd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int adc_send_burst</definition>
+        <argsstring></argsstring>
+        <name>adc_send_burst</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="64" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a1280a22ce3b8dbe6d83d86b08615b795" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int adc_read_last</definition>
+        <argsstring></argsstring>
+        <name>adc_read_last</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="65" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a5d749c756efaaca7675b43a418c6d100" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trigger</definition>
+        <argsstring></argsstring>
+        <name>trigger</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="66" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a4286869b970565dbe3059d44700c05ec" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trigger_counter</definition>
+        <argsstring></argsstring>
+        <name>trigger_counter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="67" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1aac4f3d1cdea16e01fc8d97f4433af3ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dac_ch</definition>
+        <argsstring></argsstring>
+        <name>dac_ch</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="69" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a30836a36b5ef47961fdab58cc3925780" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dac_val</definition>
+        <argsstring></argsstring>
+        <name>dac_val</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="70" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1aee7ae9a581183d0ee4ec23c95dca52d2" prot="public" static="no" mutable="no">
+        <type>_Bool</type>
+        <definition>_Bool user_VETO</definition>
+        <argsstring></argsstring>
+        <name>user_VETO</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="72" column="7" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1afc950b853d8792131aaa6a1e2e7bc810" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 dac_values[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>dac_values</name>
+        <initializer>= 
+{ 1351,	
+ 0,	
+ 1064,	
+ 0,	
+ 1064,		
+ 1024,	
+ 1024, 
+ 573}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="84" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="84" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8h_1a6a26711bb44fcbc08b4869310aa09fb3" prot="public" static="no" mutable="no">
+        <type>u32</type>
+        <definition>u32 trigger_values[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>trigger_values</name>
+        <initializer>= 
+{ 1400,	
+	1400,	
+	1400,	
+	1400,	
+	1400,		
+	1400,	
+	1400,	
+	1400	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="95" column="5" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="95" bodyend="103"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8h_1a607e1a223534673ff024c2941e59f2ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UartLitePolledExample</definition>
+        <argsstring>(u16 DeviceId)</argsstring>
+        <name>UartLitePolledExample</name>
+        <param>
+          <type>u16</type>
+          <declname>DeviceId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="41" column="5" declfile="base_code/MB40ch_wUART/src/main.h" declline="41" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1ab1c2fd3aceb66b64df86134b5bc63869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UartLiteInit</definition>
+        <argsstring>(u16 DeviceId)</argsstring>
+        <name>UartLiteInit</name>
+        <param>
+          <type>u16</type>
+          <declname>DeviceId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="42" column="5" declfile="base_code/MB40ch_wUART/src/main.h" declline="42" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a2980b605d24d42cafe4abce4bbb765fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int test_routine_1</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_routine_1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="43" column="5" declfile="base_code/MB40ch_wUART/src/main.h" declline="43" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1af4d255334b6ed185eceb37df43f2a9c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int test_routine_adc</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_routine_adc</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="44" column="5" declfile="base_code/MB40ch_wUART/src/main.h" declline="44" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a130db1a42490734b4c567392d7c5949f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int loop_routine</definition>
+        <argsstring>(void)</argsstring>
+        <name>loop_routine</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>loop_routine</para>
+<para>Bucle principal de ejecución que se encarga de:</para>
+<para><itemizedlist>
+<listitem><para>Verificar y procesar los flags de los timers TCP (TcpFastTmrFlag y TcpSlowTmrFlag) y llamar a tcp_fasttmr() y tcp_slowtmr() respectivamente.</para>
+</listitem><listitem><para>Evaluar el estado de flags como flag_senddata y flag_ready2sent para invocar transfer_data() y enviar datos.</para>
+</listitem><listitem><para>Gestionar la recepción constante de paquetes mediante xemacif_input().</para>
+</listitem><listitem><para>Procesar comandos recibidos mediante RecvBuffer; por ejemplo, comandos para reiniciar o apagar el sistema (&quot;-q&quot;, &quot;-DRS4GetState&quot;, &quot;-Shutdown&quot;, etc.).</para>
+</listitem><listitem><para>Controlar diversos flags y acciones relacionadas con hardware (GPIO, DAC, ADC, DRS4, etc.).</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="main_8h_1autotoc_md5_1s1"><sect2 id="main_8h_1autotoc_md5">
+<title>Returns</title><para>int XST_SUCCESS si el bucle se ejecuta correctamente.</para>
+<para>Ejemplo: int status = loop_routine();</para>
+<para>Diagrama de flujo resumido (ver mapa Mermaid en la documentación anterior): <verbatim>[Inicio loop_routine] --&gt; [Verificar timers] --&gt; [Envía datos si flag_senddata &amp;&amp; flag_ready2sent]
+--&gt; [Procesar comandos recibidos] --&gt; [Acciones de hardware] --&gt; [Repetir ciclo]
+</verbatim> </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="45" column="5" bodyfile="base_code/MB40ch_wUART/src/main.c" bodystart="664" bodyend="813" declfile="base_code/MB40ch_wUART/src/main.h" declline="45" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a5d26b4e05f1aacc25a9a589c5c9f6fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_routine_3</definition>
+        <argsstring>(void)</argsstring>
+        <name>test_routine_3</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="46" column="6" declfile="base_code/MB40ch_wUART/src/main.h" declline="46" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a0d71ff0b731218ea30bce2f6e8c6d77b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setup_DACs</definition>
+        <argsstring>(void)</argsstring>
+        <name>setup_DACs</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>setup_DACs</para>
+<para>Configura los DACs con los valores requeridos para las señales de control. Para cada canal se envía el valor deseado (por ejemplo, dac_values para el DRS4 y trigger_values para el comparador de triggers), verificando que cada operación se realice de forma secuencial.</para>
+<sect1 id="main_8h_1autotoc_md4_1s1"><sect2 id="main_8h_1autotoc_md4">
+<title>Returns</title><para>int XST_SUCCESS si la configuración fue exitosa.</para>
+<para>Ejemplo: if (setup_DACs() != XST_SUCCESS) { xil_printf(&quot;Error al configurar los DACs.\n&quot;); } </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="47" column="5" bodyfile="base_code/MB40ch_wUART/src/main.c" bodystart="612" bodyend="633" declfile="base_code/MB40ch_wUART/src/main.h" declline="47" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a6d5f438dfc0f638dd87efa27867ea2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setup_system</definition>
+        <argsstring>(void)</argsstring>
+        <name>setup_system</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>setup_system</para>
+<para>Inicializa y configura los periféricos y módulos críticos del sistema, incluyendo:</para>
+<para><itemizedlist>
+<listitem><para>Inicialización de GPIO (mediante XGpio_Initialize) para controlar señales y resets.</para>
+</listitem><listitem><para>Configuración e inicialización de DACs y ADCs, incluyendo llamadas a init_DACs, setup_DACs y ADC_SPI_init.</para>
+</listitem><listitem><para>Reinicio y configuración de módulos como DRS4 para la adquisición de datos.</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="main_8h_1autotoc_md3_1s1"><sect2 id="main_8h_1autotoc_md3">
+<title>Returns</title><para>int XST_SUCCESS si la configuración fue exitosa, o XST_FAILURE en caso de error.</para>
+<para>Ejemplo: if (setup_system() != XST_SUCCESS) { xil_printf(&quot;Error al configurar el sistema.\n&quot;); } </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="48" column="5" bodyfile="base_code/MB40ch_wUART/src/main.c" bodystart="266" bodyend="357" declfile="base_code/MB40ch_wUART/src/main.h" declline="48" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a5e49de157946ecccd8d1e1a9f655cd1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bin</definition>
+        <argsstring>(unsigned n)</argsstring>
+        <name>bin</name>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="104" column="6" bodyfile="base_code/MB40ch_wUART/src/main.h" bodystart="104" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8h_1a961b086c2ce94a3de192d9a2fd22e6a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DRS4_DTAP_meas</definition>
+        <argsstring>(int sel_mezz)</argsstring>
+        <name>DRS4_DTAP_meas</name>
+        <param>
+          <type>int</type>
+          <declname>sel_mezz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DRS4_DTAP_meas</para>
+<para>Realiza una medición de frecuencia o contador (DTAP) para un mezzanine especificado. Lee registros de monitoreo (CLK_MON) en función del parámetro &quot;sel_mezz&quot; (de 1 a 5) y calcula la frecuencia como: <verbatim>    DTAP_freq = (contador / 8192.0) * 100.0
+</verbatim></para>
+<sect1 id="main_8h_1autotoc_md8_1s1"><sect2 id="main_8h_1autotoc_md8">
+<title>Parameters</title><para>sel_mezz : int Selecciona el mezzanine (1 a 5) para el que se realiza la medición.</para>
+</sect2></sect1>
+<sect1 id="main_8h_1autotoc_md9_1s1"><sect2 id="main_8h_1autotoc_md9">
+<title>Returns</title><para>float La frecuencia calculada en función del contador leído.</para>
+<para>Ejemplo: float freq = DRS4_DTAP_meas(3);</para>
+<para>Nota: Si se ingresa un valor fuera del rango [1,5], se imprime un mensaje de error y se retorna 0.0. </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/main.h" line="112" column="7" bodyfile="base_code/MB40ch_wUART/src/main.c" bodystart="1118" bodyend="1147" declfile="base_code/MB40ch_wUART/src/main.h" declline="112" declcolumn="7"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -41,7 +806,7 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;platform_config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>UARTLITE_DEVICE_ID<sp/><sp/><sp/><sp/>XPAR_UARTLITE_0_DEVICE_ID</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_BUFFER_SIZE<sp/>1024<sp/><sp/><sp/></highlight><highlight class="comment">//tama�o del<sp/>buffer<sp/>interno<sp/>es<sp/>16<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_BUFFER_SIZE<sp/>1024<sp/><sp/><sp/></highlight><highlight class="comment">//tama�o<sp/>del<sp/>buffer<sp/>interno<sp/>es<sp/>16<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dac_baseaddr<sp/>XPAR_DAC_I2C_0_S00_AXI_BASEADDR</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>GPIO_DEVICE_ID<sp/><sp/>XPAR_GPIO_0_DEVICE_ID</highlight><highlight class="normal"></highlight></codeline>
@@ -87,7 +852,7 @@
 <codeline lineno="78"><highlight class="comment">[1]<sp/><sp/><sp/><sp/><sp/>:<sp/>CAL+<sp/>para<sp/>obtener<sp/>1.3[V]</highlight></codeline>
 <codeline lineno="79"><highlight class="comment">[2]<sp/><sp/><sp/><sp/><sp/>:<sp/>CAL-<sp/>para<sp/>obtener<sp/>1.3[V]</highlight></codeline>
 <codeline lineno="80"><highlight class="comment">[3]<sp/><sp/><sp/><sp/><sp/>:ADC_VCM<sp/>(disconnected)</highlight></codeline>
-<codeline lineno="81"><highlight class="comment">[4]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:BIAS<sp/>0.7<sp/>[V]<sp/>�?</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">[4]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:BIAS<sp/>0.7<sp/>[V]<sp/>�?</highlight></codeline>
 <codeline lineno="82"><highlight class="comment">[5]<sp/><sp/><sp/><sp/><sp/>2456<sp/><sp/><sp/><sp/>:ROF<sp/>seteado<sp/>en<sp/>1.5<sp/>[V]<sp/>2000<sp/>gives<sp/>1.25V</highlight></codeline>
 <codeline lineno="83"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal">u32<sp/>dac_values[8]<sp/>=<sp/>\</highlight></codeline>

@@ -202,7 +202,7 @@
   <option  id='EXAMPLE_RECURSIVE' default='yes' type='bool'><value>NO</value></option>
   <option  id='IMAGE_PATH' default='yes' type='stringlist'>
   </option>
-  <option  id='INPUT_FILTER' default='no' type='string'><value><![CDATA["sed 's/[\x80-\xFF]//g'"]]></value></option>
+  <option  id='INPUT_FILTER' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='FILTER_PATTERNS' default='yes' type='stringlist'>
   </option>
   <option  id='FILTER_SOURCE_FILES' default='yes' type='bool'><value>NO</value></option>

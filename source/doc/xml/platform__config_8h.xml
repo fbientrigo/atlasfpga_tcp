@@ -2,6 +2,78 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="platform__config_8h" kind="file" language="C++">
     <compoundname>platform_config.h</compoundname>
+    <includedby refid="tcp__com_8h" local="yes">base_code/MB40ch_wUART/src/tcp_com.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>base_code/MB40ch_wUART/src/main.h</label>
+        <link refid="main_8h_source"/>
+      </node>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/platform_config.h</label>
+        <link refid="platform__config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>base_code/MB40ch_wUART/src/tcp_com.h</label>
+        <link refid="tcp__com_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>base_code/MB40ch_wUART/src/xaxidma_controller.h</label>
+        <link refid="xaxidma__controller_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="platform__config_8h_1a8686e1ba2dea594c17d9b991280a5c77" prot="public" static="no">
+        <name>PLATFORM_EMAC_BASEADDR</name>
+        <initializer>XPAR_XEMACPS_0_BASEADDR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/platform_config.h" line="5" column="9" bodyfile="base_code/MB40ch_wUART/src/platform_config.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__config_8h_1a1556d56c40da47e192e6767b8b15003b" prot="public" static="no">
+        <name>GPIO_DEVICE_ID</name>
+        <initializer>XPAR_GPIO_0_DEVICE_ID</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/platform_config.h" line="6" column="9" bodyfile="base_code/MB40ch_wUART/src/platform_config.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__config_8h_1a012dabe2440567491183c498244620ab" prot="public" static="no">
+        <name>GPIO_DEVICE_ID1</name>
+        <initializer>XPAR_GPIO_1_DEVICE_ID</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/platform_config.h" line="7" column="9" bodyfile="base_code/MB40ch_wUART/src/platform_config.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__config_8h_1a23262b19793128f3e1f6eb64c52a6d14" prot="public" static="no">
+        <name>PLATFORM_ZYNQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/platform_config.h" line="8" column="9" bodyfile="base_code/MB40ch_wUART/src/platform_config.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -25,6 +25,7 @@ src/echo.o src/echo.o: ../src/echo.c \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/ip.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/icmp.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/icmp.h \
+ ../src/massive_data.h ../src/small_data.h ../src/line_blocker.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_printf.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xparameters.h \
@@ -82,6 +83,12 @@ src/echo.o src/echo.o: ../src/echo.c \
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/icmp.h:
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/lwip/prot/icmp.h:
+
+../src/massive_data.h:
+
+../src/small_data.h:
+
+../src/line_blocker.h:
 
 ../../echo_tcp_c_bsp/ps7_cortexa9_0/include/xil_printf.h:
 

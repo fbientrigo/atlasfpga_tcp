@@ -2,6 +2,484 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="es">
   <compounddef id="tcp__com_8h" kind="file" language="C++">
     <compoundname>tcp_com.h</compoundname>
+    <includes local="yes">lwip/tcp.h</includes>
+    <includes local="yes">xil_cache.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">netif/xadapter.h</includes>
+    <includes refid="platform_8h" local="yes">platform.h</includes>
+    <includes refid="platform__config_8h" local="yes">platform_config.h</includes>
+    <includes local="yes">xil_printf.h</includes>
+    <includedby refid="main_8h" local="yes">base_code/MB40ch_wUART/src/main.h</includedby>
+    <includedby refid="tcp__com_8c" local="yes">base_code/MB40ch_wUART/src/tcp_com.c</includedby>
+    <includedby refid="xaxidma__controller_8h" local="yes">base_code/MB40ch_wUART/src/xaxidma_controller.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>platform.h</label>
+        <link refid="platform_8h_source"/>
+      </node>
+      <node id="7">
+        <label>platform_config.h</label>
+        <link refid="platform__config_8h_source"/>
+      </node>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/tcp_com.h</label>
+        <link refid="tcp__com_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lwip/tcp.h</label>
+      </node>
+      <node id="5">
+        <label>netif/xadapter.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>xil_cache.h</label>
+      </node>
+      <node id="8">
+        <label>xil_printf.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>base_code/MB40ch_wUART/src/main.h</label>
+        <link refid="main_8h_source"/>
+      </node>
+      <node id="1">
+        <label>base_code/MB40ch_wUART/src/tcp_com.h</label>
+        <link refid="tcp__com_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>base_code/MB40ch_wUART/src/xaxidma_controller.h</label>
+        <link refid="xaxidma__controller_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="tcp__com_8h_1a25672de2f50bd9fcdead740aeec253c6" prot="public" static="no">
+        <name>Char_per_line</name>
+        <initializer>46</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="27" column="9" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tcp__com_8h_1af7dd5c1342ac6c75eea7c43dc6cace4f" prot="public" static="no">
+        <name>PBUF_LENGTH</name>
+        <initializer>50000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="28" column="9" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tcp__com_8h_1a06efc83102d00988c828079a61bd3494" prot="public" static="no">
+        <name>buffer_length</name>
+        <initializer>49900</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="29" column="9" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tcp__com_8h_1a614217d263be1fb1a5f76e2ff7be19a2" prot="public" static="no">
+        <name>PORT</name>
+        <initializer>6543</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="30" column="9" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tcp__com_8h_1a001341f08507c2c5d932bdcd6231e446" prot="public" static="no">
+        <name>N_lines</name>
+        <initializer>buffer_length/Char_per_line</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="32" column="9" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="tcp__com_8h_1a454b66af16ce0e02c7524adac54c1199" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char buffer[buffer_length]</definition>
+        <argsstring>[buffer_length]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="33" column="15" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tcp__com_8h_1a0da926ef114de4ef5c3cf494b97c77fd" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short flag_accept_conn</definition>
+        <argsstring></argsstring>
+        <name>flag_accept_conn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="35" column="7" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tcp__com_8h_1a1aebf6833b58d9a39c386d70a90692f0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flag_ready2sent</definition>
+        <argsstring></argsstring>
+        <name>flag_ready2sent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="36" column="5" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tcp__com_8h_1a1fd95a1a7156f584506a8fd0ee749b7d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flag_senddata</definition>
+        <argsstring></argsstring>
+        <name>flag_senddata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="37" column="5" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tcp__com_8h_1a586065401b404ad3263034934f708e48" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flag_tcp_done</definition>
+        <argsstring></argsstring>
+        <name>flag_tcp_done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="38" column="5" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tcp__com_8h_1a7d8c5f5eed3154f7848c3a2ac9a9863a" prot="public" static="yes" mutable="no">
+        <type>struct tcp_pcb *</type>
+        <definition>struct tcp_pcb* pcb</definition>
+        <argsstring></argsstring>
+        <name>pcb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="39" column="21" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tcp__com_8h_1a572769313f4d379b0fbdbddfcf5d2030" prot="public" static="no" mutable="no">
+        <type>struct pbuf *</type>
+        <definition>struct pbuf* p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="41" column="12" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tcp__com_8h_1a0b1c177bd408d52f8194bcdf0899fdbb" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* datos_PL</definition>
+        <argsstring></argsstring>
+        <name>datos_PL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="43" column="5" bodyfile="base_code/MB40ch_wUART/src/tcp_com.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="tcp__com_8h_1a801824bc66ef5f24d02c9def1d4ece62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int start_application</definition>
+        <argsstring>()</argsstring>
+        <name>start_application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start_application</para>
+<para>Inicializa el servidor TCP creando un nuevo PCB, vinculándolo al puerto definido (6543), y pasando al modo listen. Además, asigna el callback de aceptación (accept_callback) para gestionar conexiones entrantes. Actualiza flags globales para el control de la conexión.</para>
+<sect1 id="tcp__com_8h_1autotoc_md24_1s1"><sect2 id="tcp__com_8h_1autotoc_md24">
+<title>Returns</title><para>int 0 si el servidor se inició correctamente, o un valor negativo en caso de error.</para>
+<para>Ejemplo: if (start_application() != 0) { xil_printf(&quot;Error iniciando la aplicación TCP.\n&quot;); }</para>
+<para>Flujo: tcp_new() -&gt; tcp_bind() -&gt; tcp_listen() -&gt; tcp_accept() --&gt; Conexión en espera </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="47" column="5" bodyfile="base_code/MB40ch_wUART/src/tcp_com.c" bodystart="446" bodyend="493" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="47" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="tcp__com_8h_1aa9561090660f8b0de8bd35f174c121bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int transfer_data</definition>
+        <argsstring>(unsigned char *)</argsstring>
+        <name>transfer_data</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>transfer_data</para>
+<para>Envía el contenido del buffer global a través de la conexión TCP, gestionando el envío en múltiples trozos si el buffer de envío (tcp_sndbuf) es insuficiente. La función divide el buffer en fragmentos y envía cada uno hasta que se transmitan todos los datos. Al finalizar, envía una secuencia de fin (&quot;!#\n&quot;) para indicar la conclusión de la transmisión.</para>
+<sect1 id="tcp__com_8h_1autotoc_md18_1s1"><sect2 id="tcp__com_8h_1autotoc_md18">
+<title>Parameters</title><para>buffer : unsigned char* Buffer de datos a enviar.</para>
+</sect2></sect1>
+<sect1 id="tcp__com_8h_1autotoc_md19_1s1"><sect2 id="tcp__com_8h_1autotoc_md19">
+<title>Returns</title><para>int 0 si la transmisión se realizó con éxito.</para>
+<para>Ejemplo: // Envío de datos empaquetados previamente transfer_data(buffer);</para>
+<para>Detalles:<itemizedlist>
+<listitem><para>Mientras hayan datos pendientes, se consulta el espacio disponible en tcp_sndbuf.</para>
+</listitem><listitem><para>Se utiliza tcp_write para enviar el fragmento actual y tcp_output para forzar el envío inmediato.</para>
+</listitem><listitem><para>Si tcp_sndbuf está lleno, se espera (con usleep) antes de reintentar. </para>
+</listitem></itemizedlist>
+</para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="49" column="5" bodyfile="base_code/MB40ch_wUART/src/tcp_com.c" bodystart="251" bodyend="301" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="49" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="tcp__com_8h_1a3720d702a61e4d4cee2a4903373db7d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>err_t</type>
+        <definition>err_t accept_callback</definition>
+        <argsstring>(void *arg, struct tcp_pcb *newpcb, err_t err)</argsstring>
+        <name>accept_callback</name>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>struct tcp_pcb *</type>
+          <declname>newpcb</declname>
+        </param>
+        <param>
+          <type>err_t</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>accept_callback</para>
+<para>Callback que se ejecuta cuando el servidor TCP acepta una nueva conexión. Esta función asigna la nueva conexión al PCB global, configura los callbacks de recepción, envío y error, e incrementa un contador para futuras conexiones. Además, habilita los flags pertinentes (por ejemplo, flag_ready2sent) para indicar que la conexión está establecida.</para>
+<sect1 id="tcp__com_8h_1autotoc_md22_1s1"><sect2 id="tcp__com_8h_1autotoc_md22">
+<title>Parameters</title><para>arg : void* Argumento de callback (en este caso un entero que indica el ID de la conexión). newpcb : struct tcp_pcb* PCB de la nueva conexión establecida. err : err_t Código de error (se espera ERR_OK en una conexión exitosa).</para>
+</sect2></sect1>
+<sect1 id="tcp__com_8h_1autotoc_md23_1s1"><sect2 id="tcp__com_8h_1autotoc_md23">
+<title>Returns</title><para>err_t ERR_OK si la conexión se aceptó correctamente.</para>
+<para>Ejemplo: // Se configura el callback de aceptación en start_application: tcp_accept(pcb, accept_callback);</para>
+<para>Diagrama de relaciones: <verbatim>accept_callback --&gt; Asigna PCB global --&gt; (pcb)
+                 --&gt; Configura: recv_callback, sent_callback, tcp_server_err
+                 --&gt; Habilita flag_ready2sent
+</verbatim> </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="50" column="7" bodyfile="base_code/MB40ch_wUART/src/tcp_com.c" bodystart="395" bodyend="422" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="50" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="tcp__com_8h_1a11906e292daf6122d81a75c498068366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>err_t</type>
+        <definition>err_t recv_callback</definition>
+        <argsstring>(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)</argsstring>
+        <name>recv_callback</name>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>struct tcp_pcb *</type>
+          <declname>tpcb</declname>
+        </param>
+        <param>
+          <type>struct pbuf *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>err_t</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>recv_callback</para>
+<para>Callback que se invoca cuando se reciben datos a través de la conexión TCP. Esta función:</para>
+<para><itemizedlist>
+<listitem><para>Verifica el estado de la conexión y libera el pbuf recibido (tcp_recved).</para>
+</listitem><listitem><para>Copia los primeros 16 caracteres del payload al buffer global RecvBuffer.</para>
+</listitem><listitem><para>Compara el contenido del mensaje recibido contra comandos predefinidos (por ejemplo, &quot;-DRS4GetState&quot;, &quot;-Shutdown&quot;, &quot;-DRS4Restart&quot;, &quot;-get_event&quot;, &quot;-check&quot;, &quot;-soft_trig&quot;, etc.) utilizando la función auxiliar command_is().</para>
+</listitem><listitem><para>Según el comando recibido, invoca funciones como get_states_machine(), DRS4_Safe_shutdown(), DRS4_restart_ROI() o process_n_send_data(), y prepara una respuesta en el buffer global &quot;buffer&quot;.</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="tcp__com_8h_1autotoc_md6_1s1"><sect2 id="tcp__com_8h_1autotoc_md6">
+<title>Parameters</title><para>arg : void* Argumento de callback (usado para identificar la conexión). tpcb : struct tcp_pcb* Puntero a la estructura PCB de la conexión TCP. p : struct pbuf* pbuf recibido que contiene el mensaje. err : err_t Código de error de la operación, en caso de existir.</para>
+</sect2></sect1>
+<sect1 id="tcp__com_8h_1autotoc_md7_1s1"><sect2 id="tcp__com_8h_1autotoc_md7">
+<title>Returns</title><para>err_t ERR_OK si el procesamiento fue exitoso.</para>
+<para>Ejemplo: // Se asigna en start_application() para que se invoque al recibir datos: tcp_recv(pcb, recv_callback);</para>
+<para>Detalle: La función utiliza memcpy para copiar los datos, snprintf para formatear la respuesta, y modifica flags globales (flag_senddata) para indicar que se deben enviar respuestas. </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="51" column="7" bodyfile="base_code/MB40ch_wUART/src/main.c" bodystart="895" bodyend="1090" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="51" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="tcp__com_8h_1a0584df6fdfa48022831dec27f863e371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>tcp_sent_fn</type>
+        <definition>tcp_sent_fn sent_callback</definition>
+        <argsstring>(void *arg, struct tcp_pcb *tpcb, u16_t len)</argsstring>
+        <name>sent_callback</name>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>struct tcp_pcb *</type>
+          <declname>tpcb</declname>
+        </param>
+        <param>
+          <type>u16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sent_callback</para>
+<para>Callback que se invoca cuando se confirma que un paquete de datos fue enviado exitosamente. Esta función restablece el flag flag_ready2sent para permitir el envío de nuevos datos.</para>
+<sect1 id="tcp__com_8h_1autotoc_md25_1s1"><sect2 id="tcp__com_8h_1autotoc_md25">
+<title>Parameters</title><para>arg : void* Argumento de callback (no utilizado en esta implementación). tpcb : struct tcp_pcb* PCB de la conexión TCP. len : u16_t Longitud del paquete enviado.</para>
+</sect2></sect1>
+<sect1 id="tcp__com_8h_1autotoc_md26_1s1"><sect2 id="tcp__com_8h_1autotoc_md26">
+<title>Returns</title><para>tcp_sent_fn (err_t) ERR_OK, indicando que la operación se realizó correctamente.</para>
+<para>Ejemplo: // Se asigna en accept_callback: tcp_sent(pcb, sent_callback); </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="52" column="13" bodyfile="base_code/MB40ch_wUART/src/tcp_com.c" bodystart="519" bodyend="526" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="52" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="tcp__com_8h_1a9804e3442adfd5065e1de662f06c1949" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tcp_server_err</definition>
+        <argsstring>(void *arg, err_t err)</argsstring>
+        <name>tcp_server_err</name>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>err_t</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tcp_server_err</para>
+<para>Función callback que se invoca cuando ocurre un error en la conexión TCP. Se utiliza para limpiar la conexión llamando a tcp_server_close y notifica mediante mensajes de log.</para>
+<sect1 id="tcp__com_8h_1autotoc_md21_1s1"><sect2 id="tcp__com_8h_1autotoc_md21">
+<title>Parameters</title><para>arg : void* Argumento de callback (no utilizado en este caso). err : err_t Código de error que ha provocado el callback.</para>
+<para>Ejemplo: // Esta función se registra como callback de error en tcp_err: tcp_err(pcb, tcp_server_err); </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="53" column="6" bodyfile="base_code/MB40ch_wUART/src/tcp_com.c" bodystart="352" bodyend="360" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="tcp__com_8h_1a8bff9fa25a621d38c253d35bd0984584" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tcp_server_close</definition>
+        <argsstring>(struct tcp_pcb *pcb)</argsstring>
+        <name>tcp_server_close</name>
+        <param>
+          <type>struct tcp_pcb *</type>
+          <declname>pcb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tcp_server_close</para>
+<para>Cierra la conexión TCP asociada a &quot;pcb&quot; de forma ordenada. Se deshabilitan callbacks de recepción y errores antes de intentar cerrar la conexión. Si el cierre falla, se aborta la conexión para liberar recursos.</para>
+<sect1 id="tcp__com_8h_1autotoc_md20_1s1"><sect2 id="tcp__com_8h_1autotoc_md20">
+<title>Parameters</title><para>pcb : struct tcp_pcb* Puntero a la estructura PCB de la conexión TCP.</para>
+<para>Ejemplo: tcp_server_close(pcb); </para>
+</sect2></sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="54" column="6" bodyfile="base_code/MB40ch_wUART/src/tcp_com.c" bodystart="319" bodyend="332" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="54" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="tcp__com_8h_1ae6eebda0957833b626bcecacfcf9b7fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void packer</definition>
+        <argsstring>()</argsstring>
+        <name>packer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>packer</para>
+<para>Empaqueta los datos almacenados en la matriz global &quot;datos_PL&quot; en un único buffer formateado. La función recorre &quot;datos_PL&quot; en bloques de 9 valores (representando los datos de cada línea) y crea una cadena con formato utilizando separadores de tabulación y un salto de línea al final de cada fila. Este buffer (almacenado en la variable global &quot;buffer&quot;) es el que se utilizará para enviar los datos mediante TCP.</para>
+<para>No recibe parámetros.</para>
+<para>Ejemplo: // Empaqueta los datos en el buffer antes de enviarlos por TCP packer();</para>
+<para>Diagrama de flujo (simplificado): <verbatim>datos_PL --&gt; Iteración por bloques de 9 elementos
+             └─&gt; Formatea la línea y concatena en &quot;buffer&quot;
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="base_code/MB40ch_wUART/src/tcp_com.h" line="55" column="6" bodyfile="base_code/MB40ch_wUART/src/tcp_com.c" bodystart="64" bodyend="90" declfile="base_code/MB40ch_wUART/src/tcp_com.h" declline="55" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

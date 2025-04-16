@@ -1148,7 +1148,7 @@ EXAMPLE_RECURSIVE      = NO
 
 IMAGE_PATH             =
 
-INPUT_FILTER = "python ./scripts/normalize_filter.py"
+# INPUT_FILTER = "python ./scripts/normalize_filter.py"
 
 FILTER_PATTERNS        =
 
