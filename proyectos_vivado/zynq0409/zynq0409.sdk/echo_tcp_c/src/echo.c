@@ -93,8 +93,8 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
 
 
 
-/*
 * accept_callback: Callback que se invoca al aceptar una nueva conexión TCP.
+/*
 */
 err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
 {

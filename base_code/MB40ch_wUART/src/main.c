@@ -243,26 +243,26 @@ void shutdown_all()
 
 
 
-/**
- * setup_system
- *
- * Inicializa y configura los periféricos y módulos críticos del sistema, incluyendo:
- *
- *  - Inicialización de GPIO (mediante XGpio_Initialize) para controlar señales y resets.
- *  - Configuración e inicialización de DACs y ADCs, incluyendo llamadas a init_DACs, setup_DACs y 
- *    ADC_SPI_init.
- *  - Reinicio y configuración de módulos como DRS4 para la adquisición de datos.
- *
- * Returns
- * -------
- * int
- *     XST_SUCCESS si la configuración fue exitosa, o XST_FAILURE en caso de error.
- *
- * Ejemplo:
- *     if (setup_system() != XST_SUCCESS) {
- *         xil_printf("Error al configurar el sistema.\n");
- *     }
- */
+	/**
+	* setup_system
+	*
+	* Inicializa y configura los periféricos y módulos críticos del sistema, incluyendo:
+	*
+	*  - Inicialización de GPIO (mediante XGpio_Initialize) para controlar señales y resets.
+	*  - Configuración e inicialización de DACs y ADCs, incluyendo llamadas a init_DACs, setup_DACs y 
+	*    ADC_SPI_init.
+	*  - Reinicio y configuración de módulos como DRS4 para la adquisición de datos.
+	*
+	* Returns
+	* -------
+	* int
+	*     XST_SUCCESS si la configuración fue exitosa, o XST_FAILURE en caso de error.
+	*
+	* Ejemplo:
+	*     if (setup_system() != XST_SUCCESS) {
+	*         xil_printf("Error al configurar el sistema.\n");
+	*     }
+	*/
 int setup_system ()
 {
 	int Status;
